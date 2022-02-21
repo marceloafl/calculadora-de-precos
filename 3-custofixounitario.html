@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Calculadora de Preços | Custo Fixo Unitário</title>
+            <link rel="stylesheet" href="assets/css/base/reset.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="assets/css/base/variaveis.css">
+            <link rel="stylesheet" href="assets/css/base/base.css">
+            <link rel="stylesheet" href="assets/css/componentes/corpo.css">
+            <link rel="stylesheet" href="assets/css/componentes/cabecalho.css">
+            <link rel="stylesheet" href="assets/css/componentes/formulario.css">
+            <link rel="stylesheet" href="assets/css/componentes/input.css">
+            <link rel="stylesheet" href="assets/css/componentes/botao.css">
+            <link rel="stylesheet" href="assets/css/componentes/rodape.css">
+            <link rel="stylesheet" href="assets/css/componentes/menu.css">
+        </head>
+
+        <body>
+            <section class="corpo">
+                <header class="cabecalho">
+                    <img src="assets/imagens/logo-calculadora.png" alt="Logo da Calculadora de Preços" class="logo-calculadora__cabecalho">
+                    <h1 class="titulo-calculadora-precos">Calculadora de Preços</h1>
+                    <a class="icone__menu--abrir"><img src="assets/imagens/icones/icone-menu-abrir.svg" alt="Menu" class="icone__menu"></a>
+                </header>
+
+                <main class="main">
+                    <section class="container container__apresentacao">
+                        <h2 class="titulo titulo__secao">Calculadora de Preços de Venda</h2>
+                        <p class="texto__secao--descricao">Esta é uma ferramenta que permite calcular sugestões de preço mínimo para venda de produtos e serviços.</p>
+                        <p class="texto__secao--descricao">Basta digitar os dados relacionados ao custo de produção e os objetivos de lucro.</p>
+                    </section>
+
+                    <section class="container">
+                        <div class="texto__custo-fixo-unitario">
+                            <h2 class="titulo titulo__secao">Custo Fixo Unitário</h2>
+                            <p class="texto__secao--descricao">Custo fixo unitário é calculado de acordo com o tempo gasto para produzir ou executar determinado serviço e de acordo com o custo fixo do negócio.</p>
+                            <p class="texto__secao--descricao">É importante conhecê-lo para identificar o custo fixo unitário do produto ou serviço, sem considerar os gastos com materiais por produção.</p>
+                        </div>
+
+                        <form class="formulario">
+
+                            <fieldset class=" formulario">
+                            
+                                <label for="custo-fixo-hora" class="label__input">Custo fixo por hora:</label>
+                                <input type="number" id="custo-fixo-hora" class="input">
+        
+                                <label for="custo-fixo-minuto" class="label__input">Custo fixo por minuto:</label>
+                                <input type="number" id="custo-fixo-minuto" class="input">
+        
+                                <label for="tempo-necessario" class="label__input">Tempo necessário para produção do item ou execução do serviço (em minutos):</label>
+                                <input type="number" id="tempo-necessario" class="input">
+                            </fieldset>
+
+                            <section class="container__resultado">
+                                <div class="container__resultado--texto"></div>
+                                    <p class="texto__resultado--formulario">Custo fixo unitário:</p>
+                                    <input type="number" class="input__resultado">
+                                </div>
+                                <a href="4-custovariavelunitario.html" class="botao">Próximo</a>
+                                <a href="2-capacidadeprodutiva.html" class="botao__voltar">Voltar</a>
+                            </section>
+                        </form> 
+                    </section>
+
+                
+                </main>
+
+
+                <aside class="menu">
+                    <section class="menu__cabecalho">
+                        <a class="icone__menu--fechar"><img src="assets/imagens/icones/icone-menu-fechar.svg" alt="Menu" class=" icone__menu"></a>
+                    </section>
+    
+                    <section class="section__menu--mais">
+                        <h3 class="titulo__secundario titulo__menu--mais"><a href="#">Custos Fixos</a></h3>
+                        <ul class="lista__menu--mais">
+                            <li class="item__menu--mais"><a href="#">Despesas Estruturais</a></li>
+                            <li class="item__menu--mais"><a href="#">Despesas Administrativas</a></li>
+                            <li class="item__menu--mais"><a href="#">Despesas com Equipamentos</a></li>
+                            <li class="item__menu--mais"><a href="#">Despesas com Funcionários</a></li>
+                        </ul>
+                    </section>
+    
+                    <section class="section__menu--mais">
+                        <h3 class="titulo__secundario titulo__menu--mais"><a href="#">Capacidade Produtiva</a></h3>
+                        <ul class="lista__menu--mais">
+                            <li class="item__menu--mais"><a href="#">Produtividade</a></li>
+                        </ul>
+                    </section>
+    
+                    <section class="section__menu--mais">
+                        <h3 class="titulo__secundario titulo__menu--mais"><a href="#">Causto Fixo Unitário</a></h3>
+                    </section>
+    
+                    <section class="section__menu--mais">
+                        <h3 class="titulo__secundario titulo__menu--mais"><a href="#">Custo Variável Unitário</a></h3>
+                    </section>
+    
+                    <section class="section__menu--mais">
+                        <h3 class="titulo__secundario titulo__menu--mais"><a href="#">Lucros, taxas e impostos</a></h3>
+                        <ul class="lista__menu--mais">
+                            <li class="item__menu--mais"><a href="#">Margem de Lucro</a></li>
+                        </ul>
+                    </section>
+                </aside>
+
+                <footer class="rodape">
+                    <section class="contato__container">
+                        <img src="assets/imagens/logo-calculadora.png" alt="Logo da Calculadora de Preços" class="logo-calculadora__rodape">
+                        <ul class="lista__link--rodape">
+                            <li><a class="link__contato">Fale conosco</a></li>
+                            <li><a class="link__contato">Termos de uso</a></li>
+                            <li><a class="link__contato">Privacidade</a></li>
+                        </ul>
+                    </section>
+                </footer>
+
+                <script src="js/menu.js"></script>
+            </section>
+        </body>
+    </html>

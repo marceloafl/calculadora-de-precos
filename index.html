@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de Preços</title>
+        <link rel="stylesheet" href="assets/css/base/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/base/variaveis.css">
+        <link rel="stylesheet" href="assets/css/base/base.css">
+        <link rel="stylesheet" href="assets/css/componentes/corpo.css">
+        <link rel="stylesheet" href="assets/css/componentes/cabecalho.css">
+        <link rel="stylesheet" href="assets/css/componentes/formulario.css">
+        <link rel="stylesheet" href="assets/css/componentes/input.css">
+        <link rel="stylesheet" href="assets/css/componentes/botao.css">
+        <link rel="stylesheet" href="assets/css/componentes/rodape.css">
+        <link rel="stylesheet" href="assets/css/componentes/menu.css">
+    </head>
+
+    <body>
+        <section class="corpo">
+            <header class="cabecalho">
+                <img src="assets/imagens/logo-calculadora.png" alt="Logo da Calculadora de Preços" class="logo-calculadora__cabecalho">
+                <h1 class="titulo-calculadora-precos">Calculadora de Preços</h1>
+                <a class="icone__menu--abrir"><img src="assets/imagens/icones/icone-menu-abrir.svg" alt="Menu" class="icone__menu"></a>
+            </header>
+            
+            <main class="main">
+                <section class="container container__apresentacao">
+                    <h2 class="titulo titulo__secao">Calculadora de Preços de Venda</h2>
+                    <p class="texto__secao--descricao">Esta é uma ferramenta que permite calcular sugestões de preço mínimo para venda de produtos e serviços.</p>
+                    <p class="texto__secao--descricao">Basta digitar os dados relacionados ao custo de produção e os objetivos de lucro.</p>
+                </section>
+
+                <section class="container">
+                    <div class="texto__custos-fixos">
+                        <h2 class="titulo titulo__secao">Custos Fixos</h2>
+                        <p class="texto__secao--descricao">Os custos fixos são gastos que fazem parte da estrutura do negócio e que não variam com o aumento ou dominuição da produção.</p>
+                        <p class="texto__secao--descricao">Para identificá-los pense em um cenário de suspensão de produção. Se você for reformar sua empresa, por exemplo, você ainda terá que pagar o aluguel e os salários dos funcionários. Esses gastos geralmente são fixos.</p>
+                    </div>
+
+                    <form class="formulario">
+
+                        <fieldset class=" formulario formulario__estruturais" data-form="estruturais">
+                            <legend class="titulo__secundario">Estruturais</legend>
+                        
+                            <label for="aluguel" class="label__input">Aluguel:</label>
+                            <input nome="aluguel" type="number" id="aluguel" class="input" placeholder="R$" data-input="aluguel">
+
+                            <label for="iptu" class="label__input">IPTU:</label>
+                            <input nome="iptu" type="number" id="iptu" class="input" placeholder="R$" data-input="iptu">
+
+                            <label for="energia" class="label__input">Energia Elétrica:</label>
+                            <input nome="energia" type="number" id="energia" class="input" placeholder="R$" data-input="energia">
+
+                            <label for="agua" class="label__input">Água:</label>
+                            <input nome="agua" type="number" id="agua" class="input" placeholder="R$" data-input="agua">
+
+                            <label for="outros-estruturais" class="label__input">Outros:</label>
+                            <input nome="outros-estruturais" type="number" id="outros-estruturais" class="input" placeholder="R$" data-input="outros-estruturais">
+
+                            <label for="total-estruturais" class="label__input label__input--total">Total:</label>
+                            <input nome="total-estruturais" type="number" id="total-estruturais" class="input__total" placeholder="R$" data-inputResultado="total-estruturais">
+                        </fieldset>
+
+                        <fieldset class=" formulario formulario__administrativas" data-form="administrativas">
+                            <legend class="titulo__secundario">Despesas Administrativas</legend>
+                            
+                            <label for="internet" class="label__input">Internet:</label>
+                            <input type="number" id="internet" class="input" placeholder="R$" data-input="internet">
+
+                            <label for="telefone" class="label__input">Telefone:</label>
+                            <input type="number" id="telefone" class="input" placeholder="R$" data-input="telefone">
+
+                            <label for="marketing" class="label__input">Marketing:</label>
+                            <input type="number" id="marketing" class="input" placeholder="R$" data-input="marketing">
+
+                            <label for="contabilidade" class="label__input">Contabilidade:</label>
+                            <input type="number" id="contabilidade" class="input" placeholder="R$" data-input="contabilidade">
+
+                            <label for="outros-despesas-adm" class="label__input">Outros:</label>
+                            <input type="number" id="outros-despesas-adm" class="input" placeholder="R$" data-input="outros-despesas-adm">
+
+                            <label for="total-despesas-adm" class="label__input label__input--total">Total:</label>
+                            <input type="number" id="total-despesas-adm" class="input__total" placeholder="R$" data-input="total-despesas-adm">
+                        </fieldset>
+
+                        <fieldset class=" formulario formulario__equipamentos" data-form="equipamentos">
+                            <legend class="titulo__secundario">Despesas Fixas com Equipamentos</legend>
+                            
+                            <label for="equipamento1" class="label__input--texto">
+                                <input type="text" id="equipamento1-texto" class="input input__texto" placeholder="Digite o equipamento 1">
+                            </label>
+                            <input type="number" id="equipamento1" class="input" placeholder="R$"  data-input="equipamento1">
+
+                            <label for="equipamento2" class="label__input--texto">
+                                <input type="text" id="equipamento2-texto" class="input input__texto" placeholder="Digite o equipamento 2">
+                            </label>
+                            <input type="number" id="equipamento2" class="input" placeholder="R$"  data-input="equipamento2">
+
+                            <label for="equipamento3" class="label__input--texto">
+                                <input type="text" id="equipamento3-texto" class="input input__texto" placeholder="Digite o equipamento 3">
+                            </label>
+                            <input type="number" id="equipamento3" class="input" placeholder="R$" data-input="equipamento3">
+
+                            <label for="equipamento4" class="label__input--texto">
+                                <input type="text" id="equipamento4-texto" class="input input__texto" placeholder="Digite o equipamento 4">
+                            </label>
+                            <input type="number" id="equipamento4" class="input" placeholder="R$" data-input="equipamento4">
+
+                            <label for="equipamento5" class="label__input--texto">
+                                <input type="text" id="equipamento5-texto" class="input input__texto" placeholder="Digite o equipamento 5">
+                            </label>
+                            <input type="number" id="equipamento5" class="input" placeholder="R$" data-input="equipamento5">
+
+
+                            <label for="total-equipamentos" class="label__input label__input--total">Total:</label>
+                            <input type="number" id="total-equipamentos" class="input__total" placeholder="R$" data-input="total-equipamentos">
+                        </fieldset>
+
+                        <fieldset class=" formulario  formulario__funcionarios" data-form="funcionarios">
+                            <legend class="titulo__secundario">Despesas com Funcionários</legend>
+                            
+                            <label for="salarios" class="label__input">Salários:</label>
+                            <input type="number" id="salarios" class="input" placeholder="R$" data-input="salarios">
+
+                            <label for="fgts" class="label__input">FGTS:</label>
+                            <input type="number" id="fgts" class="input" placeholder="R$" data-input="fgts">
+
+                            <label for="vale-refeicao" class="label__input">Vale refeição:</label>
+                            <input type="number" id="vale-refeicao" class="input" placeholder="R$" data-input="vale-refeicao">
+
+                            <label for="vale-transporte" class="label__input">Vale transporte:</label>
+                            <input type="number" id="vale-transporte" class="input" placeholder="R$" data-input="vale-transporte">
+
+                            <label for="beneficios" class="label__input">Benefícios:</label>
+                            <input type="number" id="beneficios" class="input" placeholder="R$" data-input="beneficios">
+
+                            <label for="outros-funcionarios" class="label__input">Outros:</label>
+                            <input type="number" id="outros-funcionarios" class="input" placeholder="R$" data-input="outros-funcionarios">
+
+                            <label for="total-funcionarios" class="label__input label__input--total">Total:</label>
+                            <input type="number" id="total-funcionarios" class="input__total" placeholder="R$" data-input="total-funcionarios">
+                        </fieldset>
+
+                        <section class="container__resultado">
+                            <div class="container__resultado--texto">
+                                <p class="texto__resultado--formulario">Custo fixo total:</p>
+                                <input type="number" class="input__resultado">
+                            </div>
+                            <a href="#" class="botao botao__custo-fixo" data-form-button>Próximo</a>
+                        </section>
+                    </form>
+                </section>
+            </main>
+
+            <aside class="menu">
+                <section class="menu__cabecalho">
+                    <a class="icone__menu--fechar"><img src="assets/imagens/icones/icone-menu-fechar.svg" alt="Menu" class=" icone__menu"></a>
+                </section>
+
+                <section class="section__menu--mais">
+                    <h3 class="titulo__secundario titulo__menu--mais"><a href="#">Custos Fixos</a></h3>
+                    <ul class="lista__menu--mais">
+                        <li class="item__menu--mais"><a href="#">Despesas Estruturais</a></li>
+                        <li class="item__menu--mais"><a href="#">Despesas Administrativas</a></li>
+                        <li class="item__menu--mais"><a href="#">Despesas com Equipamentos</a></li>
+                        <li class="item__menu--mais"><a href="#">Despesas com Funcionários</a></li>
+                    </ul>
+                </section>
+
+                <section class="section__menu--mais">
+                    <h3 class="titulo__secundario titulo__menu--mais"><a href="#">Capacidade Produtiva</a></h3>
+                    <ul class="lista__menu--mais">
+                        <li class="item__menu--mais"><a href="#">Produtividade</a></li>
+                    </ul>
+                </section>
+
+                <section class="section__menu--mais">
+                    <h3 class="titulo__secundario titulo__menu--mais"><a href="#">Causto Fixo Unitário</a></h3>
+                </section>
+
+                <section class="section__menu--mais">
+                    <h3 class="titulo__secundario titulo__menu--mais"><a href="#">Custo Variável Unitário</a></h3>
+                </section>
+
+                <section class="section__menu--mais">
+                    <h3 class="titulo__secundario titulo__menu--mais"><a href="#">Lucros, taxas e impostos</a></h3>
+                    <ul class="lista__menu--mais">
+                        <li class="item__menu--mais"><a href="#">Margem de Lucro</a></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <footer class="rodape">
+                <section class="contato__container">
+                    <img src="assets/imagens/logo-calculadora.png" alt="Logo da Calculadora de Preços" class="logo-calculadora__rodape">
+                    <ul class="lista__link--rodape">
+                        <li><a class="link__contato">Fale conosco</a></li>
+                        <li><a class="link__contato">Termos de uso</a></li>
+                        <li><a class="link__contato">Privacidade</a></li>
+                    </ul>
+                </section>
+            </footer>
+
+            <script src="js/menu.js"></script>
+            <script src="js/custofixo.js"></script>
+        </section>
+    </body>
+</html>

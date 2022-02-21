@@ -1,0 +1,62 @@
+.rodape {
+    width: 100vw;
+    height: 105px;
+    background-color: var(--background-color-padrao);
+
+    padding: 0 var(--padding-horizontal-padrao);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.contato__container {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+}
+
+.logo-calculadora__rodape {
+    height: 50px;
+}
+
+.lista__link--rodape {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link__contato {
+    font-family: var(--fonte-familia-padrao);
+    color: #FFFFFF;
+}
+
+li .link__contato {
+    font-size: var(--fonte-tamanho-rodape);
+}
+
+
+@media screen and (min-width: 1024px) {
+    .rodape { 
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;    
+    }
+
+    .contato__container {    
+        grid-column: 2 / 6;
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    
+        height: 100%;
+    }
+
+
+
+}

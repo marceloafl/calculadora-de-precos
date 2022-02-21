@@ -1,0 +1,35 @@
+.container {
+    padding: var(--padding-vertical-padrao) var(--padding-horizontal-padrao);
+    box-sizing: border-box;
+
+    border-bottom: var(--border-bottom-padrao);
+    border-radius: 5px;
+
+    background-color: #FAFAFA;
+}
+
+.container__apresentacao {
+    background-color: #FFFFFF;
+}
+
+.titulo {
+    font-family: var(--fonte-familia-padrao);
+    font-size: var(--fonte-tamanho-titulo);
+    font-weight: var(--fonte-peso-titulo);
+}
+
+.titulo__secundario {
+    font-family: var(--fonte-familia-padrao);
+    font-size: 1rem;
+    font-weight: var(--fonte-peso-titulo);
+}
+
+.titulo__secao {
+    margin-bottom: var(--margin-vertical-padrao);
+}
+
+.texto__secao--descricao {
+    font-family: var(--fonte-familia-padrao);
+    line-height: var(--fonte-altura-padrao);
+    margin-bottom: var(--margin-vertical-padrao);
+}

@@ -1,0 +1,16 @@
+.container__resultado-final {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.texto__resultado--final {
+    font-size: var(--fonte-tamanho-titulo-calculadora);
+
+    box-sizing: border-box;
+}
+
+.input__resultado--final {
+    font-size: var(--fonte-tamanho-titulo-calculadora);
+}
+
