@@ -1,26 +1,88 @@
-//FORMULARIO DE CUSTOS ESTRUTURAIS
-const formCustoEstruturais = document.querySelector('[data-form="estruturais"]');
-//INPUTS DO FORMULARIO CUSTOS ESTRUTURAIS
-const inputsCustosEstruturais = formCustoEstruturais.querySelectorAll('[data-input]');
-
-//INPUT TOTAL CUSTOS ESTRUTURAIS
-const inputTotalCustoEstrutural = formCustoEstruturais.querySelector('[data-inputResultado]');
-
+const formCustosEstruturais = document.querySelector('[data-form="estruturais"]');
+const listaInputsCustosEstruturais = formCustosEstruturais.querySelectorAll('[data-input]');
+const inputTotalCustoEstrutural = formCustosEstruturais.querySelector('[data-inputResultado]');
 
 let custoTotalEstrutural = 0;
 
-for(let i = 0; i < inputsCustosEstruturais.length; i++) {
-    inputsCustosEstruturais[i].addEventListener('change', function () {
-        valoresCustosEstruturais = inputsCustosEstruturais[i].value;
+listaInputsCustosEstruturais.forEach(function(input){
+    input.addEventListener('change', function() {
+        valoresCustosEstruturais = input.value;       
         valoresCustosEstruturaisFormatados = parseFloat(valoresCustosEstruturais);
 
         custoTotalEstrutural += valoresCustosEstruturaisFormatados;
 
         inputTotalCustoEstrutural.value = custoTotalEstrutural;
-        
+    });
+});
+
+
+const formDespesasAdministrativas = document.querySelector('[data-form="administrativas"]');
+const listaInputsDespesasAdministrativas = formDespesasAdministrativas.querySelectorAll('[data-input]');
+const inputTotalDespesasAdministrativas = formDespesasAdministrativas.querySelector('[data-inputResultado]');
+
+let despesaTotalAdministrativa = 0;
+
+listaInputsDespesasAdministrativas.forEach(function(input) {
+    input.addEventListener('change', function (){
+        valoresDepesasAdministrativas = input.value;
+        valoresDepesasAdministrativasFormatados = parseFloat(valoresDepesasAdministrativas);
+
+        despesaTotalAdministrativa += valoresDepesasAdministrativasFormatados;
+
+        inputTotalDespesasAdministrativas.value = despesaTotalAdministrativa;
+    });
+});
+
+
+const formDespesasEquipamentos = document.querySelector('[data-form="equipamentos"]');
+const listaInputsDespesasEquipamentos = formDespesasEquipamentos.querySelectorAll('[data-input]');
+const inputTotalDespesasEquipamentos = formDespesasEquipamentos.querySelector('[data-inputResultado]');
+
+let custoTotalEquipamentos = 0;
+
+for(let i = 0; i < listaInputsDespesasEquipamentos.length; i++) {
+    listaInputsDespesasEquipamentos[i].addEventListener('change', function () {
+        valoresDespesasEquipamentos = listaInputsDespesasEquipamentos[i].value;
+        valoresDespesasEquipamentosFormatados = parseFloat(valoresDespesasEquipamentos);
+
+        custoTotalEquipamentos += valoresDespesasEquipamentosFormatados;
+
+        inputTotalDespesasEquipamentos.value = custoTotalEquipamentos;
     });
 }
 
+
+const formDespesasFuncionarios = document.querySelector('[data-form="funcionarios"]');
+const listaInputsDespesasFuncionarios = formDespesasFuncionarios.querySelectorAll('[data-input]');
+const inputTotalDespesasFuncionarios = formDespesasFuncionarios.querySelector('[data-inputResultado]');
+
+let despesaTotalFuncionarios = 0;
+
+listaInputsDespesasFuncionarios.forEach(function(input) {
+    input.addEventListener('change', function (){
+        valoresDepesasFuncionarios = input.value;
+        valoresDepesasFuncionariosFormatados = parseFloat(valoresDepesasFuncionarios);
+
+        despesaTotalFuncionarios += valoresDepesasFuncionariosFormatados;
+
+        inputTotalDespesasFuncionarios.value = despesaTotalFuncionarios;
+    });
+});
+
+
+const inputCustoFixoTotal = document.querySelector('[data-resultado="custo-fixo"]')
+const listaInputs = document.querySelectorAll('[data-input]');
+let custoFixoTotal = 0;
+
+listaInputs.forEach(function(input) {
+    input.addEventListener('change', function () {
+        valorCustoFixoTotal = input.value;
+        valorCustoFixoTotalFormatado = parseFloat(valorCustoFixoTotal);
+
+        custoFixoTotal += valorCustoFixoTotalFormatado;
+        inputCustoFixoTotal.value = custoFixoTotal;
+    })
+})
 
 
 
