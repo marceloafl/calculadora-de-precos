@@ -7,20 +7,6 @@
     box-sizing: border-box;
 }
 
-.container__resultado {
-    margin: var(--margin-vertical-padrao) 0;
-
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.container__resultado--texto {
-    display: flex;
-    align-items: baseline;
-}
-
 .texto__resultado--formulario {
     font-size: var(--fonte-tamanho-padrao);
     font-family: var(--fonte-familia-padrao);
