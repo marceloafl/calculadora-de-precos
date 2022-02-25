@@ -3,9 +3,8 @@ export class Produtividade {
         constructor() {
                 this.tempoNaoOcioso = 0.8;
                 this.qtdeSemanas = 4;
-                this.horasTrabMes = this.calculaHorasTrabMes();
-                this.escutaInputHoras();
-                this.escutaInputFuncionarios();
+                this.horasTrabMes = 0;
+                this.produtividade = 0;
         }
 
         calculaHorasTrabMes() {
@@ -21,6 +20,10 @@ export class Produtividade {
                 return horasTrabMes;
         }
 
+        defineHorasTrabMes() {
+                this.horasTrabMes = this.calculaHorasTrabMes;
+        }
+
         calculaProdutividade() {
                 let produtividade = this.calculaHorasTrabMes() * this.tempoNaoOcioso;
 
@@ -30,21 +33,8 @@ export class Produtividade {
                 return produtividade;
         }
 
-        escutaInputHoras() {
-                const inputHorasTrabSemana = document.querySelector('[data-input="horas-semana"]');                
-                inputHorasTrabSemana.addEventListener('change', () => {
-                        this.calculaHorasTrabMes();
-                        this.calculaProdutividade();
-                })
-        }            
-        
-        
-        escutaInputFuncionarios() {
-                const inputQtdeFuncionarios = document.querySelector('[data-input="quantidade-funcionarios"]');
-                inputQtdeFuncionarios.addEventListener('change', () => {
-                        this.calculaHorasTrabMes();
-                        this.calculaProdutividade();
-                })
+        defineProdutividade() {
+                this.produtividade = this.calculaProdutividade();
         }
 }
 

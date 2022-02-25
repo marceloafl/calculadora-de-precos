@@ -1,6 +1,8 @@
 import { CustoFixo } from "./custo-fixo.js"
+import { Produtividade } from "./capacidade-produtiva.js"
 
 const custoFixo = new CustoFixo;
+const produtividade = new Produtividade;
 
 const listaInput = document.querySelectorAll('[data-input]');
 
@@ -23,14 +25,22 @@ listaInput.forEach( input => {
         custoFixo.preencheInputDespFunc();
         custoFixo.defineDespesaFuncionarios();
 
-        console.log('CusFix Total antes', custoFixo.custoFixo);
         let custoFixoAtual = custoFixo.calculaCustoFixoTotal();
         custoFixo.preencheCustoFixoTotal();
         custoFixo.defineCustoFixoTotal();
-        console.log('CusFix Total depois', custoFixo.custoFixo);
+
+        produtividade.calculaHorasTrabMes();
+        produtividade.defineHorasTrabMes();
+
+        let produtividadeAtual = produtividade.calculaProdutividade()
+        produtividade.defineProdutividade();
+
+        console.log('Custo Fixo: ', custoFixoAtual);
+        console.log('Produtividade: ', produtividadeAtual);
 
     })
 })
+
 
 
 
