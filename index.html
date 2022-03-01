@@ -207,17 +207,17 @@
                                 <input type="number" id="tempo-necessario" class="input" data-input="tempo-producao">
                                 
                                 <label for="custo-fixo-hora" class="label__input">Custo fixo por hora:</label>
-                                <input type="number" id="custo-fixo-hora" class="input" data-input="custo-fixo-hora">
+                                <input type="number" id="custo-fixo-hora" class="input" data-input="custo-fixo-hora" readonly>
             
                                 <label for="custo-fixo-minuto" class="label__input">Custo fixo por minuto:</label>
-                                <input type="number" id="custo-fixo-minuto" class="input" data-input="custo-fixo-minuto">
+                                <input type="number" id="custo-fixo-minuto" class="input" data-input="custo-fixo-minuto" readonly>
             
                             </fieldset>
 
                             <section class="container__resultado">
                                 <div class="container__resultado--texto"></div>
                                     <p class="texto__resultado--formulario">Custo fixo unitário:</p>
-                                    <input type="number" class="input__resultado">
+                                    <input type="number" class="input__resultado" data-resultado="custo-fixo-unitario">
                                 </div>
                                 <a href="#" class="botao" data-button="custo-fixo-unitario">Próximo</a>
                                 <a href="#" class="botao__voltar" data-button="voltar-custo-fixo-unitario">Voltar</a>
@@ -235,64 +235,64 @@
 
                     <form class="formulario">
 
-                        <fieldset class=" formulario">
+                        <fieldset class=" formulario" data-form="custo-variavel-unitario">
                             <legend class="titulo__secundario">Produtos e materiais utilizados</legend>
                                 
                             <label for="material1" class="label__input--texto">
-                                <input type="text" id="material1-texto" class="input input__texto"placeholder="Digite o material 1">
+                                <input type="text" id="material1-texto" class="input input__texto" placeholder="Digite o material 1">
                             </label>
-                            <input type="number" id="material1" class="input" placeholder="R$">
+                            <input type="number" id="material1" class="input" placeholder="R$" data-input="material1">
 
                         <label for="material2" class="label__input--texto">
-                            <input type="text" id="material2-texto" class="input input__textoplaceholder="Digite o material 2">
+                            <input type="text" id="material2-texto" class="input input__texto" placeholder="Digite o material 2">
                         </label>
-                        <input type="number" id="material2" class="input" placeholder="R$">
+                        <input type="number" id="material2" class="input" placeholder="R$" data-input="material2">
 
                             <label for="material3" class="label__input--texto">
-                                <input type="text" id="material3-texto" class="input input__texto"placeholder="Digite o material 3">
+                                <input type="text" id="material3-texto" class="input input__texto" placeholder="Digite o material 3">
                             </label>
-                            <input type="number" id="material3" class="input" placeholder="R$">
+                            <input type="number" id="material3" class="input" placeholder="R$" data-input="material3">
 
                             <label for="material4" class="label__input--texto">
-                                <input type="text" id="material4-texto" class="input input__texto"placeholder="Digite o material 4">
+                                <input type="text" id="material4-texto" class="input input__texto" placeholder="Digite o material 4">
                             </label>
-                            <input type="number" id="material4" class="input" placeholder="R$">
+                            <input type="number" id="material4" class="input" placeholder="R$" data-input="material4">
 
                             <label for="material5" class="label__input--texto">
-                                <input type="text" id="material5-texto" class="input input__texto"placeholder="Digite o material 5">
+                                <input type="text" id="material5-texto" class="input input__texto" placeholder="Digite o material 5">
                             </label>
-                            <input type="number" id="material5" class="input" placeholder="R$">
+                            <input type="number" id="material5" class="input" placeholder="R$" data-input="material5">
 
                             <label for="material6" class="label__input--texto">
-                                <input type="text" id="material6-texto" class="input input__texto"placeholder="Digite o material 6">
+                                <input type="text" id="material6-texto" class="input input__texto" placeholder="Digite o material 6">
                             </label>
-                            <input type="number" id="material6" class="input" placeholder="R$">
+                            <input type="number" id="material6" class="input" placeholder="R$" data-input="material6">
 
                             <label for="material7" class="label__input--texto">
-                                <input type="text" id="material7-texto" class="input input__texto"placeholder="Digite o material 7">
+                                <input type="text" id="material7-texto" class="input input__texto" placeholder="Digite o material 7">
                             </label>
-                            <input type="number" id="material7" class="input" placeholder="R$">
+                            <input type="number" id="material7" class="input" placeholder="R$" data-input="material7">
 
                             <label for="material8" class="label__input--texto">
-                                <input type="text" id="material8-texto" class="input input__texto"placeholder="Digite o material 8">
+                                <input type="text" id="material8-texto" class="input input__texto" placeholder="Digite o material 8">
                             </label>
-                            <input type="number" id="material8" class="input" placeholder="R$">
+                            <input type="number" id="material8" class="input" placeholder="R$" data-input="material8">
 
                             <label for="material9" class="label__input--texto">
-                                <input type="text" id="material9-texto" class="input input__texto"placeholder="Digite o material 9">
+                                <input type="text" id="material9-texto" class="input input__texto" placeholder="Digite o material 9">
                             </label>
-                            <input type="number" id="material9" class="input" placeholder="R$">
+                            <input type="number" id="material9" class="input" placeholder="R$" data-input="material9">
 
                             <label for="material10" class="label__input--texto">
-                                <input type="text" id="material10-texto" class="input input__texto"placeholder="Digite o material 10">
+                                <input type="text" id="material10-texto" class="input input__texto" placeholder="Digite o material 10">
                             </label>
-                            <input type="number" id="material10" class="input" placeholder="R$">
+                            <input type="number" id="material10" class="input" placeholder="R$" data-input="material10">
                         </fieldset>
 
                         <section class="container__resultado">
                             <div class="container__resultado--texto">
                                 <p class="texto__resultado--formulario">Custo variável unitário:</p>
-                                <input type="number" class="input__resultado">
+                                <input type="number" class="input__resultado" data-resultado="custo-variavel-unitario">
                             </div>
                             <a href="#" class="botao" data-button="custo-variavel-unitario">Próximo</a>
                             <a href="#" class="botao__voltar" data-button="voltar-custo-variavel-unitario">Voltar</a>
@@ -309,20 +309,20 @@
 
                     <form class="formulario">
 
-                        <fieldset class=" formulario">
+                        <fieldset class=" formulario" data-form="lucros-taxas">
                             <legend class="titulo__secundario">Impostos (%)</legend>
                             
                             <label for="aluguel" class="label__input">Taxas de cartão (%):</label>
-                            <input type="number" id="aluguel" class="input" placeholder="R$">
+                            <input type="number" id="aluguel" class="input" placeholder="R$" data-input="taxas-cartao">
 
                             <label for="iptu" class="label__input">Outras taxas (%):</label>
-                            <input type="number" id="iptu" class="input" placeholder="R$">
+                            <input type="number" id="iptu" class="input" placeholder="R$" data-input="taxas-outras">
 
                             <label for="energia" class="label__input">Investimentos (%):</label>
-                            <input type="number" id="energia" class="input" placeholder="R$">
+                            <input type="number" id="energia" class="input" placeholder="R$" data-input="investimentos">
 
                             <label for="agua" class="label__input">Margem de Lucro (%):</label>
-                            <input type="number" id="agua" class="input" placeholder="R$">
+                            <input type="number" id="agua" class="input" placeholder="R$" data-input="margem-lucro">
                         </fieldset>
 
                         <section class="container__resultado">
@@ -339,20 +339,20 @@
                         <p class="texto__secao--descricao">Os valores indicados são sugestões calculadas de acordocom os dados que você preencheu nas etapas anteriores.</p>
                     </div>
 
-                    <form class="formulario">
+                    <form class="formulario" data-form="resultado-final">
                         <section class="container__resultado">
                             <div class="container__resultado--texto container__resultado-final">
                                 <p class="texto__resultado--formulario">Custo unitário fixo:</p>
-                                <input class="input__resultado">
+                                <input class="input__resultado" data-input="resultado-final-custo-unit-fixo">
 
                                 <p class="texto__resultado--formulario">Custo unitário variável:</p>
-                                <input class="input__resultado">
+                                <input class="input__resultado" data-input="resultado-final-custo-unit-var">
 
                                 <p class="texto__resultado--formulario">Custo total unitário:</p>
-                                <input class="input__resultado">
+                                <input class="input__resultado" data-input="resultado-final-custo-unit-total">
 
                                 <p class="texto__resultado--formulario texto__resultado--final">Preço mínimo de venda:</p>
-                                <input class="input__resultado input__resultado--final">
+                                <input class="input__resultado input__resultado--final" data-input="resultado-final-preco-minimo">
 
                             </div>
                             <a href="#" class="botao" data-button="resultado-final">Novo cálculo</a>

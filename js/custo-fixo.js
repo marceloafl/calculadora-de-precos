@@ -19,7 +19,7 @@ export class CustoFixo {
             return input.value = 0;
         })
 
-        let custoEstrutural = valoresCustEstr.reduce(function(acum, atual) {
+        const custoEstrutural = valoresCustEstr.reduce(function(acum, atual) {
             return acum + atual;
         });
 
