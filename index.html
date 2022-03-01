@@ -63,7 +63,7 @@
                             <input nome="outros-estruturais" type="number" id="outros-estruturais" class="input" placeholder="R$" data-input="outros-estruturais">
 
                             <label for="total-estruturais" class="label__input label__input--total">Total:</label>
-                            <input nome="total-estruturais" type="number" id="total-estruturais" class="input__total" placeholder="R$" data-inputResultado="total-estruturais">
+                            <input nome="total-estruturais" type="number" id="total-estruturais" class="input__total" placeholder="R$" data-inputResultado="total-estruturais" readonly>
                         </fieldset>
 
                         <fieldset class=" formulario formulario__administrativas" data-form="administrativas">
@@ -85,7 +85,7 @@
                             <input type="number" id="outros-despesas-adm" class="input" placeholder="R$" data-input="outros-despesas-adm">
 
                             <label for="total-despesas-adm" class="label__input label__input--total">Total:</label>
-                            <input type="number" id="total-despesas-adm" class="input__total" placeholder="R$" data-inputResultado="total-administrativas">
+                            <input type="number" id="total-despesas-adm" class="input__total" placeholder="R$" data-inputResultado="total-administrativas" readonly>
                         </fieldset>
 
                         <fieldset class=" formulario formulario__equipamentos" data-form="equipamentos">
@@ -118,7 +118,7 @@
 
 
                             <label for="total-equipamentos" class="label__input label__input--total">Total:</label>
-                            <input type="number" id="total-equipamentos" class="input__total" placeholder="R$" data-inputResultado="total-equipamentos">
+                            <input type="number" id="total-equipamentos" class="input__total" placeholder="R$" data-inputResultado="total-equipamentos" readonly>
                         </fieldset>
 
                         <fieldset class=" formulario  formulario__funcionarios" data-form="funcionarios">
@@ -143,13 +143,13 @@
                             <input type="number" id="outros-funcionarios" class="input" placeholder="R$" data-input="outros-funcionarios">
 
                             <label for="total-funcionarios" class="label__input label__input--total">Total:</label>
-                            <input type="number" id="total-funcionarios" class="input__total" placeholder="R$" data-inputResultado="total-funcionarios">
+                            <input type="number" id="total-funcionarios" class="input__total" placeholder="R$" data-inputResultado="total-funcionarios" readonly>
                         </fieldset>
 
                         <section class="container__resultado">
                             <div class="container__resultado--texto">
                                 <p class="texto__resultado--formulario">Custo fixo total:</p>
-                                <input type="number" class="input__resultado" data-resultado="custo-fixo">
+                                <input type="number" class="input__resultado" data-resultado="custo-fixo" readonly>
                             </div>
                             <a href="#" class="botao" data-button="custo-fixo">Próximo</a>
                         </section>
@@ -183,7 +183,7 @@
                         <section class="container__resultado">
                             <div class="container__resultado--texto"></div>
                                 <p class="texto__resultado--formulario">Produtividade (em horas):</p>
-                                <input type="number" class="input__resultado" data-resultado="produtividade">
+                                <input type="number" class="input__resultado" data-resultado="produtividade" readonly>
                             </div>
                             <a href="#" class="botao" data-button="capacidade-produtiva">Próximo</a>
                             <a href="#" class="botao__voltar" data-button="voltar-capacidade-produtiva">Voltar</a>
@@ -217,7 +217,7 @@
                             <section class="container__resultado">
                                 <div class="container__resultado--texto"></div>
                                     <p class="texto__resultado--formulario">Custo fixo unitário:</p>
-                                    <input type="number" class="input__resultado" data-resultado="custo-fixo-unitario">
+                                    <input type="number" class="input__resultado" data-resultado="custo-fixo-unitario" readonly>
                                 </div>
                                 <a href="#" class="botao" data-button="custo-fixo-unitario">Próximo</a>
                                 <a href="#" class="botao__voltar" data-button="voltar-custo-fixo-unitario">Voltar</a>
@@ -313,16 +313,16 @@
                             <legend class="titulo__secundario">Impostos (%)</legend>
                             
                             <label for="aluguel" class="label__input">Taxas de cartão (%):</label>
-                            <input type="number" id="aluguel" class="input" placeholder="R$" data-input="taxas-cartao">
+                            <input type="number" id="aluguel" class="input" placeholder="%" data-input="taxas-cartao">
 
                             <label for="iptu" class="label__input">Outras taxas (%):</label>
-                            <input type="number" id="iptu" class="input" placeholder="R$" data-input="taxas-outras">
+                            <input type="number" id="iptu" class="input" placeholder="%" data-input="taxas-outras">
 
                             <label for="energia" class="label__input">Investimentos (%):</label>
-                            <input type="number" id="energia" class="input" placeholder="R$" data-input="investimentos">
+                            <input type="number" id="energia" class="input" placeholder="%" data-input="investimentos">
 
                             <label for="agua" class="label__input">Margem de Lucro (%):</label>
-                            <input type="number" id="agua" class="input" placeholder="R$" data-input="margem-lucro">
+                            <input type="number" id="agua" class="input" placeholder="%" data-input="margem-lucro">
                         </fieldset>
 
                         <section class="container__resultado">
@@ -343,16 +343,16 @@
                         <section class="container__resultado">
                             <div class="container__resultado--texto container__resultado-final">
                                 <p class="texto__resultado--formulario">Custo unitário fixo:</p>
-                                <input class="input__resultado" data-input="resultado-final-custo-unit-fixo">
+                                <input class="input__resultado" data-input="resultado-final-custo-unit-fixo" readonly>
 
                                 <p class="texto__resultado--formulario">Custo unitário variável:</p>
-                                <input class="input__resultado" data-input="resultado-final-custo-unit-var">
+                                <input class="input__resultado" data-input="resultado-final-custo-unit-var" readonly>
 
                                 <p class="texto__resultado--formulario">Custo total unitário:</p>
-                                <input class="input__resultado" data-input="resultado-final-custo-unit-total">
+                                <input class="input__resultado" data-input="resultado-final-custo-unit-total" readonly>
 
                                 <p class="texto__resultado--formulario texto__resultado--final">Preço mínimo de venda:</p>
-                                <input class="input__resultado input__resultado--final" data-input="resultado-final-preco-minimo">
+                                <input class="input__resultado input__resultado--final" data-input="resultado-final-preco-minimo" readonly>
 
                             </div>
                             <a href="#" class="botao" data-button="resultado-final">Novo cálculo</a>

@@ -38,10 +38,8 @@ listaInput.forEach( input => {
         custoFixo.defineCustoFixoTotal();
 
         produtividade.calculaHorasTrabMes();
-        produtividade.defineHorasTrabMes();
 
         const produtividadeAtual = produtividade.calculaProdutividade()
-        produtividade.defineProdutividade();
 
         const custoFixoHora = custoFixoUnitario.calculaCustoFixoHora(custoFixoAtual, produtividadeAtual);
         const custoFixoMinuto = custoFixoUnitario.calculaCustoFixoMinuto(custoFixoHora);
@@ -55,7 +53,7 @@ listaInput.forEach( input => {
         const custoVariavelUnitarioAtual = custoVariavelUnitario.calculaCustoVariavelUnitario();
         custoVariavelUnitario.preencheInputCustoVariavelUnitario();
 
-        const custoDeProducao = custoFixoUnitarioAtual + custoVariavelUnitarioAtual;
+        const custoDeProducaoAtual = custoFixoUnitarioAtual + custoVariavelUnitarioAtual;
 
         lucroETaxas.somaTaxas();
         const markUpAtual = lucroETaxas.calculaMarkUp();
@@ -66,13 +64,47 @@ listaInput.forEach( input => {
         const inputResultadoCustoUnitarioTotal = formResultadoFinal.querySelector('[data-input="resultado-final-custo-unit-total"]');
         const inputResultadoPrecoMinimo = formResultadoFinal.querySelector('[data-input="resultado-final-preco-minimo"]');
 
-        inputResultadoCustoUnitarioFixo.value = (custoFixoUnitarioAtual).toFixed(2);
-        inputResultadoCustoUnitarioVar.value = (custoVariavelUnitarioAtual).toFixed(2);
-        inputResultadoCustoUnitarioTotal.value = (custoDeProducao).toFixed(2);
-        inputResultadoPrecoMinimo.value = (custoDeProducao * markUpAtual).toFixed(2);
+        if (custoFixoUnitarioAtual >= 0) {
+            inputResultadoCustoUnitarioFixo.value = (custoFixoUnitarioAtual).toFixed(2);
+        } else {
+            inputResultadoCustoUnitarioFixo.value = 0;
+        }
+
+        if (custoVariavelUnitarioAtual >= 0) {
+            inputResultadoCustoUnitarioVar.value = (custoVariavelUnitarioAtual).toFixed(2);
+        } else {
+            inputResultadoCustoUnitarioVar.value = 0;
+        }
+
+        if (custoDeProducaoAtual >= 0) {
+            inputResultadoCustoUnitarioTotal.value = (custoDeProducaoAtual).toFixed(2);
+        } else {
+            inputResultadoCustoUnitarioTotal.value = 0;
+        }
+
+        if (custoDeProducaoAtual >= 0) {
+            inputResultadoPrecoMinimo.value = (custoDeProducaoAtual * markUpAtual).toFixed(2);
+        } else {
+            inputResultadoPrecoMinimo.value = 0;
+        }
+
+        console.log('Custo Fixo: ', custoFixoAtual);
+        console.log('Produtividade: ', produtividadeAtual);
+        console.log('Custo Fixo Unitário: ', custoFixoUnitarioAtual);
+        console.log('CustoVariável Unitário: ', custoVariavelUnitarioAtual);
+        console.log('Custo de Produção: ', custoDeProducaoAtual);
+        console.log('MarkUp: ', markUpAtual);
 
     })
 })
+
+
+
+
+
+
+
+
 
 
 

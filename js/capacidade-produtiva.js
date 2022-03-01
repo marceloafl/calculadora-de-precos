@@ -17,11 +17,10 @@ export class Produtividade {
 
                 const inputHorasTrabMes = document.querySelector('[data-input="horas-mes"]');
                 inputHorasTrabMes.value = horasTrabMes;
-                return horasTrabMes;
-        }
 
-        defineHorasTrabMes() {
-                this.horasTrabMes = this.calculaHorasTrabMes();
+                this.horasTrabMes = horasTrabMes;
+
+                return horasTrabMes;
         }
 
         calculaProdutividade() {
@@ -29,13 +28,12 @@ export class Produtividade {
 
                 const inputProdutividadeFinal = document.querySelector('[data-resultado="produtividade"]');
                 inputProdutividadeFinal.value = produtividade;
+                
+                this.produtividade = produtividade;
 
                 return produtividade;
         }
 
-        defineProdutividade() {
-                this.produtividade = this.calculaProdutividade();
-        }
 }
 
 
