@@ -1,32 +1,48 @@
 export class LucroETaxas {
     constructor() {
         this.taxasSomadas = 0;
-        this.margemLucro = 0;
+        this.markUp = 0;
     }
 
-    somaTaxas() {
+    validaTaxas() {
         const formLucrosETaxas = document.querySelector('[data-form="lucros-taxas"]');
         const listaInputsLucrosETaxas = formLucrosETaxas.querySelectorAll('[data-input]');
         const arraylistaInputsLucrosETaxas = Array.from(listaInputsLucrosETaxas);
 
         const valoresTaxas = arraylistaInputsLucrosETaxas.map(function (input) {
-            if (input.value.length >= 1) {
+            if (input.value.length >= 1 && input.value >= 0) {
                 return parseFloat(input.value);
+            } else {
+                return input.value = 0;
             }
-            return input.value = 0;
         })
 
-        const somaTaxas = valoresTaxas.reduce(function(acum, atual) {
+        return valoresTaxas;
+    }
+
+    somaTaxas() {
+        const somaTaxas = this.validaTaxas().reduce(function(acum, atual) {
             return acum + atual
-        })
-        
-        this.taxasSomadas = somaTaxas;
+        })       
 
         return somaTaxas;
+    }
+
+    defineSomaTaxas() {
+        this.taxasSomadas = this.somaTaxas();
     }
 
     calculaMarkUp() {
         const markUp = 100 / (100 - this.somaTaxas());
         return markUp;
     }
+
+    defineMarkUp() {
+        this.markUp = this.calculaMarkUp();
+    }
+    
 }
+
+
+
+

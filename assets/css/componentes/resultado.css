@@ -1,7 +1,6 @@
-
-
 .texto__resultado--final {
     font-size: var(--fonte-tamanho-titulo-calculadora);
+    text-align: center;
 
     box-sizing: border-box;
 }

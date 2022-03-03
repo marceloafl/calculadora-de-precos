@@ -1,4 +1,4 @@
-.ide {
+.hide {
     display: none;
 }
 
@@ -20,5 +20,20 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.container__texto--resultado-final {
+    background-color: #FFF;
+    border-radius: 10px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: var(--padding-horizontal-padrao);
+    margin: var(--margin-vertical--botao) 0;
+
 }
 

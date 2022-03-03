@@ -3,7 +3,7 @@ export class CustoVariavelUnitario {
         this.custoVariavelUnitario = 0;
     }
 
-    calculaCustoVariavelUnitario() {
+    validaCustoVariavelUnitario() {
         const formCustoVarUnit = document.querySelector('[data-form="custo-variavel-unitario"]');
         const listaInputCustoVarUnit = formCustoVarUnit.querySelectorAll('[data-input]');
         const arrayListaInputCustVarUnit = Array.from(listaInputCustoVarUnit);
@@ -15,17 +15,28 @@ export class CustoVariavelUnitario {
             return input.value = 0;
         })
 
-        const custoVariavelUnitario = valoresInputCustVarUnit.reduce(function(acum, atual) {
-            return acum + atual;
-        });
+        return valoresInputCustVarUnit;
+    }
 
-        this.custoVariavelUnitario = custoVariavelUnitario;
+    calculaCustoVariavelUnitario(){
+        const custoVariavelUnitario = this.validaCustoVariavelUnitario().reduce(function(acum, atual) {
+            return acum + atual;
+        });       
 
         return custoVariavelUnitario;
+    }
+
+    defineCustoVariavelUnitario() {
+        this.custoVariavelUnitario = this.calculaCustoVariavelUnitario();
     }
 
     preencheInputCustoVariavelUnitario() {
         const inputCustoVarUnitario = document.querySelector('[data-resultado="custo-variavel-unitario"]');
         inputCustoVarUnitario.value = (this.calculaCustoVariavelUnitario()).toFixed(2);
     }
+
 }
+
+
+
+

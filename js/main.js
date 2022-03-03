@@ -17,83 +17,122 @@ const listaInput = document.querySelectorAll('[data-input]');
 listaInput.forEach( input => {
     input.addEventListener('change', () => {
 
-        custoFixo.calculaCustoEstrutural();
-        custoFixo.preencheInputCustoEstr();
-        custoFixo.defineCustoEstrutural();
 
-        custoFixo.calculaDespesaAdministrativa();
-        custoFixo.preencheInputDespAdm();
-        custoFixo.defineDespesaAdministrativa();
+        function obtemCustoFixo(){
+            custoFixo.preencheCustoEstrutural();
+            custoFixo.defineCustoEstrutural();
 
-        custoFixo.calculaDespesaEquipamentos();
-        custoFixo.preencheInputDespEquip();
-        custoFixo.defineDespesaEquipamentos();
+            custoFixo.preencheDespesaAdministrativa();
+            custoFixo.defineDespesaAdministrativa();
+                
+            custoFixo.preencheDespesaEquipamentos();
+            custoFixo.defineDespesaEquipamentos();
+                
+            custoFixo.preencheDespesaFuncionarios();
+            custoFixo.defineDespesaFuncionarios();
 
-        custoFixo.calculaDespesaFuncionarios();
-        custoFixo.preencheInputDespFunc();
-        custoFixo.defineDespesaFuncionarios();
+            custoFixo.preencheCustoFixo();
 
-        const custoFixoAtual = custoFixo.calculaCustoFixoTotal();
-        custoFixo.preencheCustoFixoTotal();
-        custoFixo.defineCustoFixoTotal();
-
-        produtividade.calculaHorasTrabMes();
-
-        const produtividadeAtual = produtividade.calculaProdutividade()
-
-        const custoFixoHora = custoFixoUnitario.calculaCustoFixoHora(custoFixoAtual, produtividadeAtual);
-        const custoFixoMinuto = custoFixoUnitario.calculaCustoFixoMinuto(custoFixoHora);
-        const tempoDeExecucaoAtual = custoFixoUnitario.recebeTempoDeExecucao()
-        const custoFixoUnitarioAtual = custoFixoUnitario.calculaCustoFixoUnitario(custoFixoMinuto, tempoDeExecucaoAtual);
-
-        custoFixoUnitario.preencheInputCustoFixoHora();
-        custoFixoUnitario.preencheInputCustoFixoMinuto();
-        custoFixoUnitario.preencheInputCustoFixoUnitario();
-
-        const custoVariavelUnitarioAtual = custoVariavelUnitario.calculaCustoVariavelUnitario();
-        custoVariavelUnitario.preencheInputCustoVariavelUnitario();
-
-        const custoDeProducaoAtual = custoFixoUnitarioAtual + custoVariavelUnitarioAtual;
-
-        lucroETaxas.somaTaxas();
-        const markUpAtual = lucroETaxas.calculaMarkUp();
-
-        const formResultadoFinal = document.querySelector('[data-form="resultado-final"]');
-        const inputResultadoCustoUnitarioFixo = formResultadoFinal.querySelector('[data-input="resultado-final-custo-unit-fixo"]');
-        const inputResultadoCustoUnitarioVar = formResultadoFinal.querySelector('[data-input="resultado-final-custo-unit-var"]');
-        const inputResultadoCustoUnitarioTotal = formResultadoFinal.querySelector('[data-input="resultado-final-custo-unit-total"]');
-        const inputResultadoPrecoMinimo = formResultadoFinal.querySelector('[data-input="resultado-final-preco-minimo"]');
-
-        if (custoFixoUnitarioAtual >= 0) {
-            inputResultadoCustoUnitarioFixo.value = (custoFixoUnitarioAtual).toFixed(2);
-        } else {
-            inputResultadoCustoUnitarioFixo.value = 0;
+            const custoFixoAtual = custoFixo.custoFixo;
+            return custoFixoAtual;
         }
 
-        if (custoVariavelUnitarioAtual >= 0) {
-            inputResultadoCustoUnitarioVar.value = (custoVariavelUnitarioAtual).toFixed(2);
-        } else {
-            inputResultadoCustoUnitarioVar.value = 0;
+
+        function obtemProdutividade(){
+            produtividade.preencheInputHorasMes();
+            produtividade.preencheInputProdutividade();
+
+            const produtividadeAtual = produtividade.produtividade;
+            return produtividadeAtual;
         }
 
-        if (custoDeProducaoAtual >= 0) {
-            inputResultadoCustoUnitarioTotal.value = (custoDeProducaoAtual).toFixed(2);
-        } else {
-            inputResultadoCustoUnitarioTotal.value = 0;
+
+        function obtemCustoFixoUnitario(){
+            const custoFixoHoraAtual = custoFixoUnitario.calculaCustoFixoHora(obtemCustoFixo(), obtemProdutividade());
+            custoFixoUnitario.preencheInputCustoFixoHora();
+            const custoFixoMinAtual = custoFixoUnitario.calculaCustoFixoMinuto(custoFixoHoraAtual);
+            custoFixoUnitario.preencheInputCustoFixoMinuto();
+            const tempoDeExecucaoAtual = custoFixoUnitario.recebeTempoDeExecucao()
+
+            custoFixoUnitario.preencheInputCustoFixoUnitario();
+
+            const custoFixoUnitarioAtual = custoFixoUnitario.calculaCustoFixoUnitario(custoFixoMinAtual, tempoDeExecucaoAtual);
+            return custoFixoUnitarioAtual;
+
         }
 
-        if (custoDeProducaoAtual >= 0) {
-            inputResultadoPrecoMinimo.value = (custoDeProducaoAtual * markUpAtual).toFixed(2);
-        } else {
-            inputResultadoPrecoMinimo.value = 0;
+
+        function obtemCustoVariavelUnitario(){
+            custoVariavelUnitario.defineCustoVariavelUnitario();
+            custoVariavelUnitario.preencheInputCustoVariavelUnitario();
+
+            const custoVariavelUnitarioAtual = custoVariavelUnitario.custoVariavelUnitario;
+            return custoVariavelUnitarioAtual;
         }
 
-        console.log('Custo Fixo: ', custoFixoAtual);
-        console.log('Produtividade: ', produtividadeAtual);
-        console.log('Custo Fixo Unitário: ', custoFixoUnitarioAtual);
-        console.log('CustoVariável Unitário: ', custoVariavelUnitarioAtual);
-        console.log('Custo de Produção: ', custoDeProducaoAtual);
-        console.log('MarkUp: ', markUpAtual);
+
+        function obtemCustoTotalDoProduto(){
+            const custoTotalDoProduto = obtemCustoFixoUnitario() + obtemCustoVariavelUnitario();
+            return custoTotalDoProduto
+        }
+
+
+        function obtemMarkUp(){
+            lucroETaxas.calculaMarkUp();
+            lucroETaxas.defineMarkUp();
+            lucroETaxas.defineSomaTaxas();
+
+            const markUpAtual = lucroETaxas.markUp;
+            return markUpAtual;
+        }
+
+
+        function obtemSugestaoDePreco(){
+            const sugestaoDePreco = obtemCustoTotalDoProduto() * obtemMarkUp();
+            return sugestaoDePreco;
+        }
+
+
+        function preencheInputCustoUnitarioFixo(){
+            const inputResultadoCustoUnitarioFixo = document.querySelector('[data-input="resultado-final-custo-unit-fixo"]');
+            inputResultadoCustoUnitarioFixo.value = (custoFixoUnitario.custoFixoUnitario).toFixed(2);
+        }
+
+
+        function preencheInputCustoUnitarioVariavel(){
+            const inputResultadoCustoUnitarioVariavel = document.querySelector('[data-input="resultado-final-custo-unit-var"]');
+            inputResultadoCustoUnitarioVariavel.value = (custoVariavelUnitario.custoVariavelUnitario).toFixed(2);
+        }
+
+
+        function preencheInputCustoUnitarioTotal(){
+            const inputResultadoCustoUnitarioTotal = document.querySelector('[data-input="resultado-final-custo-unit-total"]');
+            inputResultadoCustoUnitarioTotal.value = (obtemCustoTotalDoProduto()).toFixed(2);
+        }
+
+
+        function preencheSugestaoPreco() {
+            const inputResultadoCustoUnitarioTotal = document.querySelector('[data-input="resultado-final-preco-minimo"]');
+            inputResultadoCustoUnitarioTotal.value = (obtemSugestaoDePreco().toFixed(2));
+        }
+
+
+        preencheInputCustoUnitarioFixo();
+        preencheInputCustoUnitarioVariavel();
+        preencheInputCustoUnitarioTotal();
+        preencheSugestaoPreco();
+
+
+        function imprimeValores(){
+            console.log('Custo Fixo: ', obtemCustoFixo())
+            console.log('Produtividade: ', obtemProdutividade())
+            console.log('Custo Fixo Unitário: ', obtemCustoFixoUnitario())
+            console.log('Custo Variável Unitário: ', obtemCustoVariavelUnitario())
+            console.log('Custo Total do Produto: ', obtemCustoTotalDoProduto())
+            console.log('MarkUp: ', lucroETaxas.markUp)
+        }
+
+        imprimeValores();
 
     })
 })
@@ -105,10 +144,6 @@ listaInput.forEach( input => {
 
 
 
-
-
-
-// AJUSTAR NaN E PREENCHIMENTO DE INPUTS INDEFINIDOS
 
 
 

@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="assets/css/componentes/input.css">
         <link rel="stylesheet" href="assets/css/componentes/botao.css">
         <link rel="stylesheet" href="assets/css/componentes/container.css">
+        <link rel="stylesheet" href="assets/css/componentes/resultado.css">
         <link rel="stylesheet" href="assets/css/componentes/rodape.css">
         <link rel="stylesheet" href="assets/css/componentes/menu.css">
     </head>
@@ -160,7 +161,7 @@
                 <section class="container hide" data-container="capacidade-produtiva">
                     <div class="texto__capacidade-produtiva">
                         <h2 class="titulo titulo__secao">Capacidade Produtiva</h2>
-                        <p class="texto__secao--descricao">Capacidade produtiva é o máximo que seu negócio consegueproduzir em determinado período de tempocom os recursos que tem à disposição.</p>
+                        <p class="texto__secao--descricao">Capacidade produtiva é o máximo que seu negócio consegue produzir em determinado período de tempocom os recursos que tem à disposição.</p>
                     </div>
 
                     <form class="formulario">
@@ -195,7 +196,7 @@
                 <section class="container hide" data-container="custo-fixo-unitario">
                         <div class="texto__custo-fixo-unitario">
                             <h2 class="titulo titulo__secao">Custo Fixo Unitário</h2>
-                            <p class="texto__secao--descricao">Custo fixo unitário é calculado de acordo com o tempogasto para produzir ou executar determinado serviço e de acordo com o custo fixo donegócio.</p>
+                            <p class="texto__secao--descricao">Custo fixo unitário é calculado de acordo com o tempo gasto para produzir ou executar determinado serviço e de acordo com o custo fixo do negócio.</p>
                             <p class="texto__secao--descricao">É importante conhecê-lo para identificar o custo fixounitário do produto ou serviço, sem considerar os gastos com materiais por produção.</p>
                         </div>
 
@@ -229,8 +230,8 @@
                 <section class="container hide" data-container="custo-variavel-unitario">
                     <div class="texto__custo-variavel-unitario">
                         <h2 class="titulo titulo__secao">Custo Variável Unitário</h2>
-                        <p class="texto__secao--descricao">Custo variável é o valor que você gasta com produtos emateriais na produção de uma peça ou na execução do serviço.</p>
-                        <p class="texto__secao--descricao">Considere itens que estão diretamente ligados àquantidade produzida. Por exemplo, um pintor de parede utiliza mais tinta em paredes grandesdo que em áreas pequenas.</p>
+                        <p class="texto__secao--descricao">Custo variável é o valor que você gasta com produtos e materiais na produção de uma peça ou na execução do serviço.</p>
+                        <p class="texto__secao--descricao">Considere itens que estão diretamente ligados à quantidade produzida. Por exemplo, um pintor de parede utiliza mais tinta em paredes grandes do que em áreas pequenas.</p>
                     </div>
 
                     <form class="formulario">
@@ -304,7 +305,7 @@
                 <section class="container hide" data-container="lucros-taxas">
                     <div class="texto__lucros-taxas">
                         <h2 class="titulo titulo__secao">Lucro, taxas e impostos</h2>
-                        <p class="texto__secao--descricao">Indique a margem de lucro desejada, a porcentagemdestinada a investimentos no negócio, taxas de cartão e impostos.</p>
+                        <p class="texto__secao--descricao">Indique a margem de lucro desejada, a porcentagem destinada a investimentos no negócio, taxas de cartão e impostos.</p>
                     </div>
 
                     <form class="formulario">
@@ -336,7 +337,7 @@
                 <section class="container hide" data-container="resultado-final">
                     <div class="texto__resultado-final">
                         <h2 class="titulo titulo__secao">Resultado</h2>
-                        <p class="texto__secao--descricao">Os valores indicados são sugestões calculadas de acordocom os dados que você preencheu nas etapas anteriores.</p>
+                        <p class="texto__secao--descricao">Os valores indicados são sugestões calculadas de acordo com os dados que você preencheu nas etapas anteriores.</p>
                     </div>
 
                     <form class="formulario" data-form="resultado-final">
@@ -351,8 +352,10 @@
                                 <p class="texto__resultado--formulario">Custo total unitário:</p>
                                 <input class="input__resultado" data-input="resultado-final-custo-unit-total" readonly>
 
-                                <p class="texto__resultado--formulario texto__resultado--final">Preço mínimo de venda:</p>
-                                <input class="input__resultado input__resultado--final" data-input="resultado-final-preco-minimo" readonly>
+                                <div class="container__texto--resultado-final">
+                                    <p class="texto__resultado--formulario texto__resultado--final">Sugestão de preço mínimo de venda:</p>
+                                    <input class="input__resultado input__resultado--final" data-input="resultado-final-preco-minimo" readonly>
+                                </div>
 
                             </div>
                             <a href="#" class="botao" data-button="resultado-final">Novo cálculo</a>
@@ -361,11 +364,6 @@
                     </form>
                 </section>
             </main>
-
-
-
-
-
 
 
             <aside class="menu">
@@ -411,9 +409,7 @@
                 <section class="contato__container">
                     <img src="assets/imagens/logo-calculadora.png" alt="Logo da Calculadora de Preços" class="logo-calculadora__rodape">
                     <ul class="lista__link--rodape">
-                        <li><a class="link__contato">Fale conosco</a></li>
-                        <li><a class="link__contato">Termos de uso</a></li>
-                        <li><a class="link__contato">Privacidade</a></li>
+                        <li><a class="link__contato">faleconosco@email.com</a></li>
                     </ul>
                 </section>
             </footer>

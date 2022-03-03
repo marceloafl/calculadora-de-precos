@@ -7,25 +7,29 @@ export class CustoFixoUnitario {
 
     formCustoFixoUnit = document.querySelector('[data-form="custo-fixo-unitario"]');
 
-    calculaCustoFixoHora(custoFixo, produtividade) {
+
+
+    calculaCustoFixoHora(custoFixo, produtividade) { //OK
         const valorCustoFixoHora = custoFixo / produtividade;
-        
         this.custoFixoHora = valorCustoFixoHora;
         return valorCustoFixoHora;
     }
 
-    calculaCustoFixoMinuto(custoFixoHora) {
+    preencheInputCustoFixoHora() {   //OK
+        const inputCustoFixoHora = document.querySelector('[data-input="custo-fixo-hora"]');
+        inputCustoFixoHora.value = (this.custoFixoHora).toFixed(2);
+    }
+
+    calculaCustoFixoMinuto(custoFixoHora) { //OK
         const valorCustoFixoMinuto = custoFixoHora / 60;
 
         this.custoFixoMinuto = valorCustoFixoMinuto;
         return valorCustoFixoMinuto;
     }
 
-    calculaCustoFixoUnitario(custoFixoMinuto, tempoDeExecucao) {
-        const custoFixoUnitario = custoFixoMinuto * tempoDeExecucao;
-
-        this.custoFixoUnitario = custoFixoUnitario;
-        return custoFixoUnitario;
+    preencheInputCustoFixoMinuto() {
+        const inputCustoFixoMinuto = document.querySelector('[data-input="custo-fixo-minuto"]');
+        inputCustoFixoMinuto.value = (this.custoFixoMinuto).toFixed(2);
     }
 
     recebeTempoDeExecucao() {
@@ -34,14 +38,11 @@ export class CustoFixoUnitario {
         return tempoDeExecucao;
     }
 
-    preencheInputCustoFixoHora() {
-        const inputCustoFixoHora = document.querySelector('[data-input="custo-fixo-hora"]');
-        inputCustoFixoHora.value = (this.custoFixoHora).toFixed(2);
-    }
+    calculaCustoFixoUnitario(custoFixoMinuto, tempoDeExecucao) {
+        const custoFixoUnitario = custoFixoMinuto * tempoDeExecucao;
 
-    preencheInputCustoFixoMinuto() {
-        const inputCustoFixoMinuto = document.querySelector('[data-input="custo-fixo-minuto"]');
-        inputCustoFixoMinuto.value = (this.custoFixoMinuto).toFixed(2);
+        this.custoFixoUnitario = custoFixoUnitario;
+        return custoFixoUnitario;
     }
 
     preencheInputCustoFixoUnitario() {

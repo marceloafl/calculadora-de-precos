@@ -43,8 +43,12 @@
     font-weight: var(--fonte-peso-titulo);
     font-family: var(--fonte-familia-padrao);
 
-    padding-left: var(--padding-horizontal-padrao);
+    padding-left: var(--padding-horizontal-resultado);
 
-    width: 120px;
+    width: 200px;
     height: 36px;
+}
+
+.input__resultado--final {
+    text-align: center;
 }
