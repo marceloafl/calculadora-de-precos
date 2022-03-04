@@ -17,6 +17,8 @@
 
 .menu__ativo {
     transform: translateX(0);
+    position: fixed;
+    height: 100vh;
 }
 
 .menu__cabecalho {
@@ -63,7 +65,6 @@
     
         position: static;
         transform: translateX(0%);
-    
     
         padding: 0 var(--padding-horizontal-padrao) var(--padding-vertical-padrao) var(--padding-horizontal-padrao);
         box-sizing: border-box;

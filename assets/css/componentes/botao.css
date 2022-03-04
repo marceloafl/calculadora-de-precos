@@ -39,5 +39,5 @@
 }
 
 .botao__voltar--calculadora {
-    margin: var(--margin-vertical--botao-menu) 0;
+    margin: var(--margin-vertical--botao-menu) auto;
 }

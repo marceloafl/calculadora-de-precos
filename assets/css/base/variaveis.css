@@ -20,8 +20,10 @@
     --border-bottom-padrao: solid 1px #B7B9BE;
     --background-color-padrao: #004976;
 
+    --cor-padrao-azul: #004976;
+
     --margin-vertical--botao: 2.25rem;
-    --margin-vertical--botao-menu: 1.75rem;
+    --margin-vertical--botao-menu: 2rem;
     --margin-menu: 1rem;
     --padding-menu: 1rem;
 }
