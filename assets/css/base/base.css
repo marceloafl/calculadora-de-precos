@@ -1,3 +1,7 @@
+strong {
+    font-weight: var(--fonte-peso-titulo);
+}
+
 .container {
     padding: var(--padding-vertical-padrao) var(--padding-horizontal-padrao);
     box-sizing: border-box;
@@ -33,3 +37,5 @@
     line-height: var(--fonte-altura-padrao);
     margin-bottom: var(--margin-vertical-padrao);
 }
+
+

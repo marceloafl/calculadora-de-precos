@@ -10,3 +10,11 @@ botaoMenuAbrir.addEventListener('click', function () {
 botaoMenuFechar.addEventListener('click', function () {
     menu.classList.remove('menu__ativo');
 });
+
+const botaoMenuBlog = document.querySelectorAll('[ data-button-menu]');
+
+botaoMenuBlog.forEach(function (botao) {
+    botao.addEventListener('click', function () {
+        menu.classList.remove('menu__ativo');
+    })
+})

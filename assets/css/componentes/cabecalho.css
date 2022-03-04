@@ -27,9 +27,18 @@
         align-content: center;
     }
 
+    .botao__logo-calculadora{
+        grid-column: 2 / 3;
+        justify-self: end;
+    }
+
     .logo-calculadora__cabecalho {
-        margin: 50px;
         grid-column: 2 / 2;
+    }
+
+    .botao__titulo-calculadora{
+        grid-column: 3 / 6; 
+        justify-self: center;
     }
 
     .titulo-calculadora-precos {

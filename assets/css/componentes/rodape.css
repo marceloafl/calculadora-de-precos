@@ -3,7 +3,6 @@
     height: 105px;
     background-color: var(--background-color-padrao);
 
-    padding: 0 var(--padding-horizontal-padrao);
     box-sizing: border-box;
 
     display: flex;

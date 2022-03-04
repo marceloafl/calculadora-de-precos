@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de Preços</title>
+        <link rel="stylesheet" href="assets/css/base/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/base/variaveis.css">
+        <link rel="stylesheet" href="assets/css/base/base.css">
+        <link rel="stylesheet" href="assets/css/componentes/corpo.css">
+        <link rel="stylesheet" href="assets/css/componentes/cabecalho.css">
+        <link rel="stylesheet" href="assets/css/componentes/botao.css">
+        <link rel="stylesheet" href="assets/css/componentes/container.css">
+        <link rel="stylesheet" href="assets/css/componentes/rodape.css">
+        <link rel="stylesheet" href="assets/css/componentes/menu.css">
+        <link rel="stylesheet" href="assets/css/componentes/blog.css">
+    </head>
+
+    <body>
+        <section class="corpo">
+            <header class="cabecalho">
+                <a href="index.html" class="botao__logo-calculadora"><img src="assets/imagens/logo-calculadora.png" alt="Logo da Calculadora de Preços" class="logo-calculadora__cabecalho"></a>
+                <a href="index.html" class="botao__titulo-calculadora"><h1 class="titulo-calculadora-precos">Calculadora de Preços</h1></a>
+                <a class="icone__menu--abrir"><img src="assets/imagens/icones/icone-menu-abrir.svg" alt="Menu" class="icone__menu"></a>
+            </header>
+            
+            <main class="main">
+                    <section class="container container__apresentacao">
+                        <h2 class="titulo titulo__secao">Calculadora de Preços de Venda</h2>
+                        <p class="texto__secao--descricao">Esta é uma ferramenta que permite calcular sugestões de preço mínimo para venda de produtos e serviços.</p>
+                        <p class="texto__secao--descricao">Basta digitar os dados relacionados ao custo de produção e os objetivos de lucro.</p>
+                    </section>
+
+                <section class="container" data-container="mais-conteudo">
+                    <div class="texto__mais-conteudo">
+                        <h2 class="titulo titulo__secao" id="custos-fixos">Custos Fixos</h2>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Independentemente do tipo de negócio, as despesas estão presentes. Elas são necessárias para a manter a empresa funcionando de maneira adequada e para a produção dos produtos e serviços oferecidos. Para identificá-las separamos em dois tipos, os custos fixos e os custos variáveis.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Os custos fixos são constantes e não sofrem alterações caso a produção aumente ou diminua. Alguns exemplos são: aluguel, material de limpeza, salários.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Para identificá-los pense em um cenário de suspensão de produção. Se você for reformar sua empresa, por exemplo, você ainda terá que pagar o aluguel e os salários dos funcionários. Esses gastos geralmente são fixos.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Para facilitar o cálculo de precificação, separamos os custos fixos em quatro categorias:</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo"><span class="texto__mais-conteudo--subtitulo" id="estruturais">Estruturais:</span> custos ligados à estrutura da empresa</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo"><span class="texto__mais-conteudo--subtitulo" id="administrativos">Administrativos:</span> custos relacionados à rotinas </p>
+                        <p class="texto__secao--descricao texto__mais-conteudo"><span class="texto__mais-conteudo--subtitulo" id="equipamentos">Equipamentos:</span> custos para compra e manutenção de equipamentos necessários para produção, execução do serviço ou venda. Esses custos permanecem constantes independente de aumentos ou diminuições na quantidade de produção e venda. Ex.: financiamento de máquinas.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo"><span class="texto__mais-conteudo--subtitulo" id="funcionarios">Funcionários:</span> custos com pagamento de funcionários, como salário, benefícios e FGTS.</p>
+
+                        <h2 class="titulo titulo__secao" id="capacidade-produtiva">Capacidade Produtiva</h2>
+                        <p class="texto__secao--descricao texto__mais-conteudo">A capacidade produtiva é o máximo que seu negócio pode produzir em determinado período de tempo, considerando o tempo de trabalho e quantidade de funcionários.</p>
+
+                        <h2 class="titulo titulo__secao" id="custo-fixo-unitario">Custo Fixo Unitário</h2>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Para calcular o custo fixo unitário precisamos identificar os custos fixos da empresa. Ele é calculado de acordo com o tempo gasto para produzir ou executar determinado serviço e de acordo com o custo fixo do negócio.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">É importante conhecê-lo para identificar o custo de produção, execução do serviço ou venda, sem considerar os gastos com materiais por produção.</p>
+
+                        <h2 class="titulo titulo__secao" id="custos-variaveis">Custos Variáveis</h2>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Já os custos variáveis estão diretamente ligados à quantidade de produção ou venda. Eles são os valores que sua empresa gasta na produção de uma peça, na execução do serviço ou venda.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Em uma cenário de aumento de produção, os custos variáveis sofrerão aumento. E com a diminuição de produção, eles também serão reduzidos.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Por exemplo, um pintor de parede utiliza mais tinta em paredes grandes do que em áreas pequenas.</p>
+
+                        <h2 class="titulo titulo__secao" id="lucros-taxas">Lucros, taxas e impostos</h2>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Precificar corretamente os produtos e serviços que a empresa oferece é fundamental para garantir a sustenbilidade do negócio. Por isso, é necessários estar atento a todas as taxas, impostos e <strong id="margem-lucro">margem de lucro</strong> desejada.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Em relação à margem de lucro, um erro comum é considerar que vender pelo dobro do custo de produção é ter 100% de lucro.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Isso está errado, pois qualquer produto ou serviço que possui custo de produção não pode ter margem de lucro de 100%, visto que a margem de lucro está embutida no valor de venda.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Por exemplo, um item que tem custo de produção de R$ 10,00 e é vendido por R$ 20,00. O preço de venda é 2 vezes maior que o custo de produção e margem é de 50%.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Sempre considere o cálculo da margem de lucro de acordo com o preço de venda, dividindo o valor real do lucro pelo preço de venda.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">No exemplo acima:</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo texto_exemplo">
+                            Lucro: R$ 20,00 - R$ 10,00 = R$ 10,00<br>
+                            Margem de lucro: R$ 10,00 / R$ 20,00 = 0,5 * 100 = 50%</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Para fazer o cálculo considerando o custo de produção, a melhor maneira é utilizar o <strong id="markup">markup</strong>. Ele uma porcetagem calculada a partir do o valor desse custo e para se chegar a ela é necessário calcular a diferença entre o custo e o preço de venda.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">No mesmo exemplo que demos anteriormente, o markup seria de 2. Ou seja, o preço de venda é duas vezes maior que o custo de produção.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Se mudarmos o valor de venda para R$ 16,00, o markup será de 1,6 e a margem de lucro será 37,5%.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Os exemplos acima foram apresentados apenas para explicação dos cálculos e cada negócio tem suas especificidadas de custos fixos, custos variáveis, taxas, impostos, margens de lucro e markups ideais. Por isso, utilize a seguestão de preço de venda da calculadora como referência, mas não deixe de conhecer os números do seu negócio.</p>
+                        <p class="texto__secao--descricao texto__mais-conteudo">Fonte: Sebrae</p>
+                    </div>
+
+                    
+                </section>
+
+
+                
+            </main>
+
+
+            <aside class="menu">
+                <section class="menu__cabecalho">
+                    <a class="icone__menu--fechar"><img src="assets/imagens/icones/icone-menu-fechar.svg" alt="Menu" class=" icone__menu"></a>
+                </section>
+
+                <section class="menu__voltar-calculadora">
+                    <a href="index.html" class="botao__voltar botao__voltar--calculadora">Voltar para calculadora</a>
+                </section>
+
+                <section class="section__menu--mais">
+                    <h3 class="titulo__secundario titulo__menu--mais"><a href="#custos-fixos" data-button-menu>Custos Fixos</a></h3>
+                    <ul class="lista__menu--mais">
+                        <li class="item__menu--mais"><a href="#estruturais" data-button-menu>Estruturais</a></li>
+                        <li class="item__menu--mais"><a href="#administrativos" data-button-menu>Administrativos</a></li>
+                        <li class="item__menu--mais"><a href="#equipamentos" data-button-menu>Equipamentos</a></li>
+                        <li class="item__menu--mais"><a href="#funcionarios" data-button-menu>Funcionários</a></li>
+                    </ul>
+                </section>
+
+                <section class="section__menu--mais">
+                    <h3 class="titulo__secundario titulo__menu--mais"><a href="#capacidade-produtiva" data-button-menu>Capacidade Produtiva</a></h3>
+                </section>
+
+                <section class="section__menu--mais">
+                    <h3 class="titulo__secundario titulo__menu--mais"><a href="#custo-fixo-unitario" data-button-menu>Custo Fixo Unitário</a></h3>
+                </section>
+
+                <section class="section__menu--mais">
+                    <h3 class="titulo__secundario titulo__menu--mais"><a href="#custos-variaveis" data-button-menu>Custo Variável Unitário</a></h3>
+                </section>
+
+                <section class="section__menu--mais">
+                    <h3 class="titulo__secundario titulo__menu--mais"><a href="#lucros-taxas" data-button-menu>Lucros, taxas e impostos</a></h3>
+                    <ul class="lista__menu--mais">
+                        <li class="item__menu--mais"><a href="#lucros-taxas" data-button-menu>Margem de Lucro</a></li>
+                        <li class="item__menu--mais"><a href="#markup" data-button-menu>Markup</a></li>
+                    </ul>
+                </section>
+            </aside>
+
+
+            <footer class="rodape">
+                <section class="contato__container">
+                    <img src="assets/imagens/logo-calculadora.png" alt="Logo da Calculadora de Preços" class="logo-calculadora__rodape">
+                    <ul class="lista__link--rodape">
+                        <li><a class="link__contato">faleconosco@email.com</a></li>
+                    </ul>
+                </section>
+            </footer>
+        </section>
+        
+        <script src="js/menu.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/main.js" type="module"></script>
+    </body>
+</html>

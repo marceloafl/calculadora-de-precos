@@ -1,0 +1,8 @@
+.texto__mais-conteudo--subtitulo{
+    text-decoration: underline;
+}
+
+.texto_exemplo{
+    text-align: center;
+    margin: var(--margin-vertical--botao) 0;
+}
