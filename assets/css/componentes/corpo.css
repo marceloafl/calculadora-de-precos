@@ -1,65 +1,32 @@
-.corpo {
-    overflow-x: hidden;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 90px 1fr 105px;
-    grid-template-areas:
-        "header header header"
-        "main main main"
-        "footer footer footer";
-
-    background-color: #F3F2EF;
-
-}
-
-.cabecalho {
-    grid-area: header;
-}
-
-.main {
-    grid-area: main;
-}
-
-.menu {
-    grid-area: aside;
-}
-
-.rodape {
-    grid-area: footer;
+.principal{
+    align-items: center;
+    background-color: var(--cor-branca);
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+    width: 90%;
 }
 
 @media screen and (min-width: 1024px){
-    .corpo {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 90px 1fr 105px;
+    .corpo{
+        background-color: var(--cor-fundo-grid);
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 90px auto 60px;
         grid-template-areas:
-            "header header header header header header header header header header header header"
-            ". aside aside aside main main main main main main main ."
-            "footer footer footer footer footer footer footer footer footer footer footer footer";
-            gap: 1rem;
+                "header header header header header header header header header header header header"
+                "aside aside aside main main main main main main main main main"
+                "footer footer footer footer footer footer footer footer footer footer footer footer";
     }
 
-    .cabecalho {
-        grid-column: 1 / 12;
-        grid-row: 1;
+    .principal{
+        box-sizing: border-box;
+        grid-area: main;
+        margin: 0;
+        padding: 0 2rem;
     }
-    
-    .main {
-        grid-column: 4 / 11;
-        grid-row: 2;
-    }
-    
-    .menu {
-        grid-column: 2 / 4;
-        grid-row: 2;
-    }
-    
-    .rodape {
-        grid-column: 1 / 12;
-        grid-row: 3;
-    }
+
 }
-
-
-

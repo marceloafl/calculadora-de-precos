@@ -1,60 +1,32 @@
-.rodape {
-    width: 100vw;
-    height: 105px;
-    background-color: var(--background-color-padrao);
-
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-.contato__container {    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.rodape{
     align-items: center;
-
-    height: 100%;
-}
-
-.logo-calculadora__rodape {
-    height: 50px;
-}
-
-.lista__link--rodape {
+    background-color: var(--cor-azul);
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    height: 60px;
+    justify-content: space-between;
+    padding: 5px 0;
 }
 
-.link__contato {
-    font-family: var(--fonte-familia-padrao);
-    color: #FFFFFF;
+.rodape__logo--imagem {
+    height: 50%;
 }
 
-li .link__contato {
-    font-size: var(--fonte-tamanho-rodape);
+.rodape__lista{
+    color: var(--cor-branca);
 }
 
-
-@media screen and (min-width: 1024px) {
-    .rodape { 
-        display: grid;
-        grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;    
-    }
-
-    .contato__container {    
-        grid-column: 2 / 5;
-
-        flex-direction: row;
-        justify-content: space-evenly;
+@media screen and (min-width: 1024px){
+    .rodape{
+        grid-area: footer;
         align-items: center;
-    
-        height: 100%;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        padding: 0 100px;   
     }
 
-
-
+    .rodape__logo--imagem {
+        margin-left: 40px;
+    }
 }

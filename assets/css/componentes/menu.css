@@ -1,80 +1,58 @@
-.menu {
-    width: 100%;
+.inativo{
+    display: none;
+}
 
-    background-color: #FFFFFF;
-
-    border-radius: 5px;
-
-    position: absolute;
-    top: 0;
-    transform: translateX(-100%);
-
-    transition: right .1s linear;
-
-    padding: 0 var(--padding-horizontal-padrao) var(--padding-vertical-padrao) var(--padding-horizontal-padrao);
+.menu{
+    background-color: var(--cor-branca);
     box-sizing: border-box;
+    height: calc(100vh - 90px - 60px);
+    padding: 1.5rem;
 }
 
-.menu__ativo {
-    transform: translateX(0);
-    position: fixed;
-    height: 100vh;
-}
-
-.menu__cabecalho {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    height: 90px;
-}
-
-.icone__menu {
-    height: 30px;
-}
-
-.section__menu--mais {
-    border-bottom: var(--border-bottom-padrao);
-    padding-bottom: var(--padding-menu);
-
+.menu__secao{
     box-sizing: border-box;
+    border-bottom: solid 1px var(--cor-borda);
+    margin-bottom: var(--margem-menu-item);
+    width: 90%;
 }
 
-.titulo__menu--mais {
-    margin-top: var(--margin-menu);
+.menu__texto{
+    color: #000000;
+}
 
+.menu__titulo{
     box-sizing: border-box;
+    color: #000000;
+    font-size: var(--fonte-tamanho-titulo-menu);
+    margin-bottom: var(--margem-menu-item);
 }
 
-.item__menu--mais {
-    font-family: var(--fonte-familia-padrao);
-    font-size: 1rem;
-
-    margin: var(--margin-menu) 0 0 var(--margin-menu);
-
+.menu__link{
     box-sizing: border-box;
+    color: #000000;
+    margin: var(--margem-menu-item);
 }
 
-.item__menu--mais:hover {
-    font-weight: var(--fonte-peso-titulo);
-}
+@media screen and (min-width: 1024px){
+    .inativo{
+        display: block;
+    }
 
-@media screen and (min-width: 1024px) {
-    .menu {
-        width: 1fr;
-    
-        position: static;
-        transform: translateX(0%);
-    
-        padding: 0 var(--padding-horizontal-padrao) var(--padding-vertical-padrao) var(--padding-horizontal-padrao);
+    .menu{
+        background-color: var(--cor-branca);
         box-sizing: border-box;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        grid-area: aside;
+        grid-column-start: 2    ;
+        height: auto;
+        padding: 1.25rem 0.75rem
     }
-
-    .menu__cabecalho {
-        display: none;
+    
+    .menu__titulo{
+        font-size: 1rem;
+        font-weight: var(--fonte-peso-titulo);
     }
-
+    
 }
-
-
-

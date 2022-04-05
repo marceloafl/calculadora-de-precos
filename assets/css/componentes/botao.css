@@ -1,43 +1,31 @@
 .botao {
-    width: 180px;
-    height: 36px;
-
-    margin-top: var(--margin-vertical--botao);
-
-    background-color: #004976;
-    border-radius: 5px;
-
-    color: #FFFFFF;
-
-    align-self: center;
-
-    font-family: var(--fonte-familia-padrao);
-
-    display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: var(--cor-azul);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--cor-branca);
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    margin: var(--margem-botao) auto;
+    width: 75%;
 }
 
-.botao__voltar {
-    width: 180px;
-    height: 36px;
-
-    margin-top: var(--margin-vertical--botao);
-
-    border: 1px solid #004976;
-    border-radius: 5px;
-
-    color: #004976;
-
-    align-self: center;
-
-    font-family: var(--fonte-familia-padrao);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.botao--add {
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-azul);
+    color: var(--cor-azul);
 }
 
-.botao__voltar--calculadora {
-    margin: var(--margin-vertical--botao-menu) auto;
+.botao--voltar{
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-azul);
+    color: var(--cor-azul);
+}
+
+@media screen and (min-width: 1024px){
+    .botao {
+        width: 220px;
+    }
+
 }

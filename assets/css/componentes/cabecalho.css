@@ -1,51 +1,48 @@
-.cabecalho {
-    width: 100%;
-    height: 90px;
-
-    display: flex;
-    justify-content: space-evenly;
+.cabecalho{
     align-items: center;
-
-    background-color: var(--background-color-padrao);
+    background-color: var(--cor-azul);
+    display: flex;
+    height: 90px;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
-.logo-calculadora__cabecalho {
+.cabecalho__logo--imagem{
     height: 50px;
 }
 
-.titulo-calculadora-precos {
-    font-size: var(--fonte-tamanho-titulo-calculadora);
-    font-family: var(--fonte-familia-padrao);
-    color: #FFFFFF;
+.cabecalho__titulo--texto{
+    color: var(--cor-branca);
+    font-size: var(--fonte-tamanho-logo);
+}
+
+.cabecalho__menu{
+    color: var(--cor-branca);
+    height: 30px;
 }
 
 
 @media screen and (min-width: 1024px){
-    .cabecalho {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        align-content: center;
+    .cabecalho{
+        grid-area: header;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        padding: 0 10%;
+        width: 100%;
     }
 
-    .botao__logo-calculadora{
-        grid-column: 2 / 3;
-        justify-self: end;
+    .cabecalho__titulo--texto{
+        box-sizing: border-box;
+        margin-left: 40px;
     }
-
-    .logo-calculadora__cabecalho {
-        grid-column: 2 / 2;
-    }
-
-    .botao__titulo-calculadora{
-        grid-column: 3 / 6; 
-        justify-self: center;
-    }
-
-    .titulo-calculadora-precos {
-        grid-column: 3 / 6;
-    }
-
-    .icone__menu {
+    
+    .cabecalho__menu{
         display: none;
     }
+
+  
+
+
+    
+
 }

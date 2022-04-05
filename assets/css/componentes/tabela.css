@@ -1,0 +1,16 @@
+.tabela{
+    border: 1px solid #000;
+    margin: 0  0 var(--margem-input);
+    width: 100%;
+}
+
+tr, td, th {
+    border: 1px solid #000;
+    padding: var(--padding-tabela);
+    text-align: center;
+}
+
+th {
+    background-color: var(--cor-azul);
+    color: var(--cor-branca);    
+}

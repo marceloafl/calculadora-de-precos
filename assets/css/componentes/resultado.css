@@ -1,11 +1,23 @@
-.texto__resultado--final {
-    font-size: var(--fonte-tamanho-titulo-calculadora);
-    text-align: center;
-
-    box-sizing: border-box;
+.container--resultado{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.input__resultado--final {
-    font-size: var(--fonte-tamanho-titulo-calculadora);
+.titulo--resultado-final{
+    font-size: var(--fonte-tamanho-titulo);
+    margin: var(--margem-titulo) 0;
+    text-align: center;
+}
+
+.input--resultado{
+    border: none;
+    border-bottom: solid 1px #5c5c5c;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: var(--fonte-familia-padrao);
+    height: 36px;
+    margin-bottom: var(--margem-input);
+    width: 60%;
 }
 

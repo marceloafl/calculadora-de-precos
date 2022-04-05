@@ -1,29 +1,35 @@
 :root{
     --fonte-familia-padrao: 'Roboto', sans-serif;
-    --fonte-tamanho-padrao: 1rem;
-    --fonte-altura-padrao: 1.5rem;
-    --margin-vertical-padrao: 1.125rem;
-    --margin-horizontal-padrao: 1.125rem;
 
-    --fonte-tamanho-titulo-calculadora: 1.5rem;
-    --fonte-tamanho-rodape: .8rem;
-
-    --fonte-tamanho-titulo: 1.25rem;
+    --fonte-peso--padrao: 400;
     --fonte-peso-titulo: 700;
 
-    --fonte-tamanho-titulo-secundario: 1rem;
+    --fonte-tamanho-logo: 1.5rem;
+    --fonte-tamanho-titulo: 1.5rem;
+    --fonte-tamanho-subtitulo: 1.125rem;
+    --fonte-tamanho-subtitulo-desktop: 1.25rem;
+    --fonte-tamanho-titulo-menu: 1.25rem;
+    --fonte-tamanho-paragrafo: 1rem;
 
-    --padding-vertical-padrao: 2rem;
-    --padding-horizontal-padrao: 1.75rem;
-    --padding-horizontal-resultado: .75rem;
+    --linha-altura-paragrafo: 1.5rem;
 
-    --border-bottom-padrao: solid 1px #B7B9BE;
-    --background-color-padrao: #004976;
+    --cor-azul: #004976;
+    --cor-branca: #FFF;
+    --cor-vermelha: #FF0000;
+    --cor-fundo-grid: #F3F2EF;
+    --cor-borda: #D1D1D1;
 
-    --cor-padrao-azul: #004976;
+    --margem-container: 1.5rem;
+    --margem-formulario: 1.5rem;
+    --margem-titulo: 1.125rem;
+    --margem-texto: 1rem;
+    --margem-input: 1.125rem;
+    --margem-botao: 1.25rem;
+    --margem-menu-item: 1.25rem;
+    --margem-grid: 2.5rem;
 
-    --margin-vertical--botao: 2.25rem;
-    --margin-vertical--botao-menu: 2rem;
-    --margin-menu: 1rem;
-    --padding-menu: 1rem;
+    --padding-menu: 1.5rem;
+    --padding-tabela: .3rem;
+
+    
 }
