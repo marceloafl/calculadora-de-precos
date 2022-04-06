@@ -1,4 +1,4 @@
-const botaoMenu = document.querySelectorAll('[data-navegacao]');
+const botaoMenu = document.querySelectorAll('[data-menu]');
 
 botaoMenu.forEach(botao => {
     botao.addEventListener('click', () => {
@@ -12,7 +12,7 @@ function controlaMenu(botao){
 
     let menuAberto = false;
 
-    if(botao.dataset.navegacao === 'abrir-menu'){
+    if(botao.dataset.menu === 'abrir-menu'){
         menu.classList.remove('inativo');
         principal.classList.add('inativo');
         menuAberto = true;
@@ -25,8 +25,8 @@ function controlaMenu(botao){
 }
 
 function manipulaIconeMenu(botao){
-    const iconeAbrirMenu = document.querySelector('[data-navegacao="abrir-menu"]')
-    const iconeFecharMenu = document.querySelector('[data-navegacao="fechar-menu"]')
+    const iconeAbrirMenu = document.querySelector('[data-menu="abrir-menu"]')
+    const iconeFecharMenu = document.querySelector('[data-menu="fechar-menu"]')
 
     if(controlaMenu(botao)){
         botao.classList.add('inativo');

@@ -31,10 +31,10 @@
         <a href="#">
             <h1 class="cabecalho__titulo--texto">Calculadora de Preços</h1>
         </a>
-        <a href="#" data-navegacao="abrir-menu">
+        <a href="#" data-menu="abrir-menu">
             <img src="assets/imagens/icones/icone-menu-abrir.svg" alt="Menu" class="cabecalho__menu">
         </a>
-        <a href="#" data-navegacao="fechar-menu" class="inativo">
+        <a href="#" data-menu="fechar-menu" class="inativo">
             <img src="assets/imagens/icones/icone-menu-fechar.svg" alt="Menu" class="cabecalho__menu" >
         </a>
     </header>
@@ -48,7 +48,7 @@
                 lucro.</p>
         </section>
 
-        <section data-container="custo-fixo">
+        <section data-secao="custo-fixo">
             <div class="secao__container">
                 <h2 class="secao__titulo">Custos Fixos</h2>
                 <p class="secao__descricao">Os custos fixos são gastos que fazem parte da estrutura do negócio e que não
@@ -178,12 +178,12 @@
                 <section class="secao__container secao__resultado">
                     <p class="secao__titulo">Custo fixo total:</p>
                     <input name="custo-fixo" type="number" class="input" data-input="moeda" readonly>
-                    <a href="#" class="botao" data-botao="proximo">Próximo</a>
+                    <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
                 </section>
             </form>
         </section>
 
-        <section data-container="capacidade-produtiva">
+        <section data-secao="capacidade-produtiva" class="inativo">
             <div class="secao__container">
                 <h2 class="secao__titulo">Capacidade Produtiva</h2>
                 <p class="secao__descricao">Capacidade produtiva é o máximo que seu negócio consegue produzir em
@@ -209,13 +209,13 @@
                 <section class="secao__container secao__resultado">
                     <p class="secao__titulo">Produtividade (em horas):</p>
                     <input name="produtividade" type="number" class="input" data-input="tempo" readonly>
-                    <a href="#" class="botao" data-botao="proximo">Próximo</a>
-                    <a href="#" class="botao botao--voltar" data-botao="voltar">Voltar</a>
+                    <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
+                    <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                 </section>
             </form>
         </section>
 
-        <section data-container="custo-fixo-unitario">
+        <section data-secao="custo-fixo-unitario" class="inativo">
             <div class="secao__container">
                 <h2 class="secao__titulo">Custo Fixo Unitário</h2>
                 <p class="secao__descricao">Custo fixo unitário é calculado a partir da relação entre o tempo gasto para
@@ -240,13 +240,13 @@
                 <section class="secao__container secao__resultado">
                     <p class="secao__titulo">Custo fixo unitário:</p>
                     <input name="custo-fixo-unitario" type="number" class="input" data-input="moeda" readonly>
-                    <a href="#" class="botao" data-botao="proximo">Próximo</a>
-                    <a href="#" class="botao botao--voltar" data-botao="voltar">Voltar</a>
+                    <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
+                    <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                 </section>
             </form>
         </section>
 
-        <section data-container="custo-variavel-unitario">
+        <section data-secao="custo-variavel-unitario" class="inativo">
             <div class="secao__container">
                 <h2 class="secao__titulo">Custo Variável Unitário</h2>
                 <p class="secao__descricao">Custo variável é o valor que você gasta com produtos e materiais na produção
@@ -286,13 +286,13 @@
                     <section class="secao__container secao__resultado">
                         <p class="secao__titulo">Custo variável unitário:</p>
                         <input name="custo-variavel-unitario" type="number" class="input" data-input="moeda">
-                        <a href="#" class="botao" data-botao="proximo">Próximo</a>
-                        <a href="#" class="botao botao--voltar" data-botao="voltar">Voltar</a>
+                        <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
+                        <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                     </section>
             </form>
         </section>
 
-        <section class="secao__container" data-container="lucros-taxas">
+        <section class="secao__container inativo" data-secao="lucros-taxas">
             <div class="secao__container">
                 <h2 class="secao__titulo">Lucro, taxas e impostos</h2>
                 <p class="secao__descricao">Informe a margem de lucro desejada, taxas e impostos.</p>
@@ -315,13 +315,13 @@
                 </fieldset>
 
                 <section class="secao__container">
-                    <a href="#" class="botao" data-botao="proximo">Próximo</a>
-                    <a href="#" class="botao botao--voltar" data-botao="voltar">Voltar</a>
+                    <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
+                    <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                 </section>
             </form>
         </section>
 
-        <section data-container="resultado-final">
+        <section data-secao="resultado-final" class="inativo">
             <div class="secao__container">
                 <h2 class="secao__titulo">Resultado</h2>
                 <p class="secao__descricao">Os valores indicados são sugestões calculadas de acordo com os dados que
@@ -341,8 +341,8 @@
                 <p class="titulo--resultado-final">Sugestão de preço mínimo de venda:</p>
                 <input name="resultado-final" class="input--resultado" data-input="moeda" readonly>
 
-                <a href="#" class="botao" data-botao="proximo">Novo cálculo</a>
-                <a href="#" class="botao botao--voltar" data-botao="voltar">Voltar</a>
+                <a href="#" class="botao" data-navegacao="novo-calculo">Novo cálculo</a>
+                <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
             </div>
         </section>
     </main>
@@ -390,7 +390,7 @@
     </footer>
 
     <script src="./js/navegacao/menu.js"></script>
-    <script src="./js/navegacao/navegacao.js"></script>
+    <script src="./js/navegacao/navegacao.js" type="module"></script>
     <script src="./js/validacao/validacao.js" type="module"></script>
     <script src="./js/calculadora.js" type="module"></script>
 
