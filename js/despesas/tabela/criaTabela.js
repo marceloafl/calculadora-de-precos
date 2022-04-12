@@ -2,7 +2,7 @@ import { recebeNomeEquipamento, calculaCustoEquipamento } from "./despesaEquipam
 import { recebeNomeMaterial, calculaCustoMaterial } from "./despesaMateriais.js";
 
 
-const botoesAdicionar = document.querySelectorAll('[data-adicionar]')
+const botoesAdicionar = document.querySelectorAll('[data-adicionar]');
 
 botoesAdicionar.forEach(botao => {
     botao.addEventListener('click', event => {
