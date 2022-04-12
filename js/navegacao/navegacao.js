@@ -44,10 +44,8 @@ function selecionaSecao(event){
     secoes.forEach(secao => {
         if (secao.dataset.secao === dataAtributoSecao) {
             secao.classList.remove('inativo');
-            console.log('igual')
         } else {
             secao.classList.add('inativo');
-            console.log('diferente')
         }
     })    
 }

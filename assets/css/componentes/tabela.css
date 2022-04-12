@@ -14,3 +14,15 @@ th {
     background-color: var(--cor-azul);
     color: var(--cor-branca);    
 }
+
+.fadeout {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.tabela--delete{
+    background-image: url('../../../assets/imagens/icones/delete_black_24dp.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    background-position: center;
+}

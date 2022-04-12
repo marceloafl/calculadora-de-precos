@@ -113,35 +113,35 @@
                 <fieldset class="formulario" data-formulario="equipamentos">
                     <legend class="formulario__titulo">Equipamentos</legend>
                     <p class="secao__descricao">Adicione os equipamentos utilizados em sua empresa.</p>
-                    <table class="tabela">
+                    <table class="tabela" data-tabela="equipamento">
                         <tr>
                             <th class="tabela__titulo">Equipamento</th>
                             <th class="tabela__titulo">Custo/mês</th>
                         </tr>
                         <tr>
-                            <td class="tabela__valor">Equipamento 1</td>
-                            <td class="tabela__valor">R$ 10,00</td>
+                            <td class="tabela__valor" data-infotabela="equipamento">Adicione os equipamentos no formulário abaixo</td>
+                            <td class="tabela__valor" data-infotabela="equipamento">Adicione os equipamentos no formulário abaixo</td>
+                            <td class="tabela__valor tabela--delete"><a href="#" data-delete="equipamento" class="tabela__link--delete"></a></td>
                         </tr>
                     </table>
 
                     <label for="equipamento-nome" class="label">Nome do equipamento:</label>
-                    <input name="equipamento-nome" type="text" id="equipamento-nome" class="input" placeholder="Nome do equipamento" data-input="nome">
+                    <input name="equipamento-nome" type="text" id="equipamento-nome" class="input" placeholder="Nome do equipamento" data-nome="equipamento">
 
                     <label for="equipamento-valor" class="label">Valor de compra:</label>
                     <input name="equipamento-valor" type="number" id="equipamento-valor" class="input" placeholder="R$"
-                    data-input="moeda">
+                    data-input="moeda" data-valor="equipamento">
 
-                    <label for="equipamento-depreciacao" class="label">Vida útil estimada:</label>
+                    <label for="equipamento-depreciacao" class="label">Vida útil estimada em anos:</label>
                     <input name="equipamento-depreciacao" type="number" id="equipamento-depreciacao" class="input" placeholder="Vida útil estimada"
-                    data-input="tempo">
+                    data-input="tempo" data-depreciacao="equipamento">
 
-                    <a href="#" class="botao botao--add" data-botao="adicionar-equipamento">Adicionar novo
+                    <a href="#" class="botao botao--add" data-adicionar="equipamento">Adicionar novo
                         equipamento</a>
 
                     <div class="container__total--parcial">
                         <label for="total-equipamentos" class="label">Total:</label>
-                        <input name="total-equipamentos" type="number" id="total-equipamentos" class="input" placeholder="R$"
-                        data-input="moeda" data-resultado="estruturais" readonly>
+                        <input name="total-equipamentos" type="number" id="total-equipamentos" class="input" placeholder="R$" data-input="moeda" data-resultado="equipamentos" readonly>
                     </div>
                 </fieldset>
 
@@ -183,7 +183,7 @@
             </form>
         </section>
 
-        <section data-secao="capacidade-produtiva" class="inativo">
+        <section data-secao="capacidade-produtiva" class="inativ">
             <div class="secao__container">
                 <h2 class="secao__titulo">Capacidade Produtiva</h2>
                 <p class="secao__descricao">Capacidade produtiva é o máximo que seu negócio consegue produzir em
@@ -215,7 +215,7 @@
             </form>
         </section>
 
-        <section data-secao="custo-fixo-unitario" class="inativo">
+        <section data-secao="custo-fixo-unitario" class="inativ">
             <div class="secao__container">
                 <h2 class="secao__titulo">Custo Fixo Unitário</h2>
                 <p class="secao__descricao">Custo fixo unitário é calculado a partir da relação entre o tempo gasto para
@@ -246,7 +246,7 @@
             </form>
         </section>
 
-        <section data-secao="custo-variavel-unitario" class="inativo">
+        <section data-secao="custo-variavel-unitario" class="inativ">
             <div class="secao__container">
                 <h2 class="secao__titulo">Custo Variável Unitário</h2>
                 <p class="secao__descricao">Custo variável é o valor que você gasta com produtos e materiais na produção
@@ -259,40 +259,44 @@
                 <fieldset class="formulario" data-formulario="custo-variavel-unitario">
                     <legend class="formulario__titulo">Produtos e materiais utilizados</legend>
                     <p class="secao__descricao">Adicione os materiais utilizados em sua empresa.</p>
-                    <table class="tabela">
+                    <table class="tabela" data-tabela="material">
                         <tr>
                             <th class="tabela__titulo">Material</th>
                             <th class="tabela__titulo">Custo por serviço</th>
                         </tr>
                         <tr>
-                            <td class="tabela__valor">Material 1</td>
-                            <td class="tabela__valor">R$ 1,00</td>
+                            <td class="tabela__valor" data-infotabela="material">Adicione os materiais no formulário abaixo</td>
+                            <td class="tabela__valor" data-infotabela="material">Adicione os materiais no formulário abaixo</td>
+                            <td class="tabela__valor"><a href="#" data-delete="material" class="tabela__link--delete"><img src="./assets/imagens/icones/delete_black_24dp.svg" class="tabela__icone--delete"></a></td>
                         </tr>
                     </table>
 
                     <label for="material-nome" class="label">Nome do material:</label>
                     <input name="material-nome" type="text" id="material-nome" class="input" placeholder="Nome do material"
-                    data-input="nome">
+                    data-nome="material">
 
                     <label for="material-valor" class="label">Valor de compra:</label>
-                    <input name="material-valor" type="number" id="material-valor" class="input" placeholder="R$" data-input="moeda">
+                    <input name="material-valor" type="number" id="material-valor" class="input" placeholder="R$" data-input="moeda" data-valor="material">
+
+                    <label for="material-quantidade" class="label">Quantidade comprada:</label>
+                    <input name="material-quantidade" type="number" id="material-quantidade" class="input" placeholder="Quantidade total comprada" data-input="numero" data-compra="material">
 
                     <label for="material-quantidade" class="label">Quantidade utilizada na execução/produção:</label>
                     <input name="material-quantidade" type="number" id="material-quantidade" class="input" placeholder="Quantidade utilizada"
-                    data-input="numero">
+                    data-input="numero" data-uso="material">
 
-                    <a href="#" class="botao botao--add" data-botao="adicionar-material">Adicionar novo material</a>
+                    <a href="#" class="botao botao--add" data-adicionar="material">Adicionar novo material</a>
 
                     <section class="secao__container secao__resultado">
                         <p class="secao__titulo">Custo variável unitário:</p>
-                        <input name="custo-variavel-unitario" type="number" class="input" data-input="moeda">
+                        <input name="custo-variavel-unitario" type="number" class="input" data-input="moeda" data-resultado="materiais">
                         <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
                         <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                     </section>
             </form>
         </section>
 
-        <section class="secao__container inativo" data-secao="lucros-taxas">
+        <section class="secao__container inativ" data-secao="lucros-taxas">
             <div class="secao__container">
                 <h2 class="secao__titulo">Lucro, taxas e impostos</h2>
                 <p class="secao__descricao">Informe a margem de lucro desejada, taxas e impostos.</p>
@@ -321,7 +325,7 @@
             </form>
         </section>
 
-        <section data-secao="resultado-final" class="inativo">
+        <section data-secao="resultado-final" class="inativ">
             <div class="secao__container">
                 <h2 class="secao__titulo">Resultado</h2>
                 <p class="secao__descricao">Os valores indicados são sugestões calculadas de acordo com os dados que
@@ -393,6 +397,9 @@
     <script src="./js/navegacao/navegacao.js" type="module"></script>
     <script src="./js/validacao/validacao.js" type="module"></script>
     <script src="./js/calculadora.js" type="module"></script>
+    <script src="./js/despesas/tabela/criaTabela.js" type="module"></script>
+    <script src="./js/despesas/tabela/deletaDespesa.js" type="module"></script>
+
 
 </body>
 </html>

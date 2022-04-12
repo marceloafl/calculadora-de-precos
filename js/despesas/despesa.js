@@ -27,14 +27,13 @@ export class Despesa {
 
     somaValores(valorDoAtributo){
         let listaDeValores = this.criaListaDeValores(valorDoAtributo);
-        console.log(listaDeValores);
 
         let soma = 0;
 
         soma = listaDeValores.reduce(function(acum, atual){
             return acum + atual;
         }, soma)
-        console.log(soma);
+
         return soma;
     }
 
