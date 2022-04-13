@@ -15,14 +15,34 @@ th {
     color: var(--cor-branca);    
 }
 
-.fadeout {
-	opacity: 0;
-	transition: 0.5s;
-}
-
 .tabela--delete{
     background-image: url('../../../assets/imagens/icones/delete_black_24dp.svg');
-    background-repeat: no-repeat;
-    width: 20px;
     background-position: center;
+    background-repeat: no-repeat;
+    border-left: var(--cor-branca);
+    cursor: pointer;
+    width: 20px;
 }
+
+.td--info{
+    border-right: var(--cor-azul);
+}
+
+.td--vazio{
+    background-color: var(--cor-azul);
+    border-left: var(--cor-azul);
+}
+
+.td--valor{
+    border-right: var(--cor-branca);
+}
+
+.fadeout {
+	opacity: 0;
+	transition: 0.1s;
+}
+
+.invisivel{
+    display: none;
+}
+

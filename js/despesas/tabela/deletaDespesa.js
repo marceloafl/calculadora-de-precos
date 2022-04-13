@@ -1,3 +1,5 @@
+import { escondeTrInstrucao } from './escondeTh.js';
+
 const tabelas = document.querySelectorAll('[data-tabela]');
 
 tabelas.forEach(tabela => {
@@ -7,6 +9,10 @@ tabelas.forEach(tabela => {
 
         subtraiDespesa(tdClidada, event);
         exibeSoma(tdClidada, event);
+
+        setInterval(function(){
+            escondeTrInstrucao();
+        }, 100);
     })
 })
 
@@ -16,7 +22,7 @@ function deletaTr(event){
         
         setTimeout(function(){
             event.target.parentNode.remove();
-        }, 500)            
+        }, 100)            
     }
     return event.target;
 }
@@ -50,7 +56,6 @@ function somaTds(event){
     let somaTds = valoresTds.reduce(function(acum, atual){
         return acum + atual;
     })
-    console.log(somaTds)
     return somaTds;
 }
 

@@ -1,7 +1,6 @@
 import { recebeNomeEquipamento, calculaCustoEquipamento } from "./despesaEquipamentos.js";
 import { recebeNomeMaterial, calculaCustoMaterial } from "./despesaMateriais.js";
 
-
 const botoesAdicionar = document.querySelectorAll('[data-adicionar]');
 
 botoesAdicionar.forEach(botao => {
@@ -22,6 +21,7 @@ function criaTdNome(dado){
 function criaTdValor(dado){
     const td = document.createElement('td');
     td.setAttribute('data-td', 'valor')
+    td.classList.add('td--valor')
     td.textContent = dado;
     return td;
 }
@@ -42,7 +42,7 @@ function defineNome(botaoClicado){
     return nome;    
 }
 
-export function defineCusto(botaoClicado){
+function defineCusto(botaoClicado){
     if(selecionaTipo(botaoClicado) === 'equipamento'){
         const custo = calculaCustoEquipamento();
         return custo;      
@@ -56,7 +56,6 @@ function criaTr(botaoClicado){
     const custo = defineCusto(botaoClicado);
 
     const despesaTr = document.createElement('tr');
-    despesaTr.classList.add('tabela__despesa');
     despesaTr.setAttribute('data-tr', 'despesa');
 
     const nomeTd = criaTdNome(nome);
@@ -75,7 +74,7 @@ function selecionaTipo(botaoClicado){
     return tipo;
 }
 
-export function selecionaTabela(botaoClicado){
+function selecionaTabela(botaoClicado){
     if(selecionaTipo(botaoClicado) === 'equipamento'){
         const tabela = document.querySelector('[data-tabela="equipamento"]');
         return tabela;

@@ -1,3 +1,5 @@
+import { escondeTrInstrucao } from './escondeTh.js';
+
 const botoesAdicionar = document.querySelectorAll('[data-adicionar]');
 
 botoesAdicionar.forEach(botao => {
@@ -6,10 +8,12 @@ botoesAdicionar.forEach(botao => {
 
         const botaoClicado = defineBotaoClicado(event);        
         exibeSoma(botaoClicado);
+        
+        escondeTrInstrucao();
     })
 })
 
-export function defineBotaoClicado(event){
+function defineBotaoClicado(event){
     const botaoClicado = event.target;
     return botaoClicado;
 }
@@ -44,7 +48,7 @@ function recebeValoresTd(botaoClicado){
     return valoresTds;
 }
 
-export function somaTds(botaoClicado){
+function somaTds(botaoClicado){
     const valoresTds = recebeValoresTd(botaoClicado);
 
     let somaTds = valoresTds.reduce(function(acum, atual){
@@ -64,7 +68,7 @@ function selecionaInput(botaoClicado){
     }
 }
 
-export function exibeSoma(botaoClicado){
+function exibeSoma(botaoClicado){
     const input = selecionaInput(botaoClicado);
     input.value = somaTds(botaoClicado).toFixed(2);
 }

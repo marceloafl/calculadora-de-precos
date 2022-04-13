@@ -115,12 +115,13 @@
                     <p class="secao__descricao">Adicione os equipamentos utilizados em sua empresa.</p>
                     <table class="tabela" data-tabela="equipamento">
                         <tr>
-                            <th class="tabela__titulo">Equipamento</th>
-                            <th class="tabela__titulo">Custo/mês</th>
+                            <th>Equipamento</th>
+                            <th class="td--info">Custo/mês</th>
+                            <th class="td--vazio"></th>
                         </tr>
-                        <tr>
-                            <td class="tabela__valor" data-infotabela="equipamento">Adicione os equipamentos no formulário abaixo</td>
-                            <td class="tabela__valor" data-infotabela="equipamento">Adicione os equipamentos no formulário abaixo</td>
+                        <tr data-instrucao="equipamento">
+                            <td data-infotabela="equipamento">Adicione os equipamentos no formulário abaixo</td>
+                            <td data-infotabela="equipamento" class="td--info">Adicione os equipamentos no formulário abaixo</td>
                             
                         </tr>
                     </table>
@@ -261,13 +262,13 @@
                     <p class="secao__descricao">Adicione os materiais utilizados em sua empresa.</p>
                     <table class="tabela" data-tabela="material">
                         <tr>
-                            <th class="tabela__titulo">Material</th>
-                            <th class="tabela__titulo">Custo por serviço</th>
+                            <th>Material</th>
+                            <th class="td--info">Custo por serviço</th>
+                            <th class="td--vazio"></th>
                         </tr>
-                        <tr>
-                            <td class="tabela__valor" data-infotabela="material">Adicione os materiais no formulário abaixo</td>
-                            <td class="tabela__valor" data-infotabela="material">Adicione os materiais no formulário abaixo</td>
-                            <td class="tabela__valor"><a href="#" data-delete="material" class="tabela__link--delete"><img src="./assets/imagens/icones/delete_black_24dp.svg" class="tabela__icone--delete"></a></td>
+                        <tr data-instrucao="material">
+                            <td data-infotabela="material">Adicione os materiais no formulário abaixo</td>
+                            <td data-infotabela="material" class="td--info">Adicione os materiais no formulário abaixo</td>
                         </tr>
                     </table>
 
@@ -400,6 +401,5 @@
     <script src="./js/despesas/tabela/criaTabela.js" type="module"></script>
     <script src="./js/despesas/tabela/deletaDespesa.js" type="module"></script>
     <script src="./js/despesas/tabela/somaDespesas.js" type="module"></script>
-
 </body>
 </html>

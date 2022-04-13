@@ -1,7 +1,3 @@
-.inativo{
-    display: none;
-}
-
 .menu{
     background-color: var(--cor-branca);
     box-sizing: border-box;

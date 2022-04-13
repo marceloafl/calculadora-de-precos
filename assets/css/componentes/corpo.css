@@ -9,6 +9,10 @@
     width: 90%;
 }
 
+.inativo{
+    display: none;
+}
+
 @media screen and (min-width: 1024px){
     .corpo{
         background-color: var(--cor-fundo-grid);
@@ -28,5 +32,4 @@
         margin: 0;
         padding: 0 2rem;
     }
-
 }
