@@ -4,15 +4,19 @@ botoesAdicionar.forEach(botao => {
     botao.addEventListener('click', event => {
         event.preventDefault();
 
-
-        const botaoClicado = event.target;
-        mostra(botaoClicado);
+        const botaoClicado = defineBotaoClicado(event);        
+        exibeSoma(botaoClicado);
     })
 })
 
+export function defineBotaoClicado(event){
+    const botaoClicado = event.target;
+    return botaoClicado;
+}
+
 function selecionaTipo(botaoClicado){
     const tipo = botaoClicado.dataset.adicionar;
-    return tipo;  // RETORNA O VALOR DO DATASET ADICIONAR DOS BOTOES
+    return tipo;
 }
 
 function defineTipoDeTabela(botaoClicado){
@@ -21,14 +25,14 @@ function defineTipoDeTabela(botaoClicado){
         return tabela;
     } else if (selecionaTipo(botaoClicado) === 'material'){
         const tabela = document.querySelector('[data-tabela="material"]');
-        return tabela;  // RETORNA A TABELA RELACIONADA AO BOTAO CLICADO
+        return tabela;
     }
 }
 
 function selecionaTds(botaoClicado){
     const tabela = defineTipoDeTabela(botaoClicado);
     const tds = tabela.querySelectorAll('[data-td="valor"]')
-    return tds;  // RETORNA OS TDs ADICIONADOS
+    return tds;
 }
 
 function recebeValoresTd(botaoClicado){
@@ -40,23 +44,35 @@ function recebeValoresTd(botaoClicado){
     return valoresTds;
 }
 
-function somaTds(botaoClicado){
+export function somaTds(botaoClicado){
     const valoresTds = recebeValoresTd(botaoClicado);
 
     let somaTds = valoresTds.reduce(function(acum, atual){
         return acum + atual;
     })
-    return somaTds; // RETORNA A SOMA DOS VALORES DAS TDs
+    return somaTds;
 }
 
-function mostra(botaoClicado){
-    const elemento = somaTds(botaoClicado);
-    console.log(elemento);
+function selecionaInput(botaoClicado){
+    
+    if(selecionaTipo(botaoClicado) === 'equipamento'){
+        const input = document.querySelector('[data-resultado="equipamentos"]');
+        return input;
+    } else if (selecionaTipo(botaoClicado) === 'material'){
+        const input = document.querySelector('[data-resultado="materiais"]');
+        return input;
+    }
+}
+
+export function exibeSoma(botaoClicado){
+    const input = selecionaInput(botaoClicado);
+    input.value = somaTds(botaoClicado).toFixed(2);
 }
 
 
-// CRIA LÓGICA PARA DEFINIR TOTAL DE CADA DESPESA DA TABELA
-// PREENCHER/EXIBIR OS TOTAL NOS INPUTS
+
+
+
 
 
 
