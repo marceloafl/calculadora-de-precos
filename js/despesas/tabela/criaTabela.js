@@ -1,5 +1,6 @@
 import { recebeNomeEquipamento, calculaCustoEquipamento } from "./despesaEquipamentos.js";
 import { recebeNomeMaterial, calculaCustoMaterial } from "./despesaMateriais.js";
+import { validaEntrada, exibeMensagemDeErro } from './validaEntrada.js';
 
 const botoesAdicionar = document.querySelectorAll('[data-adicionar]');
 
@@ -7,7 +8,12 @@ botoesAdicionar.forEach(botao => {
     botao.addEventListener('click', event => {
         event.preventDefault();
         const botaoClicado = event.target;
-        adicionaCustoNaTabela(botaoClicado);
+
+        if (validaEntrada(botaoClicado)){
+            adicionaCustoNaTabela(botaoClicado);
+        } else {
+            exibeMensagemDeErro(botaoClicado);
+        }
     })
 })
 
@@ -69,7 +75,7 @@ function criaTr(botaoClicado){
     return despesaTr;
 }
 
-function selecionaTipo(botaoClicado){
+export function selecionaTipo(botaoClicado){
     const tipo = botaoClicado.dataset.adicionar;
     return tipo;
 }

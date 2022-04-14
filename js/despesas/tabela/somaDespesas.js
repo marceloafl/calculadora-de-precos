@@ -1,4 +1,5 @@
 import { escondeTrInstrucao } from './escondeTh.js';
+import { exibeTotalNoInput } from '../custoFixo/custoFixo.js'
 
 const botoesAdicionar = document.querySelectorAll('[data-adicionar]');
 
@@ -8,6 +9,7 @@ botoesAdicionar.forEach(botao => {
 
         const botaoClicado = defineBotaoClicado(event);        
         exibeSoma(botaoClicado);
+        exibeTotalNoInput();
         
         escondeTrInstrucao();
     })
@@ -60,10 +62,10 @@ function somaTds(botaoClicado){
 function selecionaInput(botaoClicado){
     
     if(selecionaTipo(botaoClicado) === 'equipamento'){
-        const input = document.querySelector('[data-resultado="equipamentos"]');
+        const input = document.querySelector('[data-resultado="equipamento"]');
         return input;
     } else if (selecionaTipo(botaoClicado) === 'material'){
-        const input = document.querySelector('[data-resultado="materiais"]');
+        const input = document.querySelector('[data-resultado="material"]');
         return input;
     }
 }

@@ -46,3 +46,12 @@ th {
     display: none;
 }
 
+.tabela__container--inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.tabela__input--erro{
+    color: var(--cor-vermelha);
+    text-align: center;
+}

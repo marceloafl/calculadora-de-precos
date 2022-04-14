@@ -1,9 +1,18 @@
-import { CustoFixo } from './despesas/custoFixo.js'
+import { somaTotais } from './despesas/custoFixo/custoFixo.js';
+import { calculaProdutividade } from './despesas/produtividade/produtividade.js'
 
-const inputs = document.querySelectorAll('[data-input]')
+// CALCULADORA CENTRAL UNINDO AS CONTAS
 
-inputs.forEach(input => {
-    input.addEventListener('change', () => {
-        const custoFixo = new CustoFixo();
-    })
+
+
+const botaoTaxas = document.querySelector('[data-botao="lucros-taxas"]');
+botaoTaxas.addEventListener('click',  () => {
+    const custoFixo = somaTotais();
+    const produtividade = calculaProdutividade();
+    //const custoFixoUnitario = somaTotais();
+    //const custoVariavelUnitario = somaTotais();
+    //const markUp = somaTotais();
+    
+    console.log(custoFixo);
+    console.log(produtividade);
 })

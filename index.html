@@ -59,30 +59,30 @@
             </div>
 
             <form class="formulario">
-                <fieldset class="formulario" data-formulario="estruturais">
+                <fieldset class="formulario" data-formulario="estrutural">
                     <legend class="formulario__titulo">Estruturais</legend>
 
                     <label for="aluguel" class="label">Aluguel:</label>
                     <input name="aluguel" type="number" id="aluguel" class="input" placeholder="R$"
-                        data-input="moeda" data-despesa="aluguel">
+                        data-input="moeda" data-despesa="aluguel" data-tipo="estrutural">
 
                     <label for="iptu" class="label">IPTU:</label>
-                    <input name="iptu" type="number" id="iptu" class="input" placeholder="R$" data-input="moeda" data-despesa="iptu">
+                    <input name="iptu" type="number" id="iptu" class="input" placeholder="R$" data-input="moeda" data-despesa="iptu" data-tipo="estrutural">
 
                     <label for="energia" class="label">Energia Elétrica:</label>
-                    <input name="energia" type="number" id="energia" class="input" placeholder="R$" data-input="moeda" data-despesa="energia">
+                    <input name="energia" type="number" id="energia" class="input" placeholder="R$" data-input="moeda" data-despesa="energia" data-tipo="estrutural">
 
                     <label for="agua" class="label">Água:</label>
-                    <input name="agua" type="number" id="agua" class="input" placeholder="R$" data-input="moeda" data-despesa="agua">
+                    <input name="agua" type="number" id="agua" class="input" placeholder="R$" data-input="moeda" data-despesa="agua" data-tipo="estrutural">
 
                     <label for="outros-estruturais" class="label">Outros:</label>
                     <input name="outros-estruturais" type="number" id="outros-estruturais" class="input"
-                        placeholder="R$" data-input="moeda" data-despesa="outros-estruturais">
+                        placeholder="R$" data-input="moeda" data-despesa="outros-estruturais" data-tipo="estrutural">
 
                     <div class="container__total--parcial">
                         <label for="total-estruturais" class="label">Custo estrutural total:</label>
                         <input name="total-estruturais" type="number" id="total-estruturais" class="input"
-                            placeholder="R$" data-input="moeda" data-resultado="estruturais" readonly>
+                            placeholder="R$" data-input="moeda" data-resultado="estrutural" readonly>
                     </div>
                 </fieldset>
 
@@ -90,19 +90,19 @@
                     <legend class="formulario__titulo">Administrativas</legend>
 
                     <label for="internet" class="label">Internet:</label>
-                    <input name="internet" type="number" id="internet" class="input" placeholder="R$" data-input="moeda" data-despesa="internet">
+                    <input name="internet" type="number" id="internet" class="input" placeholder="R$" data-input="moeda" data-despesa="internet" data-tipo="administrativas">
 
                     <label for="telefone" class="label">Telefone:</label>
-                    <input name="telefone" type="number" id="telefone" class="input" placeholder="R$" data-input="moeda" data-despesa="telefone">
+                    <input name="telefone" type="number" id="telefone" class="input" placeholder="R$" data-input="moeda" data-despesa="telefone" data-tipo="administrativas">
 
                     <label for="marketing" class="label">Marketing:</label>
-                    <input name="marketing" type="number" id="marketing" class="input" placeholder="R$" data-input="moeda" data-despesa="marketing">
+                    <input name="marketing" type="number" id="marketing" class="input" placeholder="R$" data-input="moeda" data-despesa="marketing" data-tipo="administrativas">
 
                     <label for="contabilidade" class="label">Contabilidade:</label>
-                    <input name="contabilidade" type="number" id="contabilidade" class="input" placeholder="R$" data-input="moeda" data-despesa="contabilidade">
+                    <input name="contabilidade" type="number" id="contabilidade" class="input" placeholder="R$" data-input="moeda" data-despesa="contabilidade" data-tipo="administrativas">
 
                     <label for="outros-despesas-adm" class="label">Outros:</label>
-                    <input name="outros-despesas-adm" type="number" id="outros-despesas-adm" class="input" placeholder="R$" data-input="moeda" data-despesa="outros-despesas-adm">
+                    <input name="outros-despesas-adm" type="number" id="outros-despesas-adm" class="input" placeholder="R$" data-input="moeda" data-despesa="outros-despesas-adm" data-tipo="administrativas">
 
                     <div class="container__total--parcial">
                         <label for="total-despesas-adm" class="label">Total:</label>
@@ -126,23 +126,23 @@
                         </tr>
                     </table>
 
-                    <label for="equipamento-nome" class="label">Nome do equipamento:</label>
-                    <input name="equipamento-nome" type="text" id="equipamento-nome" class="input" placeholder="Nome do equipamento" data-nome="equipamento">
-
-                    <label for="equipamento-valor" class="label">Valor de compra:</label>
-                    <input name="equipamento-valor" type="number" id="equipamento-valor" class="input" placeholder="R$"
-                    data-input="moeda" data-valor="equipamento">
-
-                    <label for="equipamento-depreciacao" class="label">Vida útil estimada em anos:</label>
-                    <input name="equipamento-depreciacao" type="number" id="equipamento-depreciacao" class="input" placeholder="Vida útil estimada"
-                    data-input="tempo" data-depreciacao="equipamento">
+                    <div class="tabela__container--inputs" data-inputtabela="equipamento">
+                        <label for="equipamento-nome" class="label">Nome do equipamento:</label>
+                        <input name="equipamento-nome" type="text" id="equipamento-nome" class="input" placeholder="Nome do equipamento" data-nome="equipamento">
+    
+                        <label for="equipamento-valor" class="label">Valor de compra:</label>
+                        <input name="equipamento-valor" type="number" id="equipamento-valor" class="input" placeholder="R$" data-input="moeda" data-valor="equipamento">
+    
+                        <label for="equipamento-depreciacao" class="label">Vida útil estimada em anos:</label>
+                        <input name="equipamento-depreciacao" type="number" id="equipamento-depreciacao" class="input" placeholder="Vida útil estimada" data-input="tempo" data-depreciacao="equipamento">                      
+                    </div>
 
                     <a href="#" class="botao botao--add" data-adicionar="equipamento">Adicionar novo
                         equipamento</a>
 
                     <div class="container__total--parcial">
                         <label for="total-equipamentos" class="label">Total:</label>
-                        <input name="total-equipamentos" type="number" id="total-equipamentos" class="input" placeholder="R$" data-input="moeda" data-resultado="equipamentos" readonly>
+                        <input name="total-equipamento" type="number" id="total-equipamento" class="input" placeholder="R$" data-input="moeda" data-resultado="equipamento" readonly>
                     </div>
                 </fieldset>
 
@@ -150,24 +150,24 @@
                     <legend class="formulario__titulo">Funcionários</legend>
 
                     <label for="salarios" class="label">Salários:</label>
-                    <input name="salarios" type="number" id="salarios" class="input" placeholder="R$" data-input="moeda" data-despesa="salarios">
+                    <input name="salarios" type="number" id="salarios" class="input" placeholder="R$" data-input="moeda" data-despesa="salarios" data-tipo="funcionarios">
 
                     <label for="fgts" class="label">FGTS:</label>
-                    <input name="fgts" type="number" id="fgts" class="input" placeholder="R$" data-input="moeda" data-despesa="fgts">
+                    <input name="fgts" type="number" id="fgts" class="input" placeholder="R$" data-input="moeda" data-despesa="fgts" data-tipo="funcionarios">
 
                     <label for="vale-refeicao" class="label">Vale refeição:</label>
-                    <input name="vale-refeicao" type="number" id="vale-refeicao" class="input" placeholder="R$" data-input="moeda" data-despesa="vale-refeicao">
+                    <input name="vale-refeicao" type="number" id="vale-refeicao" class="input" placeholder="R$" data-input="moeda" data-despesa="vale-refeicao" data-tipo="funcionarios">
 
                     <label for="vale-transporte" class="label">Vale transporte:</label>
                     <input name="vale-transporte" type="number" id="vale-transporte" class="input" placeholder="R$"
-                    data-input="moeda" data-despesa="vale-transporte">
+                    data-input="moeda" data-despesa="vale-transporte" data-tipo="funcionarios">
 
                     <label for="beneficios" class="label">Benefícios:</label>
-                    <input name="beneficios" type="number" id="beneficios" class="input" placeholder="R$" data-input="moeda" data-despesa="beneficios">
+                    <input name="beneficios" type="number" id="beneficios" class="input" placeholder="R$" data-input="moeda" data-despesa="beneficios" data-tipo="funcionarios">
 
                     <label for="outros-funcionarios" class="label">Outros:</label>
                     <input name="outros-funcionarios" type="number" id="outros-funcionarios" class="input" placeholder="R$"
-                    data-input="moeda" data-despesa="outros-funcionarios">
+                    data-input="moeda" data-despesa="outros-funcionarios" data-tipo="funcionarios">
 
                     <div class="container__total--parcial">
                         <label for="total-funcionarios" class="label">Total:</label>
@@ -178,13 +178,13 @@
 
                 <section class="secao__container secao__resultado">
                     <p class="secao__titulo">Custo fixo total:</p>
-                    <input name="custo-fixo" type="number" class="input" data-input="moeda" readonly>
-                    <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
+                    <input name="custo-fixo" type="number" class="input" data-input="moeda" data-total="custo-fixo" readonly>
+                    <a href="#" class="botao" data-navegacao="proximo" data-botao="custo-fixo">Próximo</a>
                 </section>
             </form>
         </section>
 
-        <section data-secao="capacidade-produtiva" class="inativ">
+        <section data-secao="produtividade" class="inativ">
             <div class="secao__container">
                 <h2 class="secao__titulo">Capacidade Produtiva</h2>
                 <p class="secao__descricao">Capacidade produtiva é o máximo que seu negócio consegue produzir em
@@ -192,7 +192,7 @@
             </div>
 
             <form class="formulario">
-                <fieldset class=" formulario" data-formulario="capacidade-produtiva">
+                <fieldset class=" formulario" data-formulario="produtividade">
                     <label for="horas-semana" class="label">Horas trabalhadas na semana:</label>
                     <input name="horas-semana" type="number" id="horas-semana" class="input" data-input="tempo" data-despesa="horas-semana">
 
@@ -209,8 +209,8 @@
 
                 <section class="secao__container secao__resultado">
                     <p class="secao__titulo">Produtividade (em horas):</p>
-                    <input name="produtividade" type="number" class="input" data-input="tempo" readonly>
-                    <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
+                    <input name="produtividade" type="number" class="input" data-input="tempo" data-total="produtividade" readonly>
+                    <a href="#" class="botao" data-navegacao="proximo" data-botao="produtividade">Próximo</a>
                     <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                 </section>
             </form>
@@ -240,7 +240,7 @@
 
                 <section class="secao__container secao__resultado">
                     <p class="secao__titulo">Custo fixo unitário:</p>
-                    <input name="custo-fixo-unitario" type="number" class="input" data-input="moeda" readonly>
+                    <input name="custo-fixo-unitario" type="number" class="input" data-input="moeda" data-total="custo-fixo-unitario" readonly>
                     <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
                     <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                 </section>
@@ -272,25 +272,27 @@
                         </tr>
                     </table>
 
-                    <label for="material-nome" class="label">Nome do material:</label>
-                    <input name="material-nome" type="text" id="material-nome" class="input" placeholder="Nome do material"
-                    data-nome="material">
+                    <div class="tabela__container--inputs" data-inputtabela="material">
+                        <label for="material-nome" class="label">Nome do material:</label>
+                        <input name="material-nome" type="text" id="material-nome" class="input" placeholder="Nome do material"
+                        data-nome="material">
 
-                    <label for="material-valor" class="label">Valor de compra:</label>
-                    <input name="material-valor" type="number" id="material-valor" class="input" placeholder="R$" data-input="moeda" data-valor="material">
+                        <label for="material-valor" class="label">Valor de compra:</label>
+                        <input name="material-valor" type="number" id="material-valor" class="input" placeholder="R$" data-input="moeda" data-valor="material">
 
-                    <label for="material-quantidade" class="label">Quantidade comprada:</label>
-                    <input name="material-quantidade" type="number" id="material-quantidade" class="input" placeholder="Quantidade total comprada" data-input="numero" data-compra="material">
+                        <label for="material-quantidade" class="label">Quantidade comprada:</label>
+                        <input name="material-quantidade" type="number" id="material-quantidade" class="input" placeholder="Quantidade total comprada" data-input="numero" data-compra="material">
 
-                    <label for="material-quantidade" class="label">Quantidade utilizada na execução/produção:</label>
-                    <input name="material-quantidade" type="number" id="material-quantidade" class="input" placeholder="Quantidade utilizada"
-                    data-input="numero" data-uso="material">
+                        <label for="material-quantidade" class="label">Quantidade utilizada na execução/produção:</label>
+                        <input name="material-quantidade" type="number" id="material-quantidade" class="input" placeholder="Quantidade utilizada"
+                        data-input="numero" data-uso="material">
+                    </div>
 
                     <a href="#" class="botao botao--add" data-adicionar="material">Adicionar novo material</a>
 
                     <section class="secao__container secao__resultado">
                         <p class="secao__titulo">Custo variável unitário:</p>
-                        <input name="custo-variavel-unitario" type="number" class="input" data-input="moeda" data-resultado="materiais">
+                        <input name="custo-variavel-unitario" type="number" class="input" data-input="moeda" data-resultado="material" data-total="custo-variavel-unitario">
                         <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
                         <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                     </section>
@@ -320,7 +322,7 @@
                 </fieldset>
 
                 <section class="secao__container">
-                    <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
+                    <a href="#" class="botao" data-navegacao="proximo" data-botao="lucros-taxas">Próximo</a>
                     <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                 </section>
             </form>
@@ -395,11 +397,16 @@
     </footer>
 
     <script src="./js/navegacao/menu.js"></script>
-    <script src="./js/navegacao/navegacao.js" type="module"></script>
+    
     <script src="./js/validacao/validacao.js" type="module"></script>
-    <script src="./js/calculadora.js" type="module"></script>
+    <script src="./js/despesas/custoFixo/custoFixo.js" type="module"></script>
     <script src="./js/despesas/tabela/criaTabela.js" type="module"></script>
     <script src="./js/despesas/tabela/deletaDespesa.js" type="module"></script>
     <script src="./js/despesas/tabela/somaDespesas.js" type="module"></script>
+    <script src="./js/despesas/custoFixo/custoFixo.js" type="module"></script>
+    <script src="./js/despesas/produtividade/produtividade.js" type="module"></script>
+    <script src="./js/despesas/custoFixoUnitario/custoFixoUnitario.js" type="module"></script>
+    <script src="./js/calculadora.js" type="module"></script>
+
 </body>
 </html>
