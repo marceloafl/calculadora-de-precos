@@ -12,7 +12,6 @@
 
 .input--resultado{
     border: none;
-    border-bottom: solid 1px #5c5c5c;
     border-radius: 5px;
     box-sizing: border-box;
     font-family: var(--fonte-familia-padrao);

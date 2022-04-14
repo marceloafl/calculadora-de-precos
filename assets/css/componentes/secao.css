@@ -33,15 +33,10 @@
     font-size: var(--fonte-tamanho-subtitulo);
 }
 
-.secao__resultado .input{
-    border: none;
-    border-bottom: solid 1px #5c5c5c;
-}
-
 @media screen and (min-width: 1024px){
     .secao__titulo{
         font-size: var(--fonte-tamanho-subtitulo-desktop);
-        font-weight: var(--fonte-peso-titulo);
+        /*font-weight: var(--fonte-peso-titulo);*/
         margin: var(--margem-titulo) 0;
         text-align: left;
     }

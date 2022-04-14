@@ -75,10 +75,10 @@ function subtraiDespesa(tdClidada, event){
 function selecionaInput(event){
     
     if(recebeAtributoDaTabela(event) === 'equipamento'){
-        const input = document.querySelector('[data-resultado="equipamentos"]');
+        const input = document.querySelector('[data-resultado="equipamento"]');
         return input;
     } else if (recebeAtributoDaTabela(event) === 'material'){
-        const input = document.querySelector('[data-resultado="materiais"]');
+        const input = document.querySelector('[data-resultado="material"]');
         return input;
     }
 }

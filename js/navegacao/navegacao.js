@@ -52,7 +52,7 @@ function selecionaSecao(event){
 
 const etapasNavegacao = {
     0: 'custo-fixo',
-    1: 'capacidade-produtiva',
+    1: 'produtividade',
     2: 'custo-fixo-unitario',
     3: 'custo-variavel-unitario',
     4: 'lucros-taxas',

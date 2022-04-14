@@ -50,7 +50,7 @@ function recebeValoresTd(botaoClicado){
     return valoresTds;
 }
 
-function somaTds(botaoClicado){
+export function somaTds(botaoClicado){
     const valoresTds = recebeValoresTd(botaoClicado);
 
     let somaTds = valoresTds.reduce(function(acum, atual){

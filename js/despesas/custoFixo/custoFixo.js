@@ -11,10 +11,10 @@ inputs.forEach(input => {
     })
 })
 
-const botaoCustoFixo = document.querySelector('[data-botao="custo-fixo"]');
-botaoCustoFixo.addEventListener('click', () => {
-    
-})
+//const botaoCustoFixo = document.querySelector('[data-botao="custo-fixo"]');
+//botaoCustoFixo.addEventListener('click', () => {
+//    
+//})
 
 function recuperaTotais(){
     const secao = document.querySelector('[data-secao="custo-fixo"]');

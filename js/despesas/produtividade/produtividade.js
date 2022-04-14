@@ -32,7 +32,7 @@ export function calculaProdutividade(){
     const horasNaoOciosas = 0.8;
 
     let produtividade = horasMes * horasNaoOciosas;
-    return produtividade.toFixed(2);
+    return parseFloat(produtividade);
 }
 
 function exibeInputResultado(){

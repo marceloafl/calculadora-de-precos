@@ -178,13 +178,13 @@
 
                 <section class="secao__container secao__resultado">
                     <p class="secao__titulo">Custo fixo total:</p>
-                    <input name="custo-fixo" type="number" class="input" data-input="moeda" data-total="custo-fixo" readonly>
+                    <input name="custo-fixo" type="number" class="input input--total" data-input="moeda" data-total="custo-fixo" readonly>
                     <a href="#" class="botao" data-navegacao="proximo" data-botao="custo-fixo">Próximo</a>
                 </section>
             </form>
         </section>
 
-        <section data-secao="produtividade" class="inativ">
+        <section data-secao="produtividade" class="inativo">
             <div class="secao__container">
                 <h2 class="secao__titulo">Capacidade Produtiva</h2>
                 <p class="secao__descricao">Capacidade produtiva é o máximo que seu negócio consegue produzir em
@@ -209,14 +209,14 @@
 
                 <section class="secao__container secao__resultado">
                     <p class="secao__titulo">Produtividade (em horas):</p>
-                    <input name="produtividade" type="number" class="input" data-input="tempo" data-total="produtividade" readonly>
+                    <input name="produtividade" type="number" class="input input--total" data-input="tempo" data-total="produtividade" readonly>
                     <a href="#" class="botao" data-navegacao="proximo" data-botao="produtividade">Próximo</a>
                     <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                 </section>
             </form>
         </section>
 
-        <section data-secao="custo-fixo-unitario" class="inativ">
+        <section data-secao="custo-fixo-unitario" class="inativo">
             <div class="secao__container">
                 <h2 class="secao__titulo">Custo Fixo Unitário</h2>
                 <p class="secao__descricao">Custo fixo unitário é calculado a partir da relação entre o tempo gasto para
@@ -240,14 +240,14 @@
 
                 <section class="secao__container secao__resultado">
                     <p class="secao__titulo">Custo fixo unitário:</p>
-                    <input name="custo-fixo-unitario" type="number" class="input" data-input="moeda" data-total="custo-fixo-unitario" readonly>
-                    <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
+                    <input name="custo-fixo-unitario" type="number" class="input input--total" data-input="moeda" data-total="custo-fixo-unitario" readonly>
+                    <a href="#" class="botao" data-navegacao="proximo" data-botao="custo-fixo-unitario">Próximo</a>
                     <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                 </section>
             </form>
         </section>
 
-        <section data-secao="custo-variavel-unitario" class="inativ">
+        <section data-secao="custo-variavel-unitario" class="inativo">
             <div class="secao__container">
                 <h2 class="secao__titulo">Custo Variável Unitário</h2>
                 <p class="secao__descricao">Custo variável é o valor que você gasta com produtos e materiais na produção
@@ -292,14 +292,14 @@
 
                     <section class="secao__container secao__resultado">
                         <p class="secao__titulo">Custo variável unitário:</p>
-                        <input name="custo-variavel-unitario" type="number" class="input" data-input="moeda" data-resultado="material" data-total="custo-variavel-unitario">
-                        <a href="#" class="botao" data-navegacao="proximo">Próximo</a>
+                        <input name="custo-variavel-unitario" type="number" class="input input--total" data-input="moeda" data-resultado="material" data-total="custo-variavel-unitario">
+                        <a href="#" class="botao" data-navegacao="proximo" data-botao="custo-variavel-unitario">Próximo</a>
                         <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                     </section>
             </form>
         </section>
 
-        <section class="secao__container inativ" data-secao="lucros-taxas">
+        <section class="secao__container inativo" data-secao="lucros-taxas">
             <div class="secao__container">
                 <h2 class="secao__titulo">Lucro, taxas e impostos</h2>
                 <p class="secao__descricao">Informe a margem de lucro desejada, taxas e impostos.</p>
@@ -328,7 +328,7 @@
             </form>
         </section>
 
-        <section data-secao="resultado-final" class="inativ">
+        <section data-secao="resultado-final" class="inativo">
             <div class="secao__container">
                 <h2 class="secao__titulo">Resultado</h2>
                 <p class="secao__descricao">Os valores indicados são sugestões calculadas de acordo com os dados que
@@ -337,16 +337,16 @@
 
             <div class="secao__container container--resultado">
                 <p class="label">Custo unitário fixo:</p>
-                <input name="custo-unitario-fixo" class="input" data-input="moeda" readonly>
+                <input type="number" name="custo-unitario-fixo" class="input" data-input="moeda" data-final="custo-unitario-fixo" readonly>
 
                 <p class="label">Custo unitário variável:</p>
-                <input name="custo-unitario-variavel" class="input" data-input="moeda" readonly>
+                <input type="number" name="custo-unitario-variavel" class="input" data-input="moeda" data-final="custo-unitario-variavel" readonly>
 
                 <p class="label">Custo total unitário:</p>
-                <input name="custo-unitario-total" class="input" data-input="moeda" readonly>
+                <input type="number" name="custo-unitario-total" class="input" data-input="moeda" data-final="custo-unitario-total" readonly>
 
                 <p class="titulo--resultado-final">Sugestão de preço mínimo de venda:</p>
-                <input name="resultado-final" class="input--resultado" data-input="moeda" readonly>
+                <input type="number" name="resultado-final" class="input--resultado" data-input="moeda" data-final="resultado" readonly>
 
                 <a href="#" class="botao" data-navegacao="novo-calculo">Novo cálculo</a>
                 <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
@@ -396,16 +396,12 @@
         </ul>
     </footer>
 
-    <script src="./js/navegacao/menu.js"></script>
-    
+    <script src="./js/navegacao/menu.js"></script>  
+    <script src="./js/navegacao/navegacao.js" type="module"></script>
     <script src="./js/validacao/validacao.js" type="module"></script>
-    <script src="./js/despesas/custoFixo/custoFixo.js" type="module"></script>
     <script src="./js/despesas/tabela/criaTabela.js" type="module"></script>
     <script src="./js/despesas/tabela/deletaDespesa.js" type="module"></script>
     <script src="./js/despesas/tabela/somaDespesas.js" type="module"></script>
-    <script src="./js/despesas/custoFixo/custoFixo.js" type="module"></script>
-    <script src="./js/despesas/produtividade/produtividade.js" type="module"></script>
-    <script src="./js/despesas/custoFixoUnitario/custoFixoUnitario.js" type="module"></script>
     <script src="./js/calculadora.js" type="module"></script>
 
 </body>

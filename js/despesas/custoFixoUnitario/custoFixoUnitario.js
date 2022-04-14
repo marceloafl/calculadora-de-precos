@@ -44,11 +44,10 @@ function recebeTempoNecessario(){
     return tempoNecessario;
 }
 
-function calculaCustoFixoUnitario(){
+export function calculaCustoFixoUnitario(){
     const custoFixoPorMinuto = calculaCustoFixoPorMinuto();
     const tempoNecessario = recebeTempoNecessario();
     const custoFixoUnitario = custoFixoPorMinuto * tempoNecessario;
-    console.log(custoFixoUnitario);
     return custoFixoUnitario;
 }
 
