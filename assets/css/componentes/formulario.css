@@ -19,6 +19,11 @@
 
 .label{
     height: 100%;
+    margin-bottom: .25rem;
+}
+
+.label--dica{
+    font-size: var(--fonte-tamanho-dica);
 }
 
 .input{
@@ -28,6 +33,10 @@
     height: 36px;
     margin-bottom: var(--margem-input);
     width: 60%;
+}
+
+.input--readonly{
+    background-color: var(--cor-readonly);
 }
 
 .input--erro{

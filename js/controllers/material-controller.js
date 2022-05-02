@@ -36,7 +36,11 @@ export class MateriaisController {
         const material = this.criaMaterial();
         const nomeMaterial = material.nome;
         const custoMaterial = material.custoExecucao;
-        this.materiaisView.adicionaMaterialNaTabela(nomeMaterial, custoMaterial);       
+        this.materiaisView.adicionaMaterialNaTabela(nomeMaterial, custoMaterial);
+        this.inputNome.value = '';
+        this.inputValor.value = '';
+        this.inputCompra.value = '';
+        this.inputUso.value = '';
     }
 
     atualizaMateriais(target){

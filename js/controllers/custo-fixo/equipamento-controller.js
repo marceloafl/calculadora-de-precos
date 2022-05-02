@@ -34,6 +34,9 @@ export class EquipamentosController {
         const nomeEquipamento = equipamento.nome;
         const custoMesEquipamento = equipamento.custoMes;
         this.equipamentosView.adicionaEquipamentoNaTabela(nomeEquipamento, custoMesEquipamento);
+        this.inputNome.value = '';
+        this.inputValor.value = '';
+        this.inputVidaUtil.value = '';
     }
 
     atualizaEquipamentos(target){

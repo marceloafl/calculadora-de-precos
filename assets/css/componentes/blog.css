@@ -1,3 +1,11 @@
+.secao__container.blog{
+    padding: 0 1.5rem;
+}
+
+.secao__descricao.blog{
+    text-align: center;
+}
+
 .texto__mais-conteudo--subtitulo{
     text-decoration: underline;
 }
@@ -5,4 +13,11 @@
 .texto_exemplo{
     text-align: center;
     margin: var(--margin-vertical--botao) 0;
+}
+
+@media screen and (min-width: 1024px){
+    .secao__descricao.blog{
+        text-align: left;
+    }
+
 }

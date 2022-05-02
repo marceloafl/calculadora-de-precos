@@ -11,7 +11,7 @@
     width: 75%;
 }
 
-.botao--add {
+.botao--sec {
     background-color: var(--cor-branca);
     border: 1px solid var(--cor-azul);
     color: var(--cor-azul);
@@ -27,5 +27,5 @@
     .botao {
         width: 220px;
     }
-
 }
+

@@ -10,6 +10,7 @@
     --fonte-tamanho-subtitulo-desktop: 1.25rem;
     --fonte-tamanho-titulo-menu: 1.25rem;
     --fonte-tamanho-paragrafo: 1rem;
+    --fonte-tamanho-dica: .8rem;
 
     --linha-altura-paragrafo: 1.5rem;
 
@@ -18,6 +19,7 @@
     --cor-vermelha: #FF0000;
     --cor-fundo-grid: #F3F2EF;
     --cor-borda: #D1D1D1;
+    --cor-readonly: #e6e4e4;
 
     --margem-container: 1.5rem;
     --margem-formulario: 1.5rem;

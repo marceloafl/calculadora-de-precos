@@ -24,11 +24,11 @@
 
 <body class="corpo">
     <header class="cabecalho">
-        <a href="#">
+        <a href="index.html">
             <img src="assets/imagens/logo-calculadora.png" alt="Logo da Calculadora de Preços"
                 class="cabecalho__logo--imagem">
         </a>
-        <a href="#">
+        <a href="index.html">
             <h1 class="cabecalho__titulo--texto">Calculadora de Preços</h1>
         </a>
         <a href="#" data-menu="abrir-menu">
@@ -62,57 +62,60 @@
                 <fieldset class="formulario" data-formulario="estrutural">
                     <legend class="formulario__titulo">Estruturais</legend>
 
-                    <label for="aluguel" class="label">Aluguel:</label>
+                    <label for="aluguel" class="label">Aluguel (valor por mês):</label>
                     <input name="aluguel" type="number" id="aluguel" class="input" placeholder="R$"
                         data-input="positivo" data-custo="aluguel" data-tipo="estrutural">
 
-                    <label for="iptu" class="label">IPTU:</label>
+                    <label for="iptu" class="label">IPTU (valor por mês):</label>
                     <input name="iptu" type="number" id="iptu" class="input" placeholder="R$" data-input="positivo" data-custo="iptu" data-tipo="estrutural">
 
-                    <label for="energia" class="label">Energia Elétrica:</label>
+                    <label for="energia" class="label">Energia Elétrica (valor por mês):</label>
                     <input name="energia" type="number" id="energia" class="input" placeholder="R$" data-input="positivo" data-custo="energia" data-tipo="estrutural">
 
-                    <label for="agua" class="label">Água:</label>
+                    <label for="agua" class="label">Água (valor por mês):</label>
                     <input name="agua" type="number" id="agua" class="input" placeholder="R$" data-input="positivo" data-custo="agua" data-tipo="estrutural">
 
-                    <label for="outros-estruturais" class="label">Outros:</label>
+                    <label for="outros-estruturais" class="label">Outros (valor por mês):</label>
                     <input name="outros-estruturais" type="number" id="outros-estruturais" class="input"
                         placeholder="R$" data-input="positivo" data-custo="outros-estruturais" data-tipo="estrutural">
 
                     <div class="container__total--parcial">
-                        <label for="total-estruturais" class="label">Custo estrutural total:</label>
-                        <input name="total-estruturais" type="number" id="total-estruturais" class="input"
+                        <label for="total-estruturais" class="label">Custo estrutural total (mês):</label>
+                        <input name="total-estruturais" type="number" id="total-estruturais" class="input input--readonly"
                             placeholder="R$" data-resultado="estrutural" value="0" readonly>
                     </div>
                 </fieldset>
 
                 <fieldset class="formulario" data-formulario="administrativas">
-                    <legend class="formulario__titulo">Administrativas</legend>
+                    <legend class="formulario__titulo">Administrativos</legend>
 
-                    <label for="internet" class="label">Internet:</label>
+                    <label for="internet" class="label">Internet (valor por mês):</label>
                     <input name="internet" type="number" id="internet" class="input" placeholder="R$" data-input="positivo" data-custo="internet" data-tipo="administrativas">
 
-                    <label for="telefone" class="label">Telefone:</label>
+                    <label for="telefone" class="label">Telefone (valor por mês):</label>
                     <input name="telefone" type="number" id="telefone" class="input" placeholder="R$" data-input="positivo" data-custo="telefone" data-tipo="administrativas">
 
-                    <label for="marketing" class="label">Marketing:</label>
+                    <label for="marketing" class="label">Marketing (valor por mês):</label>
                     <input name="marketing" type="number" id="marketing" class="input" placeholder="R$" data-input="positivo" data-custo="marketing" data-tipo="administrativas">
 
-                    <label for="contabilidade" class="label">Contabilidade:</label>
+                    <label for="contabilidade" class="label">Contabilidade (valor por mês):</label>
                     <input name="contabilidade" type="number" id="contabilidade" class="input" placeholder="R$" data-input="positivo" data-custo="contabilidade" data-tipo="administrativas">
 
-                    <label for="outros-despesas-adm" class="label">Outros:</label>
+                    <label for="outros-despesas-adm" class="label">Outros (valor por mês):</label>
                     <input name="outros-despesas-adm" type="number" id="outros-despesas-adm" class="input" placeholder="R$" data-input="positivo" data-custo="outros-administrativos" data-tipo="administrativas">
 
                     <div class="container__total--parcial">
-                        <label for="total-despesas-adm" class="label">Total:</label>
-                        <input name="total-despesas-adm" type="number" id="total-despesas-adm" class="input" placeholder="R$" data-resultado="administrativos" value="0" readonly>
+                        <label for="total-despesas-adm" class="label">Custo administrativo total (mês):</label>
+                        <input name="total-despesas-adm" type="number" id="total-despesas-adm" class="input input--readonly" placeholder="R$" data-resultado="administrativos" value="0" readonly>
                     </div>
                 </fieldset>
 
                 <fieldset class="formulario" data-formulario="equipamentos">
                     <legend class="formulario__titulo">Equipamentos</legend>
                     <p class="secao__descricao">Adicione os equipamentos utilizados em sua empresa.</p>
+                    <p class="secao__descricao">Lembre-se que esses equipamentos fazem parte da estrutura do negócio. Portanto, não variam de acordo com a produção.</p>
+                    <p class="secao__descricao">Você pode incluir um veículo, por exemplo. Pois ele é um equipamento e seu custo (de aquisição) não varia.</p>
+                    <p class="secao__descricao">Diferentemente do combustível, que terá custos maiores caso a quantidade de serviços executados aumentem. Nas próximas etapas da calculadora teremos o campo para você incluir esses gastos variáveis, como o combustível.</p>
                     <table class="tabela" data-tabela="equipamento">
                         <tr>
                             <th>Equipamento</th>
@@ -120,8 +123,8 @@
                             <th class="td--vazio"></th>
                         </tr>
                         <tr data-instrucao="equipamento">
-                            <td data-infotabela="equipamento">Adicione os equipamentos no formulário abaixo</td>
-                            <td data-infotabela="equipamento" class="td--info">Adicione os equipamentos no formulário abaixo</td>
+                            <td data-infotabela="equipamento">Adicione o nome do equipamento no formulário abaixo</td>
+                            <td data-infotabela="equipamento" class="td--info">Adicione o valor do equipamento no formulário abaixo</td>
                             
                         </tr>
                     </table>
@@ -130,54 +133,54 @@
                         <label for="equipamento-nome" class="label">Nome do equipamento:</label>
                         <input name="equipamento-nome" type="text" id="equipamento-nome" class="input" placeholder="Nome do equipamento" data-nome="equipamento">
     
-                        <label for="equipamento-valor" class="label">Valor de compra:</label>
+                        <label for="equipamento-valor" class="label">Quanto você pagou por esse equipamento?</label>
                         <input name="equipamento-valor" type="number" id="equipamento-valor" class="input" placeholder="R$" data-input="positivo" data-valor="equipamento">
     
-                        <label for="equipamento-depreciacao" class="label">Vida útil estimada em anos:</label>
+                        <label for="equipamento-depreciacao" class="label">Qual a vida útil estimada (em anos):</label>
                         <input name="equipamento-depreciacao" type="number" id="equipamento-depreciacao" class="input" placeholder="Vida útil estimada" data-input="positivo" data-depreciacao="equipamento">                      
                     </form>
 
-                    <a href="#" class="botao botao--add" data-adicionar="equipamento">Adicionar novo
+                    <a href="#" class="botao botao--sec" data-adicionar="equipamento">Adicionar novo
                         equipamento</a>
 
                     <div class="container__total--parcial">
-                        <label for="total-equipamentos" class="label">Total:</label>
-                        <input name="total-equipamento" type="number" id="total-equipamento" class="input" placeholder="R$" data-input="positivo" data-resultado="equipamento" value="0" readonly>
+                        <label for="total-equipamentos" class="label">Custo total dos equipamentos (mês):</label>
+                        <input name="total-equipamento" type="number" id="total-equipamento" class="input input--readonly" placeholder="R$" data-input="positivo" data-resultado="equipamento" value="0" readonly>
                     </div>
                 </fieldset>
 
                 <fieldset class="formulario" data-formulario="funcionarios">
                     <legend class="formulario__titulo">Funcionários</legend>
 
-                    <label for="salarios" class="label">Salários:</label>
+                    <label for="salarios" class="label">Salários (valor total por mês):</label>
                     <input name="salarios" type="number" id="salarios" class="input" placeholder="R$" data-input="positivo" data-custo="salario" data-tipo="funcionarios">
 
-                    <label for="fgts" class="label">FGTS:</label>
+                    <label for="fgts" class="label">FGTS (valor total por mês):</label>
                     <input name="fgts" type="number" id="fgts" class="input" placeholder="R$" data-input="positivo" data-custo="fgts" data-tipo="funcionarios">
 
-                    <label for="vale-refeicao" class="label">Vale refeição:</label>
+                    <label for="vale-refeicao" class="label">Vale refeição (valor total por mês):</label>
                     <input name="vale-refeicao" type="number" id="vale-refeicao" class="input" placeholder="R$" data-input="positivo" data-custo="vale-refeicao" data-tipo="funcionarios">
 
-                    <label for="vale-transporte" class="label">Vale transporte:</label>
+                    <label for="vale-transporte" class="label">Vale transporte (valor total por mês):</label>
                     <input name="vale-transporte" type="number" id="vale-transporte" class="input" placeholder="R$"
                     data-input="positivo" data-custo="vale-transporte" data-tipo="funcionarios">
 
-                    <label for="beneficios" class="label">Benefícios:</label>
+                    <label for="beneficios" class="label">Benefícios (valor total por mês):</label>
                     <input name="beneficios" type="number" id="beneficios" class="input" placeholder="R$" data-input="positivo" data-custo="beneficios" data-tipo="funcionarios">
 
-                    <label for="outros-funcionarios" class="label">Outros:</label>
+                    <label for="outros-funcionarios" class="label">Outros (valor total por mês):</label>
                     <input name="outros-funcionarios" type="number" id="outros-funcionarios" class="input" placeholder="R$"
                     data-input="positivo" data-custo="outros-funcionarios" data-tipo="funcionarios">
 
                     <div class="container__total--parcial">
-                        <label for="total-funcionarios" class="label">Total:</label>
-                        <input name="total-funcionarios" type="number" id="total-funcionarios" class="input" placeholder="R$"
+                        <label for="total-funcionarios" class="label">Custo total com funcionários (mês):</label>
+                        <input name="total-funcionarios" type="number" id="total-funcionarios" class="input input--readonly" placeholder="R$"
                         data-resultado="funcionarios" value="0" readonly>
                     </div>
                 </fieldset>
 
                 <section class="secao__container secao__resultado">
-                    <p class="secao__titulo">Custo fixo total:</p>
+                    <p class="secao__titulo">Custo fixo total (mês):</p>
                     <input name="custo-fixo" type="number" class="input input--total" data-input="positivo" data-total="custo-fixo" readonly>
                     <a href="#" class="botao" data-navegacao="proximo" data-botao="custo-fixo">Próximo</a>
                 </section>
@@ -201,15 +204,15 @@
                     data-input="positivo" data-custo="quantidade-funcionarios">
 
                     <label for="horas-mes" class="label">Horas trabalhadas no mês:</label>
-                    <input name="horas-mes" type="number" id="horas-mes" class="input" data-input="positivo" data-custo="horas-mes" readonly>
+                    <input name="horas-mes" type="number" id="horas-mes" class="input input--readonly" data-input="positivo" data-custo="horas-mes" readonly>
 
                     <label for="tempo-ocioso" class="label">Tempo ocioso (padrão: 20%):</label>
-                    <input name="tempo-ocioso" type="number" id="tempo-ocioso" class="input" data-fixo="porcentagem" placeholder="20%" data-custo="tempo-ocioso" disabled>
+                    <input name="tempo-ocioso" type="number" id="tempo-ocioso" class="input input--readonly" data-fixo="porcentagem" placeholder="20%" data-custo="tempo-ocioso" disabled>
                 </fieldset>
 
                 <section class="secao__container secao__resultado">
                     <p class="secao__titulo">Produtividade (em horas):</p>
-                    <input name="produtividade" type="number" class="input input--total" data-input="positivo" data-total="produtividade" readonly>
+                    <input name="produtividade" type="number" class="input input--total  input--readonly" data-input="positivo" data-total="produtividade" readonly>
                     <a href="#" class="botao" data-navegacao="proximo" data-botao="produtividade">Próximo</a>
                     <a href="#" class="botao botao--voltar" data-navegacao="voltar">Voltar</a>
                 </section>
@@ -232,10 +235,10 @@
                     <input name="tempo-necessario" type="number" id="tempo-necessario" class="input" data-input="positivo" data-custo="tempo-necessario">
 
                     <label for="custo-fixo-hora" class="label">Custo fixo por hora:</label>
-                    <input name="custo-fixo-hora" type="number" id="custo-fixo-hora" class="input" data-input="positivo" data-custo="custo-fixo-hora" readonly>
+                    <input name="custo-fixo-hora" type="number" id="custo-fixo-hora" class="input input--readonly" data-input="positivo" data-custo="custo-fixo-hora" readonly>
 
                     <label for="custo-fixo-minuto" class="label">Custo fixo por minuto:</label>
-                    <input name="custo-fixo-minuto" type="number" id="custo-fixo-minuto" class="input" data-input="positivo" data-custo="custo-fixo-minuto" readonly>
+                    <input name="custo-fixo-minuto" type="number" id="custo-fixo-minuto" class="input input--readonly" data-input="positivo" data-custo="custo-fixo-minuto" readonly>
                 </fieldset>
 
                 <section class="secao__container secao__resultado">
@@ -254,6 +257,7 @@
                     de uma peça ou na execução do serviço. Esse gasto varia de acordo com a quantidade de produção.</p>
                 <p class="secao__descricao">Considere itens que estão diretamente ligados à quantidade produzida. Por
                     exemplo, um pintor de parede utiliza mais tinta em paredes grandes do que em áreas pequenas.</p>
+                <p class="secao__descricao">Outro exemplo é o combustível, que citamos na primeira etapa desta calculadora. No caso de um serviço de entregas, quanto mais serviços são executados, maiores as quantidades e os gastos com esse material.</p>    
             </div>
 
             <form class="formulario">
@@ -280,15 +284,20 @@
                         <label for="material-valor" class="label">Valor de compra:</label>
                         <input name="material-valor" type="number" id="material-valor" class="input" placeholder="R$" data-input="positivo" data-valor="material">
 
-                        <label for="material-quantidade" class="label">Quantidade comprada:</label>
+                        <label for="material-quantidade" class="label">Quantidade comprada<br>
+                            <span class="label--dica">(ex.: para o galão de 1 litro escrever 1):</span>
+                        </label>
                         <input name="material-quantidade" type="number" id="material-quantidade" class="input" placeholder="Quantidade total comprada" data-input="positivo" data-compra="material">
 
-                        <label for="material-quantidade" class="label">Quantidade utilizada na execução/produção:</label>
+                        <label for="material-quantidade" class="label">Quantidade utilizada na execução/produção<br>
+                            <span class="label--dica">(Essa quantidade deverá ser na mesma unidade de medida usada para informar a quantidade comprada)</span><br>
+                            <span class="label--dica">(ex.: para utilização de 200 ml, escreva: 0,2):</span>
+                        </label>
                         <input name="material-quantidade" type="number" id="material-quantidade" class="input" placeholder="Quantidade utilizada"
                         data-input="positivo" data-uso="material">
                     </div>
 
-                    <a href="#" class="botao botao--add" data-adicionar="material">Adicionar novo material</a>
+                    <a href="#" class="botao botao--sec" data-adicionar="material">Adicionar novo material</a>
 
                     <section class="secao__container secao__resultado">
                         <p class="secao__titulo">Custo variável unitário:</p>
@@ -356,34 +365,33 @@
 
     <aside class="menu inativo" data-container="menu">
         <section class="menu__secao">
-            <h3 class="menu__titulo"><a href="blog.html">Custos Fixos</a></h3>
+            <h3 class="menu__titulo"><a href="blog.html#custos-fixos">Custos Fixos</a></h3>
             <ul class="menu__lista">
-                <li class="menu__link"><a href="blog.html">Estruturais</a></li>
-                <li class="menu__link"><a href="blog.html">Administrativos</a></li>
-                <li class="menu__link"><a href="blog.html">Equipamentos</a></li>
-                <li class="menu__link"><a href="blog.html">Funcionários</a></li>
+                <li class="menu__link"><a href="blog.html#estruturais">Estruturais</a></li>
+                <li class="menu__link"><a href="blog.html#administrativos">Administrativos</a></li>
+                <li class="menu__link"><a href="blog.html#equipamentos">Equipamentos</a></li>
+                <li class="menu__link"><a href="blog.html#funcionarios">Funcionários</a></li>
             </ul>
         </section>
 
         <section class="menu__secao">
-            <h3 class="menu__titulo"><a href="blog.html">Capacidade Produtiva</a></h3>
+            <h3 class="menu__titulo"><a href="blog.html#capacidade-produtiva">Capacidade Produtiva</a></h3>
         </section>
 
         <section class="menu__secao">
-            <h3 class="menu__titulo"><a href="blog.html">Custo Fixo Unitário</a></h3>
+            <h3 class="menu__titulo"><a href="blog.html#custo-fixo-unitario">Custo Fixo Unitário</a></h3>
         </section>
 
         <section class="menu__secao">
-            <h3 class="menu__titulo"><a href="blog.html">Custo Variável Unitário</a></h3>
+            <h3 class="menu__titulo"><a href="blog.html#custos-variaveis">Custo Variável Unitário</a></h3>
         </section>
 
         <section class="menu__secao">
-            <h3 class="menu__titulo"><a href="blog.html">Lucros, taxas e impostos</a></h3>
+            <h3 class="menu__titulo"><a href="blog.html#lucros-taxas">Lucros, taxas e impostos</a></h3>
             <ul class="menu__lista">
-                <li class="menu__link"><a href="blog.html">Margem de Lucro</a></li>
-                <li class="menu__link"><a href="blog.html">Markup</a></li>
+                <li class="menu__link"><a href="blog.html#margem-lucro">Margem de Lucro</a></li>
+                <li class="menu__link"><a href="blog.html#markup">Markup</a></li>
             </ul>
-        </section>
         </section>
     </aside>
 

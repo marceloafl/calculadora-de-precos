@@ -49,13 +49,15 @@ inputsPositivos.forEach(input => {
 inputsPorcentagem.forEach(input => {
     input.addEventListener('change', event => {
         event.preventDefault();
+        validador.zeraInputVazio(input);
         taxas.calculaMarkUp(input); 
         preco.exibeResultado(input);
     })
 })
 
 // TABELAS
-document.addEventListener('click', event => {
+const main = document.querySelector('[data-container="principal"]');
+main.addEventListener('click', event => {
     event.preventDefault();
     materialController.atualizaMateriais(event.target);
     equipamentoController.atualizaEquipamentos(event.target);

@@ -45,4 +45,8 @@
         font-weight: var(--fonte-peso-titulo);
     }
     
+    .botao--sec.menu{
+        text-align: center;
+        width: 80%;
+    }
 }
