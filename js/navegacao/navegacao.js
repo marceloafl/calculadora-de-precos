@@ -1,12 +1,11 @@
-import { selecionaElemento } from '../elementos/selecionaElemento.js';
-
 const botoesProximo = document.querySelectorAll('[data-navegacao]');
 
 let etapaNavegacao = 0;
 
 botoesProximo.forEach((botao) => {
     botao.addEventListener('click', function (event){
-        selecionaSecao(event)
+        selecionaSecao(event);
+        window.scrollTo(0, 0)
     })
 })
 
