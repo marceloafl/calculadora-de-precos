@@ -1,0 +1,11 @@
+.main{
+  display: grid;
+  gap: 16px;
+  grid-template-areas: 
+    "aside main"
+    "article article";
+  grid-template-columns: 192px 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 32px 0;
+  padding: 0 128px;
+}

@@ -1,0 +1,20 @@
+.footer{
+  align-items: center;
+  background-color: #004976;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 128px;
+
+  svg{
+    fill: #FFFFFF;
+    height: 30px;
+    width: 30px;
+  }
+
+  p{
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 16px;
+  }
+}

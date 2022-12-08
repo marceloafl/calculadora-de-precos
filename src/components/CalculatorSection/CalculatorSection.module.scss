@@ -1,0 +1,15 @@
+.calculatorSection{
+  background-color: #FFF;
+  border-radius: 8px;
+  box-sizing: border-box;
+  grid-area: main;
+  padding: 0 16px;
+
+  article{
+    border-bottom: solid 1px #F1F1F1;
+  }
+
+  p{
+    line-height: 1.5rem;
+  }
+}

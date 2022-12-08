@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Custos Fixos",
+    "text": "Independentemente do tipo de negócio, as despesas estão presentes. Elas são necessárias para produção e execução dos serviços oferecidos de maneira adequada. Para identificá-las, separamos em dois tipos, os custos fixos e os custos variáveis. Os custos fixos são constantes e não sofrem alterações caso a produção aumente ou diminua. Alguns exemplos são: aluguel, material de limpeza, salários. Para identificá-los pense em um cenário de suspensão de produção. Se você for reformar sua empresa, por exemplo, você ainda terá que pagar o aluguel e os salários dos funcionários. Esses gastos geralmente são fixos. Para facilitar o cálculo de precificação, separamos os custos fixos em quatro categorias: Estruturais: custos ligados à estrutura da empresa Administrativos: custos relacionados a rotinasEquipamentos: custos para compra e manutenção de equipamentos necessários para produção, execução do serviço ou venda. Esses custos permanecem constantes independente de aumentos ou diminuições na quantidade de produção e venda. Ex.: financiamento de máquinas. Funcionários: custos com pagamento de funcionários, como salário, benefícios trabalhistas e FGTS.",
+    "id": 1
+  },
+  {
+    "title": "Capacidade Produtiva",
+    "text": "A capacidade produtiva é o máximo que seu negócio pode produzir, considerando o tempo de trabalho e a quantidade de funcionários.",
+    "id": 2
+  },
+  {
+    "title": "Custo Fixo Unitário",
+    "text": "Para calcular o custo fixo unitário precisamos identificar os custos fixos da empresa previamente. Dessa forma, será possível realizar cálculo do custo fixo unitário, que leva em consideração o tempo gasto para produzir ou executar determinado serviço e o custo fixo do negócio.",
+    "id": 3
+  },
+  {
+    "title": "Custos Variáveis",
+    "text": "Os custos variáveis estão diretamente ligados à quantidade de produção ou venda. Eles são os valores que sua empresa gasta na produção de uma peça, na execução do serviço ou venda. Em uma cenário de aumento de produção, os custos variáveis sofrerão aumento. E com a diminuição de produção, eles serão reduzidos. Por exemplo, um pintor de parede utiliza mais tinta em paredes grandes do que em áreas pequenas.",
+    "id": 4
+  },
+  {
+    "title": "Lucros, taxas e impostos",
+    "text": "Precificar corretamente os produtos e serviços que a empresa oferece é fundamental para garantir a sustenbilidade do negócio. Por isso, é necessário estar atento a todas as taxas, impostos e margem de lucro desejada. Em relação à margem de lucro, um erro comum é considerar que vender pelo dobro do custo de produção é ter 100% de lucro. Isso está errado, pois qualquer produto ou serviço que possui custo de produção não pode ter margem de lucro de 100%, visto que ela está embutida no valor de venda. Por exemplo, um item que tem custo de produção de R$ 10,00 e é vendido por R$ 20,00. O preço de venda é 2 vezes maior que o custo de produção e margem é de 50%. Sempre considere o cálculo da margem de lucro de acordo com o preço de venda, dividindo o valor real do lucro pelo valor de venda. No exemplo acima: Lucro: R$ 20,00 - R$ 10,00 = R$ 10,00 Margem de lucro: R$ 10,00 / R$ 20,00 = 0,5 * 100 = 50% Para fazer o cálculo considerando o custo de produção, a melhor maneira é utilizar o markup. De mandeira simplificada, para se chegar a ele é necessário calcular a divisão entre o preço de venda e o custo de produção. No mesmo exemplo que demos anteriormente, o markup seria de 2. Ou seja, o preço de venda é duas vezes maior que o custo de produção. Se mudarmos o valor de venda para R$ 16,00, o markup será de 1,6 e a margem de lucro será 37,5%. Os exemplos acima foram apresentados apenas para explicação dos cálculos e cada negócio tem suas especificidades de custos fixos, custos variáveis, taxas, impostos, margens de lucro e markups ideais. Por isso, utilize a sugestão de preço de venda da calculadora como referência, mas não deixe de conhecer os números do seu negócio e de procure orientação especializada.",
+    "id": 5
+  }
+]

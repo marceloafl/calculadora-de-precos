@@ -1,0 +1,27 @@
+.fieldset{
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 32px 0;
+
+  legend{
+    font-size: 24px;
+    text-transform: capitalize;
+    margin: 8px 0;
+    padding: 0;
+  }
+  
+  section{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.totalFieldset{
+  margin: 16px 0 0;
+  label{
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+}

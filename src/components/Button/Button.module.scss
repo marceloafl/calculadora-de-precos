@@ -1,0 +1,28 @@
+.button{
+  align-items: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.button__primary{
+  background-color: #004976;
+  color: #FFF;
+  &:hover{
+    background-color: #00243a;
+  }
+}
+
+.button__secondary{
+  background-color: #FFF;
+  border: solid 1px #004976;
+  color: #004976;
+  &:hover{
+    color: #00243a;
+    border: solid 1px #00243a;
+  }
+}
