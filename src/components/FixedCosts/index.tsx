@@ -1,4 +1,6 @@
+import Button from 'components/Button';
 import Fieldset from 'components/Fieldset';
+import TotalCostSection from 'components/TotalCostSection';
 import costs from 'data/costs.json';
 
 export default function FixedCosts(){
@@ -15,6 +17,8 @@ export default function FixedCosts(){
           <Fieldset key={item.id}  {...item}/>
         ))}
       </form>
+      <TotalCostSection name='custo-fixo' label='Custo fixo'/>
+      <Button buttonStyle='primary'>Próximo</Button>
     </section>
   );
 }

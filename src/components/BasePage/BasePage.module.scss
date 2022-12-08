@@ -5,7 +5,7 @@
     "aside main"
     "article article";
   grid-template-columns: 192px 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   margin: 32px 0;
   padding: 0 128px;
 }

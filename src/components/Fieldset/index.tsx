@@ -1,14 +1,22 @@
 import styles from './Fieldset.module.scss';
 import Input from 'components/Input';
 import { InputCosts } from 'types/types';
+import Table from 'components/Table';
 
 export default function Fieldset(props: InputCosts) {
 
   const {type, inputs, id} = props;
 
+  function insertTable(type: string){
+    if(type === 'equipamentos'){
+      return <Table />;
+    }
+  }
+
   return(
     <fieldset className={styles.fieldset}>
       <legend>{type}</legend>
+      {insertTable(type)}
       {inputs.map((input) => (
         <section key={input.id} >
           <label htmlFor={input.name}>{input.label}</label>
@@ -32,8 +40,6 @@ export default function Fieldset(props: InputCosts) {
           disabled={true}
         />
       </section>
-
-      
     </fieldset>
   );
 }
