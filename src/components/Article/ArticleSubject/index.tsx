@@ -9,7 +9,7 @@ export default function Item(props: Article){
   }
 
   return(
-    <article>
+    <article data-article>
       <h2 id={createId(title)}>{title}</h2>
       <p>{text}</p>
     </article>

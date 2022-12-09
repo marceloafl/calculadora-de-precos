@@ -3,6 +3,7 @@ import CalculatorSection from 'components/CalculatorSection';
 import FixedCosts from 'components/FixedCosts';
 import Productivity from 'components/Productivity';
 import Rates from 'components/Rates';
+import Results from 'components/Results';
 import UnitFixedCost from 'components/UnitFixedCost';
 import UnitVariableCost from 'components/UnitVariableCost';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -19,6 +20,7 @@ export default function AppRouter(){
               <Route path='custo-fixo-unitario' element={<UnitFixedCost />} />
               <Route path='custo-fixo-variavel' element={<UnitVariableCost />} />
               <Route path='taxas' element={<Rates />} />
+              <Route path='resultado' element={<Results />} />
             </Route>
           </Route>
         </Routes>

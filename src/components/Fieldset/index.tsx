@@ -8,7 +8,7 @@ export default function Fieldset(props: InputCosts) {
   const {type, inputs, id} = props;
 
   function insertTable(type: string){
-    if(type === 'equipamentos'){
+    if(type === 'equipamentos' || type === 'materiais'){
       return <Table />;
     }
   }
@@ -30,7 +30,7 @@ export default function Fieldset(props: InputCosts) {
         </section>
       ))}
       <section className={styles.totalFieldset}>
-        <label htmlFor={type}>{`Total (${type})`}</label>
+        <label htmlFor={type}>Total:</label>
         <Input 
           key={id}
           type='number'

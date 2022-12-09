@@ -1,184 +1,373 @@
-[
-  {
-    "id": 1,
-    "type": "estruturais",
-    "value": 0,
-    "inputs": [
-      {
-        "name": "aluguel",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Aluguel",
-        "id": 1
-      },
-      {
-        "name": "iptu",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "IPTU",
-        "id": 2
-      },
-      {
-        "name": "energia",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Energia",
-        "id": 3
-      },
-      {
-        "name": "agua",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Água",
-        "id": 4
-      },
-      {
-        "name": "outros",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Outros",
-        "id": 5
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "type": "administrativos",
-    "value": 0,
-    "inputs": [
-      {
-        "name": "internet",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Internet",
-        "id": 1
-      },
-      {
-        "name": "telefone",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Telefone",
-        "id": 2
-      },
-      {
-        "name": "marketing",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Marketing",
-        "id": 3
-      },
-      {
-        "name": "contabilidade",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Contabilidade",
-        "id": 4
-      },
-      {
-        "name": "outros",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Outros",
-        "id": 5
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "type": "equipamentos",
-    "value": 0,
-    "inputs": [
-      {
-        "name": "nome",
-        "inputType": "text",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Nome do equipamento",
-        "id": 1
-      },
-      {
-        "name": "preço",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Quanto você pagou por esse equipamento?",
-        "id": 2
-      },
-      {
-        "name": "vida útil",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Qual a vida útil estimada (em anos):",
-        "id": 3
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "type": "funcionários",
-    "value": 0,
-    "inputs": [
-      {
-        "name": "salarios",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Salários",
-        "id": 1
-      },
-      {
-        "name": "fgts",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "FGTS",
-        "id": 2
-      },
-      {
-        "name": "vale-refeicao",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Vale-refeição",
-        "id": 3
-      },
-      {
-        "name": "vale-transporte",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Vale-transporte",
-        "id": 4
-      },
-      {
-        "name": "beneficios",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Benefícios",
-        "id": 5
-      },
-      {
-        "name": "outros",
-        "inputType": "number",
-        "placeholder": "Digite aqui",
-        "disabled": false,
-        "label": "Outros",
-        "id": 6
-      }
-    ]
-  }
-]
-
-
+{
+  "fixedCosts": [
+    {
+      "id": 1,
+      "type": "estruturais",
+      "value": 0,
+      "inputs": [
+        {
+          "name": "aluguel",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Aluguel",
+          "id": 1
+        },
+        {
+          "name": "iptu",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "IPTU",
+          "id": 2
+        },
+        {
+          "name": "energia",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Energia",
+          "id": 3
+        },
+        {
+          "name": "agua",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Água",
+          "id": 4
+        },
+        {
+          "name": "outros-estruturais",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Outros",
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "administrativos",
+      "value": 0,
+      "inputs": [
+        {
+          "name": "internet",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Internet",
+          "id": 1
+        },
+        {
+          "name": "telefone",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Telefone",
+          "id": 2
+        },
+        {
+          "name": "marketing",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Marketing",
+          "id": 3
+        },
+        {
+          "name": "contabilidade",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Contabilidade",
+          "id": 4
+        },
+        {
+          "name": "outros-administrativos",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Outros",
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "equipamentos",
+      "value": 0,
+      "inputs": [
+        {
+          "name": "nome-equipamento-custo-fixo",
+          "inputType": "text",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Nome do equipamento",
+          "id": 1
+        },
+        {
+          "name": "preço-equipamento-custo-fixo",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Quanto você pagou por esse equipamento?",
+          "id": 2
+        },
+        {
+          "name": "vida-util",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Qual a vida útil estimada (em anos):",
+          "id": 3
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "funcionários",
+      "value": 0,
+      "inputs": [
+        {
+          "name": "salarios",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Salários",
+          "id": 1
+        },
+        {
+          "name": "fgts",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "FGTS",
+          "id": 2
+        },
+        {
+          "name": "vale-refeicao",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Vale-refeição",
+          "id": 3
+        },
+        {
+          "name": "vale-transporte",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Vale-transporte",
+          "id": 4
+        },
+        {
+          "name": "beneficios",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Benefícios",
+          "id": 5
+        },
+        {
+          "name": "outros-funcionarios",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Outros",
+          "id": 6
+        }
+      ]
+    }
+  ],
+  "productivity": [
+    {
+      "id": 2,
+      "type": "",
+      "value": 0,
+      "inputs": [
+        {
+          "name": "horas-semana",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Horas trabalhadas na semana",
+          "id": 1
+        },
+        {
+          "name": "quantidade-funcionarios",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Quantidade de Funcionários",
+          "id": 2
+        },
+        {
+          "name": "horas-mes",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": true,
+          "label": "Horas trabalhadas no mês",
+          "id": 3
+        },
+        {
+          "name": "ociosidade",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": true,
+          "label": "Tempo ocioso (padrão: 20%)",
+          "id": 3
+        }
+      ]
+    }
+  ],
+  "unitFixedCost": [
+    {
+      "id": 3,
+      "type": "",
+      "value": 0,
+      "inputs": [
+        {
+          "name": "tempo-producao",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Horas trabalhadas na semana",
+          "id": 1
+        },
+        {
+          "name": "custo-fixo-hora",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Quantidade de Funcionários",
+          "id": 2
+        },
+        {
+          "name": "custo-fixo-minuto",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": true,
+          "label": "Horas trabalhadas no mês",
+          "id": 3
+        }
+      ]
+    }
+  ],
+  "unitvariableCost": [
+    {
+      "id": 4,
+      "type": "materiais",
+      "value": 0,
+      "inputs": [
+        {
+          "name": "nome-material-custo-variavel",
+          "inputType": "text",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Nome do material",
+          "id": 1
+        },
+        {
+          "name": "preço-material-custo-variavel",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Valor de compra",
+          "id": 2
+        },
+        {
+          "name": "quantidade-compra",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Quantidade comprada (ex.: para um galão de 1 litro, escrever 1",
+          "id": 3
+        },
+        {
+          "name": "quantidade-uso",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Quantidade utilizada na execução/produção (Essa quantidade deverá ser na mesma unidade de medida usada para informar a quantidade comprada. Ex.: para utilização de 200 ml, escreva: 0,2)",
+          "id": 4
+        }
+      ]
+    }
+  ],
+  "rates": [
+    {
+      "id": 5,
+      "type": "",
+      "value": 0,
+      "inputs": [
+        {
+          "name": "cartao",
+          "inputType": "text",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Taxas de cartão (%)",
+          "id": 1
+        },
+        {
+          "name": "outras",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Outras taxas (%)",
+          "id": 2
+        },
+        {
+          "name": "impostos",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Impostos (%)",
+          "id": 3
+        },
+        {
+          "name": "margem-lucro",
+          "inputType": "number",
+          "placeholder": "Digite aqui",
+          "disabled": false,
+          "label": "Margem de lucro (%)",
+          "id": 4
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": 6,
+      "type": "",
+      "value": 0,
+      "inputs": [
+        {
+          "name": "custo-unitario-fixo",
+          "inputType": "number",
+          "placeholder": "",
+          "disabled": true,
+          "label": "Custo unitário fixo",
+          "id": 1
+        },
+        {
+          "name": "custo unitario variavel",
+          "inputType": "number",
+          "placeholder": "",
+          "disabled": true,
+          "label": "Custo unitário variável",
+          "id": 2
+        },
+        {
+          "name": "custo unitário total",
+          "inputType": "number",
+          "placeholder": "",
+          "disabled": true,
+          "label": "Custo  unitário total",
+          "id": 3
+        }
+      ]
+    }
+  ]
+}

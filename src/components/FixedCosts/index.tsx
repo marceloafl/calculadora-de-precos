@@ -1,10 +1,13 @@
 import Button from 'components/Button';
 import Fieldset from 'components/Fieldset';
-import TotalCostSection from 'components/TotalCostSection';
+import ParcialResult from 'components/ParcialResult';
 import costs from 'data/costs.json';
+import { selectTypeCost } from 'utils/utils';
 
 export default function FixedCosts(){
 
+  const selectedCosts = selectTypeCost(costs, 'fixedCosts');
+  
   return(
     <section>
       <article>
@@ -13,12 +16,12 @@ export default function FixedCosts(){
         <p>Para identificá-los, pense em um cenário de suspensão de produção. Se você for reformar sua empresa, por exemplo, você ainda terá que pagar o aluguel e os salários dos funcionários. Esses gastos geralmente são fixos.</p>
       </article>
       <form>
-        {costs.map((item) => (
+        {selectedCosts?.map((item) => (
           <Fieldset key={item.id}  {...item}/>
         ))}
       </form>
-      <TotalCostSection name='custo-fixo' label='Custo fixo'/>
-      <Button buttonStyle='primary'>Próximo</Button>
+      <ParcialResult value={10}>Custo fixo total (mês):</ParcialResult>
+      <Button buttonStyle='primary' nextRoute='/produtividade'>Próximo</Button>
     </section>
   );
 }
