@@ -1,13 +1,27 @@
 import Button from 'components/Button';
 import Fieldset from 'components/Fieldset';
 import ParcialResult from 'components/ParcialResult';
-import costs from 'data/costs.json';
-import { selectTypeCost } from 'utils/utils';
+import { useSetRecoilState } from 'recoil';
+import { selectedSubCostState } from 'state/atom';
+import { CostsList } from 'types/types';
+import costList from 'data/inputCosts.json';
+import { useEffect } from 'react';
 
 export default function FixedCosts(){
 
-  const selectedCosts = selectTypeCost(costs, 'fixedCosts');
+  const selectedType = 'custos_fixos';
+  const selectedSubCosts = selectSubCost(costList, selectedType);
+  const setSelectedSubCost = useSetRecoilState(selectedSubCostState);
+
+  function selectSubCost(costList: CostsList, selectedType: string){
+    const selectedSubCost = costList.find(cost => cost.cost_name === selectedType)?.subcosts;
+    return selectedSubCost;
+  }
   
+  useEffect(() => {
+    setSelectedSubCost(selectedSubCosts);
+  }, [selectedSubCosts]);
+
   return(
     <section>
       <article>
@@ -16,8 +30,8 @@ export default function FixedCosts(){
         <p>Para identificá-los, pense em um cenário de suspensão de produção. Se você for reformar sua empresa, por exemplo, você ainda terá que pagar o aluguel e os salários dos funcionários. Esses gastos geralmente são fixos.</p>
       </article>
       <form>
-        {selectedCosts?.map((item) => (
-          <Fieldset key={item.id}  {...item}/>
+        {selectedSubCosts?.map((item) => (
+          <Fieldset key={item.subcost_id}  {...item}/>
         ))}
       </form>
       <ParcialResult value={10}>Custo fixo total (mês):</ParcialResult>

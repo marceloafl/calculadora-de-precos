@@ -1,11 +1,25 @@
-import { selectTypeCost } from 'utils/utils';
-import costs from 'data/costs.json';
 import Button from 'components/Button';
 import Fieldset from 'components/Fieldset';
+import { useSetRecoilState } from 'recoil';
+import { selectedSubCostState } from 'state/atom';
+import { CostsList } from 'types/types';
+import costList from 'data/inputCosts.json';
+import { useEffect } from 'react';
 
-export default function Rates(){
+export default function FixedCosts(){
 
-  const selectedCosts = selectTypeCost(costs, 'rates');
+  const selectedType = 'taxas';
+  const selectedSubCosts = selectSubCost(costList, selectedType);
+  const setSelectedSubCost = useSetRecoilState(selectedSubCostState);
+
+  function selectSubCost(costList: CostsList, selectedType: string){
+    const selectedSubCost = costList.find(cost => cost.cost_name === selectedType)?.subcosts;
+    return selectedSubCost;
+  }
+  
+  useEffect(() => {
+    setSelectedSubCost(selectedSubCosts);
+  }, [selectedSubCosts]);
 
   return(
     <section>
@@ -14,8 +28,8 @@ export default function Rates(){
         <p>Informe a margem de lucro desejada, taxas e impostos.</p>
       </article>
       <form>
-        {selectedCosts?.map((item) => (
-          <Fieldset key={item.id}  {...item}/>
+        {selectedSubCosts?.map((item) => (
+          <Fieldset key={item.subcost_id}  {...item}/>
         ))}
       </form>
       <Button buttonStyle='primary' nextRoute='/resultado'>Próximo</Button>

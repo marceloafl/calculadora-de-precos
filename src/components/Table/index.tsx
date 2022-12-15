@@ -10,7 +10,7 @@ export default function Table(){
         </tr>
       </thead>
       <tbody>
-        <th colSpan={2}>Adicione os materiais no formulário abaixo</th>
+        <tr><th colSpan={2}>Adicione os materiais no formulário abaixo</th></tr>
       </tbody>
     </table>
   );

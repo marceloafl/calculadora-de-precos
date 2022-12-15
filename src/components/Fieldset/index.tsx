@@ -1,11 +1,11 @@
 import styles from './Fieldset.module.scss';
 import Input from 'components/Input';
-import { InputCosts } from 'types/types';
+import { SubCost } from 'types/types';
 import Table from 'components/Table';
 
-export default function Fieldset(props: InputCosts) {
+export default function Fieldset(props: SubCost) {
 
-  const {type, inputs, id} = props;
+  const { subcost_id, subcost_name, subcost_value, subcost_inputs } = props;
 
   function insertTable(type: string){
     if(type === 'equipamentos' || type === 'materiais'){
@@ -15,29 +15,33 @@ export default function Fieldset(props: InputCosts) {
 
   return(
     <fieldset className={styles.fieldset}>
-      <legend>{type}</legend>
-      {insertTable(type)}
-      {inputs.map((input) => (
-        <section key={input.id} >
-          <label htmlFor={input.name}>{input.label}</label>
+      <legend>{subcost_name}</legend>
+      {insertTable(subcost_name)}
+      {subcost_inputs.map((input) => (
+        <section key={input.input_id} >
+          <label htmlFor={input.input_name}>{input.input_label}</label>
           <Input 
-            type={input.inputType}
-            name={input.name}
-            id={input.name}
-            placeholder={input.placeholder}
-            disabled={input.disabled}
+            type={input.input_type}
+            currency={input.input_currency}
+            name={input.input_name}
+            id={input.input_name}
+            placeholder={input.input_placeholder}
+            disabled={input.input_disabled}
+            value={String(input.input_value)}
           />
         </section>
       ))}
       <section className={styles.totalFieldset}>
-        <label htmlFor={type}>Total:</label>
+        <label htmlFor={subcost_name}>Total:</label>
         <Input 
-          key={id}
+          key={subcost_id}
           type='number'
-          name={type}
-          id={type}
+          currency={true}
+          name={subcost_name}
+          id={subcost_name}
           placeholder='Total'
           disabled={true}
+          value={String(subcost_value)}
         />
       </section>
     </fieldset>

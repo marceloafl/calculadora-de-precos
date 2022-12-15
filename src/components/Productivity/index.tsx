@@ -1,12 +1,26 @@
 import Button from 'components/Button';
 import Fieldset from 'components/Fieldset';
 import ParcialResult from 'components/ParcialResult';
-import costs from 'data/costs.json';
-import { selectTypeCost } from 'utils/utils';
+import { useSetRecoilState } from 'recoil';
+import { selectedSubCostState } from 'state/atom';
+import { CostsList } from 'types/types';
+import costList from 'data/inputCosts.json';
+import { useEffect } from 'react';
 
 export default function Productivity(){
 
-  const selectedCosts = selectTypeCost(costs, 'productivity');
+  const selectedType = 'produtividade';
+  const selectedSubCosts = selectSubCost(costList, selectedType);
+  const setSelectedSubCost = useSetRecoilState(selectedSubCostState);
+
+  function selectSubCost(costList: CostsList, selectedType: string){
+    const selectedSubCost = costList.find(cost => cost.cost_name === selectedType)?.subcosts;
+    return selectedSubCost;
+  }
+  
+  useEffect(() => {
+    setSelectedSubCost(selectedSubCosts);
+  }, [selectedSubCosts]);
 
   return(
     <section>
@@ -15,8 +29,8 @@ export default function Productivity(){
         <p>Capacidade produtiva é o máximo que seu negócio consegue produzir em determinado período de tempo com os recursos que tem à disposição.</p>
       </article>
       <form action="">
-        {selectedCosts?.map((item) => (
-          <Fieldset key={item.id}  {...item} />
+        {selectedSubCosts?.map((item) => (
+          <Fieldset key={item.subcost_id}  {...item} />
         ))}
       </form>
       <ParcialResult  value={20}>Produtividade (em horas):</ParcialResult>

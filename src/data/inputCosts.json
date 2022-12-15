@@ -1,0 +1,467 @@
+[
+  {
+    "cost_name": "custos_fixos",
+    "subcosts": [
+      {
+        "subcost_id": 1,
+        "subcost_name": "estruturais",
+        "subcost_value": 100,
+        "subcost_inputs": [
+          {
+            "input_name": "aluguel",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Aluguel",
+            "input_value": 850,
+            "input_id": 1
+          },
+          {
+            "input_name": "iptu",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "IPTU",
+            "input_value": 90,
+            "input_id": 2
+          },
+          {
+            "input_name": "energia",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Energia",
+            "input_value": 0,
+            "input_id": 3
+          },
+          {
+            "input_name": "agua",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Água",
+            "input_value": 0,
+            "input_id": 4
+          },
+          {
+            "input_name": "outros-estruturais",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Outros",
+            "input_value": 0,
+            "input_id": 5
+          }
+        ]
+      },
+      {
+        "subcost_id": 2,
+        "subcost_name": "administrativos",
+        "subcost_value": 0,
+        "subcost_inputs": [
+          {
+            "input_name": "internet",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Internet",
+            "input_value": 0,
+            "input_id": 1
+          },
+          {
+            "input_name": "telefone",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Telefone",
+            "input_value": 0,
+            "input_id": 2
+          },
+          {
+            "input_name": "marketing",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Marketing",
+            "input_value": 0,
+            "input_id": 3
+          },
+          {
+            "input_name": "contabilidade",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Contabilidade",
+            "input_value": 0,
+            "input_id": 4
+          },
+          {
+            "input_name": "outros-administrativos",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Outros",
+            "input_value": 0,
+            "input_id": 5
+          }
+        ]
+      },
+      {
+        "subcost_id": 3,
+        "subcost_name": "equipamentos",
+        "subcost_value": 0,
+        "subcost_inputs": [
+          {
+            "input_name": "nome-equipamento-custo-fixo",
+            "input_type": "text",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Nome do equipamento",
+            "input_value": 0,
+            "input_id": 1
+          },
+          {
+            "input_name": "preço-equipamento-custo-fixo",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Quanto você pagou por esse equipamento?",
+            "input_value": 0,
+            "input_id": 2
+          },
+          {
+            "input_name": "vida-util",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Qual a vida útil estimada (em anos):",
+            "input_value": 0,
+            "input_id": 3
+          }
+        ]
+      },
+      {
+        "subcost_id": 4,
+        "subcost_name": "funcionários",
+        "subcost_value": 0,
+        "subcost_inputs": [
+          {
+            "input_name": "salarios",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Salários",
+            "input_value": 450,
+            "input_id": 1
+          },
+          {
+            "input_name": "fgts",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "FGTS",
+            "input_value": 0,
+            "input_id": 2
+          },
+          {
+            "input_name": "vale-refeicao",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Vale-refeição",
+            "input_value": 0,
+            "input_id": 3
+          },
+          {
+            "input_name": "vale-transporte",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Vale-transporte",
+            "input_value": 0,
+            "input_id": 4
+          },
+          {
+            "input_name": "beneficios",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Benefícios",
+            "input_value": 0,
+            "input_id": 5
+          },
+          {
+            "input_name": "outros-funcionarios",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Outros",
+            "input_value": 0,
+            "input_id": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cost_name": "produtividade",
+    "subcosts": [
+      {
+        "subcost_id": 1,
+        "subcost_name": "",
+        "subcost_value": 0,
+        "subcost_inputs": [
+          {
+            "input_name": "horas-semana",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Horas trabalhadas na semana",
+            "input_value": 0,
+            "input_id": 1
+          },
+          {
+            "input_name": "quantidade-funcionarios",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Quantidade de Funcionários",
+            "input_value": 0,
+            "input_id": 2
+          },
+          {
+            "input_name": "horas-mes",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": true,
+            "input_label": "Horas trabalhadas no mês",
+            "input_value": 0,
+            "input_id": 3
+          },
+          {
+            "input_name": "ociosidade",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": true,
+            "input_label": "Tempo ocioso (padrão: 20%)",
+            "input_value": 0,
+            "input_id": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cost_name": "custos_fixo_unitario",
+    "subcosts": [
+      {
+        "subcost_id": 1,
+        "subcost_name": "",
+        "subcost_value": 0,
+        "subcost_inputs": [
+          {
+            "input_name": "tempo-producao",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Tempo necessário para produção do item ou execução do serviço (em minutos)",
+            "input_value": 0,
+            "input_id": 1
+          },
+          {
+            "input_name": "custo-fixo-hora",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": true,
+            "input_label": "Custo fixo por hora",
+            "input_value": 0,
+            "input_id": 2
+          },
+          {
+            "input_name": "custo-fixo-minuto",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": true,
+            "input_label": "Custo fixo por minuto",
+            "input_value": 0,
+            "input_id": 3
+          }          
+        ]
+      }
+    ]  
+  },
+  {
+    "cost_name": "custos_variavel_unitario",
+    "subcosts": [
+      {
+        "subcost_id": 1,
+        "subcost_name": "",
+        "subcost_value": 0,
+        "subcost_inputs": [
+          {
+            "input_name": "nome-material-custo-variavel",
+            "input_type": "text",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Nome do material",
+            "input_value": 0,
+            "input_id": 1
+          },
+          {
+            "input_name": "preço-material-custo-variavel",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Valor de compra",
+            "input_value": 0,
+            "input_id": 2
+          },
+          {
+            "input_name": "quantidade-compra",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Quantidade comprada (ex.: para um galão de 1 litro, escrever 1",
+            "input_value": 0,
+            "input_id": 3
+          },
+          {
+            "input_name": "quantidade-uso",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Quantidade utilizada na execução/produção (Essa quantidade deverá ser na mesma unidade de medida usada para informar a quantidade comprada. Ex.: para utilização de 200 ml, escreva: 0,2)",
+            "input_value": 0,
+            "input_id": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cost_name": "taxas",
+    "subcosts": [
+      {
+        "subcost_id": 1,
+        "subcost_name": "",
+        "subcost_value": 0,
+        "subcost_inputs": [
+          {
+            "input_name": "cartao",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Taxas de cartão (%)",
+            "input_value": 0,
+            "input_id": 1
+          },
+          {
+            "input_name": "outras",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Outras taxas (%)",
+            "input_value": 0,
+            "input_id": 2
+          },
+          {
+            "input_name": "impostos",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Impostos (%)",
+            "input_value": 0,
+            "input_id": 3
+          },
+          {
+            "input_name": "margem-lucro",
+            "input_type": "number",
+            "input_currency": false,
+            "input_placeholder": "Digite aqui",
+            "input_disabled": false,
+            "input_label": "Margem de lucro (%)",
+            "input_value": 0,
+            "input_id": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cost_name": "resultados",
+    "subcosts": [
+      {
+        "subcost_id": 1,
+        "subcost_name": "",
+        "subcost_value": 0,
+        "subcost_inputs": [
+          {
+            "input_name": "custo-unitario-fixo",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "",
+            "input_disabled": true,
+            "input_label": "Custo unitário fixo",
+            "input_value": 0,
+            "input_id": 1
+          },
+          {
+            "input_name": "custo unitario variavel",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "",
+            "input_disabled": true,
+            "input_label": "Custo unitário variável",
+            "input_value": 0,
+            "input_id": 2
+          },
+          {
+            "input_name": "custo unitário total",
+            "input_type": "number",
+            "input_currency": true,
+            "input_placeholder": "",
+            "input_disabled": true,
+            "input_label": "Custo  unitário total",
+            "input_value": 0,
+            "input_id": 3
+          }
+        ]
+      }
+    ]
+  }
+]
+  
+  

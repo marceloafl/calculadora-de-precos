@@ -15,7 +15,9 @@ export default function TotalCostSection({name, label}: Props){
         name={name}
         id={name}
         placeholder=''
+        currency={true}
         disabled={true}
+        value={String(8)}
       />
     </section>
   );

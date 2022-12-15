@@ -1,12 +1,26 @@
 import Button from 'components/Button';
 import Fieldset from 'components/Fieldset';
 import ParcialResult from 'components/ParcialResult';
-import costs from 'data/costs.json';
-import { selectTypeCost } from 'utils/utils';
+import { useSetRecoilState } from 'recoil';
+import { selectedSubCostState } from 'state/atom';
+import { CostsList } from 'types/types';
+import costList from 'data/inputCosts.json';
+import { useEffect } from 'react';
 
 export default function UnitVariableCost(){
+
+  const selectedType = 'custos_variavel_unitario';
+  const selectedSubCosts = selectSubCost(costList, selectedType);
+  const setSelectedSubCost = useSetRecoilState(selectedSubCostState);
+
+  function selectSubCost(costList: CostsList, selectedType: string){
+    const selectedSubCost = costList.find(cost => cost.cost_name === selectedType)?.subcosts;
+    return selectedSubCost;
+  }
   
-  const selectedCosts = selectTypeCost(costs, 'unitvariableCost');
+  useEffect(() => {
+    setSelectedSubCost(selectedSubCosts);
+  }, [selectedSubCosts]);
 
   return(
     <section>
@@ -15,8 +29,8 @@ export default function UnitVariableCost(){
         <p>Custo variável é o valor que você gasta com produtos e materiais na produção de uma peça ou na execução do serviço. Esse gasto varia de acordo com a quantidade de produção. Considere itens que estão diretamente ligados à quantidade produzida. Por exemplo, um pintor de parede utiliza mais tinta em paredes grandes do que em áreas pequenas. Outro exemplo é o combustível, que citamos na primeira etapa desta calculadora. No caso de um serviço de entregas, quanto mais serviços são executados, maiores as quantidades e os gastos com esse material.</p>
       </article>
       <form>
-        {selectedCosts?.map((item) => (
-          <Fieldset key={item.id}  {...item}/>
+        {selectedSubCosts?.map((item) => (
+          <Fieldset key={item.subcost_id}  {...item}/>
         ))}
       </form>
       <ParcialResult value={40}>Custo variável unitário:</ParcialResult>
