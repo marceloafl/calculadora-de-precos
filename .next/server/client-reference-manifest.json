@@ -103,6 +103,14 @@
         "chunks": [],
         "async": false
       }
+    },
+    "(app-client)/./components/Card/styles.tsx": {
+      "*": {
+        "id": "(sc_client)/./components/Card/styles.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
     }
   },
   "edgeSSRModuleMapping": {},
@@ -311,7 +319,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/resultado/page:static/chunks/app/resultado/page.js"
       ],
       "async": false
     },
@@ -319,7 +327,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/resultado/page:static/chunks/app/resultado/page.js"
       ],
       "async": false
     },
@@ -338,14 +346,47 @@
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
+    },
+    "C:\\Users\\marcelo.lemes\\Documents\\Projetos\\calculadora-de-precos\\components\\Card\\styles.tsx": {
+      "id": "(app-client)/./components/Card/styles.tsx",
+      "name": "*",
+      "chunks": [
+        "app/resultado/page:static/chunks/app/resultado/page.js"
+      ],
+      "async": false
     }
   },
   "entryCSSFiles": {
+    "C:\\Users\\marcelo.lemes\\Documents\\Projetos\\calculadora-de-precos\\app\\layout": {
+      "modules": [
+        "C:\\Users\\marcelo.lemes\\Documents\\Projetos\\calculadora-de-precos\\styles\\global.css",
+        "C:\\Users\\marcelo.lemes\\Documents\\Projetos\\calculadora-de-precos\\node_modules\\next\\font\\google\\target.css?{\"path\":\"utils\\\\fonts.js\",\"import\":\"Roboto\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":[\"100\",\"300\",\"400\",\"500\",\"700\",\"900\"]}],\"variableName\":\"roboto\"}"
+      ],
+      "files": [
+        "static/css/app/layout.css"
+      ]
+    },
     "C:\\Users\\marcelo.lemes\\Documents\\Projetos\\calculadora-de-precos\\app\\page": {
       "modules": [],
       "files": []
     },
-    "C:\\Users\\marcelo.lemes\\Documents\\Projetos\\calculadora-de-precos\\app\\layout": {
+    "C:\\Users\\marcelo.lemes\\Documents\\Projetos\\calculadora-de-precos\\app\\capacidade-produtiva\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\marcelo.lemes\\Documents\\Projetos\\calculadora-de-precos\\app\\custo-fixo-unitario\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\marcelo.lemes\\Documents\\Projetos\\calculadora-de-precos\\app\\lucro-taxas-impostos\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\marcelo.lemes\\Documents\\Projetos\\calculadora-de-precos\\app\\custo-variavel-unitario\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\marcelo.lemes\\Documents\\Projetos\\calculadora-de-precos\\app\\resultado\\page": {
       "modules": [],
       "files": []
     }

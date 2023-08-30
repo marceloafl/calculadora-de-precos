@@ -31,12 +31,18 @@ export default function LateralMenu() {
       <nav>
         {costs.map((cost) => (
           <S.PrimaryList>
-            <a href="#">{cost.title}</a>
-            {cost.subcosts?.map((subcost) => (
-              <S.SecondaryList>
-                <a href="#">{subcost}</a>
-              </S.SecondaryList>
-            ))}
+            <li>
+              <a href="#">{cost.title}</a>
+              {cost.subcosts?.map((subcost) => (
+                <ul>
+                  <S.SecondaryList>
+                    <li>
+                      <a href="#">{subcost}</a>
+                    </li>
+                  </S.SecondaryList>
+                </ul>
+              ))}
+            </li>
           </S.PrimaryList>
         ))}
       </nav>

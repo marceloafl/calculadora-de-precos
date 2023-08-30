@@ -1,14 +1,40 @@
 {
   "pages": {
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/layout": [
+    "/capacidade-produtiva/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/layout.js"
+      "static/chunks/app/capacidade-produtiva/page.js"
+    ],
+    "/custo-fixo-unitario/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/custo-fixo-unitario/page.js"
+    ],
+    "/lucro-taxas-impostos/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/lucro-taxas-impostos/page.js"
+    ],
+    "/custo-variavel-unitario/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/custo-variavel-unitario/page.js"
+    ],
+    "/resultado/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/resultado/page.js"
     ]
   }
 }

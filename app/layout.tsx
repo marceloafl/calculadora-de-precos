@@ -1,6 +1,8 @@
 import Header from "../components/Header";
 import LateralMenu from "../components/LateralMenu";
 import StyledJsxRegistry from "./registry";
+import '../styles/global.css';
+import { roboto } from '../utils/fonts';
 
 export const metadata = {
   title: "Next.js",
@@ -14,11 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body style={{ margin: 0 }}>
+      <body className={roboto.className}>
         <StyledJsxRegistry>
           <Header />
-          <LateralMenu />
-          {children}
+          <main>
+            <LateralMenu />
+            {children}
+          </main>
         </StyledJsxRegistry>
       </body>
     </html>
